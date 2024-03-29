@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  public isCollapsed = false;
+
 }
 

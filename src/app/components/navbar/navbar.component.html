@@ -1,5 +1,38 @@
-<!--<nav class="navbar navbar-expand-lg navbar-rosa-claro" data-bs-theme="dark">
-
-  </nav>-->
-
-  <h1>Implementação</h1>
+<!-- Cabeçalho do site -->
+<header class="fixed-top">
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-expand-lg navbar-rosa-claro" data-bs-theme="dark">
+    <div class="container-fluid">
+      <!-- Logo e nome do site. Você pode descomentar a linha abaixo para adicionar um logo. -->
+      <a class="navbar-brand ms-0 ms-md-5 d-flex align-itens-center gap-3">
+        <h1 class="fs-3">Quero adotar</h1>
+        <!--<img src="assets/img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">-->
+      </a>
+      <!-- Botão que aparece em telas pequenas para expandir ou colapsar o menu de navegação -->
+      <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menu de navegação -->
+      <div [collapse]="isCollapsed" [isAnimated] ="true" class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <!-- Cada item do menu é um 'li'. 'a' é o link para a página correspondente. -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <!-- Um link desativado -->
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <!-- Formulário de pesquisa -->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
