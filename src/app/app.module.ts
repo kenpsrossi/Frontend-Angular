@@ -12,6 +12,8 @@ import { ResgatesComponent } from './views/resgates/resgates.component';
 import { AjudarComponent } from './views/ajudar/ajudar.component';
 import { AdotarComponent } from './views/adotar/adotar.component';
 import { LoginComponent } from './views/login/login.component';
+import { MenuComponent } from './views/menu/menu.component';
+import { CarouselComponent } from './views/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LoginComponent } from './views/login/login.component';
     ResgatesComponent,
     AjudarComponent,
     AdotarComponent,
-    LoginComponent
+    LoginComponent,
+    MenuComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
