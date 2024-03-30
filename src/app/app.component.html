@@ -1,22 +1,8 @@
-<app-navbar></app-navbar>
+<app-menu></app-menu>
 
 <router-outlet></router-outlet>
    
 
 
 
-
-<div class="app-carousel">
-    <carousel [isAnimated]="true" [interval]="slideInterval" [(activeSlide)]="activeSlideIndex">
-      <!-- Usando *ngFor para iterar sobre as slides -->
-      <slide *ngFor="let slide of slides; let index=index">
-        <!-- Imagem do Carousel com texto alternativo descritivo -->
-        <img [src]="slide.image" alt="Imagem de {{ slide.text }}" class="carousel-image">
-        <div class="carousel-caption">
-          <!-- Texto da slide -->
-          <h4>{{ slide.text }}</h4>
-        </div>
-      </slide>
-    </carousel>
-  </div>
 
