@@ -1,0 +1,33 @@
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo-container img {
+    max-width: 200px; /* ajuste este valor conforme necessário */
+    height: auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: pink; /* plano de fundo rosa */
+    border: 2px solid black; /* bordas */
+    padding: 20px; /* espaço interno ao redor do formulário */
+  }
+  
+  /* letras em negrito */
+  label, input, button {
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: black; /* cor de fundo preta */
+    color: white; /* cor do texto branca */
+    border: none; /* remove a borda padrão do botão */
+    margin-top: 20px; /* adiciona um espaço acima do botão */
+  }
