@@ -1,5 +1,3 @@
-
-
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import pets_data from 'src/app/data/pets-data';
@@ -33,8 +31,6 @@ export class AnimaisComponent {
             break;
         }
 
-
-
         // Filtra os animais com base no tipo
         this.animais = this.filterAnimalsPerEspecie(especie);
       }
@@ -48,4 +44,4 @@ export class AnimaisComponent {
     // Filtra os animais que correspondem ao tipo
     return pets_data.filter(animal => animal.especie === especie);
   }
-}
+} 

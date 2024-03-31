@@ -1,22 +1,26 @@
+<!-- Lista não ordenada com a classe 'animal-list' e 'list-unstyled' para remover a estilização padrão da lista -->
 <ul class="animal-list list-unstyled">
+    <!-- Para cada 'animal' no array 'animais', cria um item de lista -->
     <li *ngFor="let animal of animais" class="d-flex flex-column">
+        <!-- Div para a imagem do animal -->
         <div class="animal-imagem">
-            <img src="assets/imagens/{{  animal.imagem }}" alt="Foto de {{ animal.nome }}" class="rounded img-fluid">
-        <div class="animal-wrapper p-2 ">
-            <button class="btn btn-success">Adotar</button>
+            <!-- Imagem do animal. O caminho para a imagem e o texto alternativo são vinculados aos dados do animal -->
+            <img src="{{  animal.imagem }}" alt="Foto de {{ animal.nome }}" class="rounded img-fluid">
+            <!-- Div para o botão 'Adotar' que é exibido quando o mouse passa sobre a imagem -->
+            <div class="animal-wrapper p-2 ">
+                <button class="btn btn-success">Adotar</button>
+            </div>
         </div>
-    </div>
-    <strong class="fs-4">{{ animal.nome }}</strong>
-    <span>pelagem: {{ animal.pelagem }}</span>
-    <span>Espécie: {{ animal.especie }}</span>
-    <span>Gênero: {{ animal.sexo }}</span>
-    <span>Idade: {{ animal.idade }}</span>
-    <span>Raça: {{ animal.raca }}</span>
-    
-
-
+        <!-- Exibe o nome do animal em negrito -->
+        <strong class="fs-4">{{ animal.nome }}</strong>
+        <!-- Exibe várias propriedades do animal -->
+        <span>pelagem: {{ animal.pelagem }}</span>
+        <span>Espécie: {{ animal.especie }}</span>
+        <span>Gênero: {{ animal.sexo }}</span>
+        <span>Idade: {{ animal.idade }}</span>
+        <span>Raça: {{ animal.raca }}</span>
     </li>
 </ul>
 
-
+<!-- Se não houver animais no array 'animais', exibe uma mensagem -->
 <h1 *ngIf="!animais.length" class="fs-3 display-3 text-center">Não há nenhum animalzinho</h1>

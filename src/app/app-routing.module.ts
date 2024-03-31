@@ -7,7 +7,10 @@ import { AjudarComponent } from './views/ajudar/ajudar.component';
 
 const routes: Routes = [
   {
-    path: '', pathMatch: 'full', redirectTo: 'todos',
+    path: '', pathMatch: 'full', redirectTo: 'menu',
+  },
+  {
+    path: 'menu', component: MenuComponent
   },
   {
     path: 'todos', component: MenuComponent
