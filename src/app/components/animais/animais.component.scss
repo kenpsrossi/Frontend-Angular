@@ -1,19 +1,24 @@
-/* Define z-index values */
+// Define valores para z-index
 $z-index-wrapper: 10;
 
-/* Define colors */
+// Define cores
 $color-wrapper-bg: #6562629c;
 
 .animal-list {
+  // Define o display para grid
   display: grid;
+  // Define 4 colunas de tamanho igual
   grid-template-columns: repeat(4, 1fr);
+  // Centraliza os itens na célula da grid
   justify-items: center;
+  // Define o espaço entre os itens da grid
   gap: 2rem;
 
   .animal-image {
+    // Define a posição como relativa para permitir posicionamento absoluto dos filhos
     position: relative;
 
-    /* Show the animal wrapper on hover */
+    // Mostra o wrapper do animal quando o mouse passa sobre a imagem
     &:hover {
       .animal-wrapper {
         display: block;
@@ -22,13 +27,19 @@ $color-wrapper-bg: #6562629c;
   }
 
   .animal-wrapper {
+    // Esconde o wrapper do animal por padrão
     display: none;
+    // Posiciona o wrapper do animal sobre a imagem
     position: absolute;
+    // Define a cor de fundo do wrapper do animal
     background-color: $color-wrapper-bg;
+    // Posiciona o wrapper do animal no topo e à esquerda da imagem
     top: 0;
     left: 0;
+    // Faz o wrapper do animal ocupar toda a largura e altura da imagem
     width: 100%;
     height: 100%;
+    // Coloca o wrapper do animal acima da imagem
     z-index: $z-index-wrapper;
   }
 }

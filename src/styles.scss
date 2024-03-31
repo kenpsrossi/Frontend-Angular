@@ -1,19 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
-
+// Importa os estilos globais do Bootstrap
 @import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+// Importa os estilos do tema Minty do Bootswatch
 @import '/node_modules/bootswatch/dist/minty/bootstrap.min.css';
 
-/* Importing Bootstrap SCSS file. */
+// Importa os estilos SCSS do Bootstrap
 @import "./node_modules/bootstrap/scss/bootstrap";
 
-/* Importing Datepicker SCSS file. */
+// Importa os estilos do Datepicker do ngx-bootstrap
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
+// Estilos globais
 
+// Aplica a todos os elementos
+* {
+    // Garante que o padding e a margem são incluídos na largura e altura total de um elemento
+    box-sizing: border-box;
+}
 
+// Aplica ao html e ao body
+html, body {
+    // Garante que os elementos html e body ocupem a altura total da viewport
+    height: 100%;
+}
 
-/* Global styles */
-
-
-
+// Define variáveis de cores no escopo root
+:root {
+    // Define a cor primária
+    --primary-color: #95dfae;
+    // Define a cor secundária
+    --secondary-color: #eca7e2;
+}
