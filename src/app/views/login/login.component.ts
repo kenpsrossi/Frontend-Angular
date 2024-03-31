@@ -11,6 +11,6 @@ export class LoginComponent {
 
   onSubmit() {
     // Implemente a lógica de login aqui
-    console.log(`Username: ${this.username}, Password: ${this.password}`);
+    //console.log(`Username: ${this.username}, Password: ${this.password}`);
   }
 }

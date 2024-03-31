@@ -1,0 +1,22 @@
+<ul class="animal-list list-unstyled">
+    <li *ngFor="let animal of animais" class="d-flex flex-column">
+        <div class="animal-imagem">
+            <img src="assets/imagens/{{  animal.imagem }}" alt="Foto de {{ animal.nome }}" class="rounded img-fluid">
+        <div class="animal-wrapper p-2 ">
+            <button class="btn btn-success">Adotar</button>
+        </div>
+    </div>
+    <strong class="fs-4">{{ animal.nome }}</strong>
+    <span>pelagem: {{ animal.pelagem }}</span>
+    <span>Espécie: {{ animal.especie }}</span>
+    <span>Gênero: {{ animal.sexo }}</span>
+    <span>Idade: {{ animal.idade }}</span>
+    <span>Raça: {{ animal.raca }}</span>
+    
+
+
+    </li>
+</ul>
+
+
+<h1 *ngIf="!animais.length" class="fs-3 display-3 text-center">Não há nenhum animalzinho</h1>

@@ -3,7 +3,7 @@ export default [
     {
         id: 1,
         matricula: 1,
-        nome: 'Rex',
+        nome: 'Dog 1',
         especie: 'Cachorro',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -13,13 +13,13 @@ export default [
         localResgate: 'Rua 1, Bairro 1',
         observacao: 'Cachorro muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/cachorro1.jpeg',
         idade: 2
     },
     {
         id: 2,
         matricula: 2,
-        nome: 'Mel',
+        nome: 'Dog 2',
         especie: 'Cachorro',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -29,13 +29,13 @@ export default [
         localResgate: 'Rua 2, Bairro 2',
         observacao: 'Cachorra muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/cachorro2.jpeg',
         idade: 3
     },
     {
         id: 3,
         matricula: 3,
-        nome: 'Nina',
+        nome: 'Cat 7',
         especie: 'Gato',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -45,13 +45,13 @@ export default [
         localResgate: 'Rua 3, Bairro 3',
         observacao: 'Gata muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/gato1.jpeg',
         idade: 4
     },
     {
         id: 4,
         matricula: 4,
-        nome: 'Bob',
+        nome: 'Cat 8',
         especie: 'Gato',
         pelagem: 'Curta',
         raca: 'Vira-lata',  
@@ -61,13 +61,13 @@ export default [
         localResgate: 'Rua 4, Bairro 4',
         observacao: 'Gato muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',    
+        imagem: 'assets/imagens/gato2.jpeg',    
         idade: 5
     },
     {
         id: 5,
         matricula: 5,
-        nome: 'Luna',
+        nome: 'Dog 3',
         especie: 'Cachorro',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -77,13 +77,13 @@ export default [
         localResgate: 'Rua 5, Bairro 5',
         observacao: 'Cachorra muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/cachorro3.jpeg',
         idade: 6
     },  
     {
         id: 6,  
         matricula: 6,
-        nome: 'Toby',
+        nome: 'Dog 4',
         especie: 'Cachorro',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -93,13 +93,13 @@ export default [
         localResgate: 'Rua 6, Bairro 6',
         observacao: 'Cachorro muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/cachorro4.jpeg',
         idade: 7
     },
     {
         id: 7,
         matricula: 7,
-        nome: 'Mia',
+        nome: 'Cat 3',
         especie: 'Gato',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -109,13 +109,13 @@ export default [
         localResgate: 'Rua 7, Bairro 7',
         observacao: 'Gata muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/gato3.jpeg',
         idade: 8
     },
     {
         id: 8,
         matricula: 8,
-        nome: 'Tom',
+        nome: 'Cat 4',
         especie: 'Gato',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -125,13 +125,13 @@ export default [
         localResgate: 'Rua 8, Bairro 8',
         observacao: 'Gato muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/gato4.jpeg',
         idade: 9
     },
     {
         id: 9,
         matricula: 9,
-        nome: 'Lola',
+        nome: 'Dog 5',
         especie: 'Cachorro',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -141,13 +141,13 @@ export default [
         localResgate: 'Rua 9, Bairro 9',
         observacao: 'Cachorra muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/cachorro5.jpeg',
         idade: 10
     },
     {
         id: 10,
         matricula: 10,
-        nome: 'Thor',
+        nome: 'Dog 6',
         especie: 'Cachorro',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -157,13 +157,13 @@ export default [
         localResgate: 'Rua 10, Bairro 10',
         observacao: 'Cachorro muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/cachorro6.jpeg',
         idade: 11
     },
     {
         id: 11,
         matricula: 11,
-        nome: 'Luna',
+        nome: 'Cat 5',
         especie: 'Gato',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -173,13 +173,13 @@ export default [
         localResgate: 'Rua 11, Bairro 11',
         observacao: 'Gata muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/gato5.jpeg',
         idade: 12
     },
     {
         id: 12,
         matricula: 12,
-        nome: 'Bob',
+        nome: 'Cat 6',
         especie: 'Gato',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -189,13 +189,13 @@ export default [
         localResgate: 'Rua 12, Bairro 12',
         observacao: 'Gato muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/gato6.jpeg',
         idade: 13
     },
     {
         id: 13,
         matricula: 13,
-        nome: 'Rex',
+        nome: 'Dog 7',
         especie: 'Cachorro',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -205,13 +205,13 @@ export default [
         localResgate: 'Rua 1, Bairro 1',
         observacao: 'Cachorro muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/cachorro1.jpeg',
         idade: 14
     },
     {
         id: 14,
         matricula: 14,
-        nome: 'Mel',
+        nome: 'Dog 8',
         especie: 'Cachorro',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -221,13 +221,13 @@ export default [
         localResgate: 'Rua 2, Bairro 2',
         observacao: 'Cachorra muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/cachorro2.jpeg',
         idade: 15
     },
     {
         id: 15,
         matricula: 15,
-        nome: 'Nina',
+        nome: 'Cat 1',
         especie: 'Gato',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -237,13 +237,13 @@ export default [
         localResgate: 'Rua 3, Bairro 3',
         observacao: 'Gata muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/gato1.jpeg',
         idade: 16
     },
     {
         id: 16,
         matricula: 16,
-        nome: 'Bob',
+        nome: 'Cat 2',
         especie: 'Gato',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -253,7 +253,7 @@ export default [
         localResgate: 'Rua 4, Bairro 4',
         observacao: 'Gato muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'https://images.unsplash.com/photo-1560807707-3b5d3b2f1f3c',
+        imagem: 'assets/imagens/gato2.jpeg',
         idade: 17
     }
      

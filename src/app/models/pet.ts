@@ -2,8 +2,8 @@ export interface Pet {
     id: number;
     matricula: number;
     nome: string;
-    especie: string;
-    pelagem: string;
+    especie:  'Cachorro' | 'Gato';
+    pelagem?: string;
     raca: string;
     sexo: string;
     castracao: string;
@@ -11,6 +11,6 @@ export interface Pet {
     localResgate?: string;
     observacao?: string;
     status: string;
-    imagem: string;
+    imagem?: string;
     idade: number;
 }

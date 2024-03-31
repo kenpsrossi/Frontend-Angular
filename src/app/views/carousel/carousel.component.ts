@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-carousel',
@@ -16,9 +17,31 @@ export class CarouselComponent {
   
     // Array de slides
     public slides: Array<{image: string; text? : string}> = [
-      {image: 'assets/imagens/cao-gato.jpeg',text: 'todos os animais'},
-      {image: 'assets/imagens/caes.jpeg', text: 'Cães'},
-      {image: 'assets/imagens/gatos.jpeg' , text: 'Gatos'},
+      {image: 'assets/imagens/cao-gato.jpeg', },
+      {image: 'assets/imagens/caes.jpeg', },
+      {image: 'assets/imagens/gatos.jpeg' ,},
     ];
+      
+     // Títulos das páginas
+  private _pageTitles: Array<{path: RegExp; title: string}> = [
+    {path: /^\/todos/, title: 'Todos os animais disponiveis para adoção'},
+    {path: /^\/dogs/, title: 'Cachorros disponiveis para adoção'},
+    {path: /^\/cats/, title: 'Gatos disponiveis para adoção'},
+  ];
+
+  constructor(private readonly _router: Router) {
+    // Inscreve-se para os eventos do roteador
+    _router.events.subscribe(events => {
+      // Verifica se o evento é do tipo NavigationEnd
+      if (events instanceof NavigationEnd) {
+        // Atualiza o título da página com base na URL
+        this.pageCurrentTitle = this._pageTitles
+        .find(pageTitle => pageTitle.path.test(_router.url))?.title ??
+        'Animais disponiveis para adoção';
+      }
+    });
   }
+
+  }
+  
 

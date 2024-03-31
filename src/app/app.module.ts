@@ -23,6 +23,9 @@ import { AdotarComponent } from './views/adotar/adotar.component';
 import { LoginComponent } from './views/login/login.component';
 import { MenuComponent } from './views/menu/menu.component';
 import { CarouselComponent } from './views/carousel/carousel.component';
+import { AnimaisComponent } from './components/animais/animais.component';
+
+
 
 // Definindo o módulo da aplicação
 @NgModule({
@@ -36,7 +39,8 @@ import { CarouselComponent } from './views/carousel/carousel.component';
     AdotarComponent,
     LoginComponent,
     MenuComponent,
-    CarouselComponent
+    CarouselComponent,
+    AnimaisComponent,
   ],
   imports: [
     // Importando outros módulos que este módulo depende
