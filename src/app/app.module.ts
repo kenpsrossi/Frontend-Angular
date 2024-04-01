@@ -41,6 +41,7 @@ import { AnimaisComponent } from './components/animais/animais.component';
     MenuComponent,
     CarouselComponent,
     AnimaisComponent,
+    
   ],
   imports: [
     // Importando outros módulos que este módulo depende

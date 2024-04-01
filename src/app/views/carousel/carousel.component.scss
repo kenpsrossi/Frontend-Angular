@@ -9,8 +9,10 @@
         /* Estilos para imagens dentro de um slide */
         & img {
             width: 100%;
-            min-height: 400px;
-            max-height: 600px;
+            /* Diminui a altura mínima da imagem para 300px */
+            min-height: 300px;
+            /* Diminui a altura máxima da imagem para 500px */
+            max-height: 500px;
             /* Ajusta a imagem para preencher o contêiner mantendo a proporção */
             object-fit: cover;
             /* Alinha a imagem ao topo e à esquerda */
