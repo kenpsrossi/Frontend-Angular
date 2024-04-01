@@ -1,0 +1,94 @@
+.navbar-rosa-claro {
+    background-color: #FFB6C1;
+}/* A classe .ajudar é o seletor para a div principal da sua página */
+.ajudar {
+  /* Adiciona espaço nas laterais da página */
+  padding: 0 20px;
+
+  /* O h1 é o seletor para o título principal da sua página */
+  h1 {
+    /* A propriedade color define a cor do texto. Neste caso, é um cinza escuro */
+    color: #333;
+    /* A propriedade text-align define o alinhamento do texto. Neste caso, o texto será centralizado */
+    text-align: center;
+    /* A propriedade font-size define o tamanho do texto. Neste caso, o texto será 1.5 vezes o tamanho do texto normal */
+    font-size: 1.5em;
+    /* A propriedade border adiciona uma borda ao redor do título */
+    border: 1px solid #333;
+    /* A propriedade padding adiciona espaço ao redor do texto dentro da borda */
+    padding: 20px;
+    /* A propriedade margin auto centraliza o título horizontalmente */
+    margin: 0 auto;
+    /* A propriedade max-width define a largura máxima do título */
+    max-width: 600px;
+  }
+
+  /* A tag form é usada para criar um formulário HTML para entrada do usuário */
+  form {
+    /* A propriedade display com o valor flex define o contêiner do formulário para exibir seus filhos em linhas ou colunas */
+    display: flex;
+    /* A propriedade flex-direction define a direção principal em que os itens flexíveis são colocados no contêiner flex. Neste caso, eles são colocados em uma coluna */
+    flex-direction: column;
+
+    // Adicione um contêiner para os botões
+    .button-container {
+      display: flex;
+      // Centraliza os botões horizontalmente
+      justify-content: center;
+      // Centraliza os botões verticalmente
+      align-items: center;
+
+      button {
+        // Adiciona espaço nas laterais dos botões
+        padding: 0 20px;
+        // Adiciona bordas ao redor dos botões
+        border: 1px solid #333;
+        // Adiciona espaço entre os botões
+        margin: 0 10px;
+      }
+    }
+
+    /* A tag button é usada para criar botões clicáveis. Neste caso, todos os botões dentro do formulário terão uma margem superior de 10px */
+    button {
+      margin-top: 10px;
+    }
+  }
+  /* O resto do seu CSS vai aqui */
+}
+/* A classe .ajudar é o seletor para a div principal da sua página */
+.ajudar {
+  /* Resto do seu CSS */
+
+  /* A tag form é usada para criar um formulário HTML para entrada do usuário */
+  form {
+    /* Resto do seu CSS */
+
+    // Adicione um contêiner para os botões
+    .button-container {
+      display: flex;
+      // Centraliza os botões horizontalmente
+      justify-content: center;
+      // Centraliza os botões verticalmente
+      align-items: center;
+      // Adiciona espaço acima dos botões
+      margin-top: 20px;
+
+      button {
+        // Adiciona espaço nas laterais dos botões
+        padding: 0 20px;
+        // Adiciona bordas ao redor dos botões
+        border: 1px solid #333;
+        // Adiciona espaço entre os botões
+        margin: 0 10px;
+      }
+    }
+  }
+  /* O resto do seu CSS vai aqui */
+}
+/* A classe .ajudar é o seletor para a div principal da sua página */
+.ajudar {
+  /* A propriedade background define a cor de fundo da página. Neste caso, é um gradiente linear de rosa para amarelo */
+  background: rgb(231, 190, 218);
+
+  /* Resto do seu CSS */
+}
