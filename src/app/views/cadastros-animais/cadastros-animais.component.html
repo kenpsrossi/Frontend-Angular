@@ -1,1 +1,147 @@
-<p>cadastros-animais works!</p>
+<nav class="navbar navbar-expand-lg navbar-rosa-claro" data-bs-theme="dark">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
+      <!-- Botão Home -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="btn btn-info" href="#">Home
+            <span class="visually-hidden">(current)</span>              
+          </a>
+        </li>
+      </ul>
+
+      <!-- Título centralizado -->
+      <h2 class="fs-3" style="color: #a7087a; font-weight: bold; font-style: italic;">Cadastros-animais</h2>
+
+      <!-- Espaço vazio para manter o título no centro -->
+      <ul class="navbar-nav"></ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Formulário de cadastro de animais -->
+<form class="formulario" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <!-- Seção de ID, Matrícula, Espécie e Raça -->
+    <div class="row">
+      <!-- Campo de ID -->
+      <div class="col col-md-3">
+        <div>
+          <label for="id" class="form-label mt-2">Id</label>
+          <input [(ngModel)]="animal.id" type="text" class="form-control" id="id" name="id" placeholder="ID"> 
+        </div>
+      </div>
+      <!-- Campo de Matrícula -->
+      <div class="col-md-3">
+        <div>
+          <label for="matricula" class="form-label mt-2">Matrícula</label>
+          <input [(ngModel)]="animal.matricula" type="text" class="form-control" id="matricula" name="matricula" placeholder="Matrícula"> 
+        </div>
+      </div>
+      <!-- Campo de Espécie -->
+      <div class="col-md-3">
+        <div>
+          <label for="especie" class="form-label mt-2">Espécie</label>
+          <input [(ngModel)]="animal.especie" type="text" class="form-control" id="especie" name="especie" placeholder="Espécie"> 
+        </div>
+      </div>
+      <!-- Campo de Raça -->
+      <div class="col-md-3">
+        <div>
+          <label for="raca" class="form-label mt-2">Raça</label>
+          <input [(ngModel)]="animal.raca" type="text" class="form-control" id="raca" name="raca" placeholder="Raça"> 
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção de Nome e Pelagem -->
+    <div class="row">
+      <!-- Campo de Nome -->
+      <div class="col-md-8">
+        <div>
+          <label for="nome" class="form-label mt-4">Nome</label>
+          <input [(ngModel)]="animal.nome" type="text" class="form-control" id="nome" name="nome" placeholder="Nome"> 
+        </div>   
+      </div>
+      <!-- Campo de Pelagem -->
+      <div class="col-md-4">
+        <div>
+          <label for="pelagem" class="form-label mt-4">Pelagem</label>
+          <input [(ngModel)]="animal.pelagem" type="text" class="form-control" id="pelagem" name="pelagem" placeholder="Pelagem"> 
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção de Sexo, Idade, Status, Castração e Local de Resgate -->
+    <div class="row">
+      <!-- Campo de Sexo -->
+      <div class="col-md-2">
+        <div>
+          <label for="sexo" class="form-label mt-4">Sexo</label>
+          <input [(ngModel)]="animal.sexo" type="text" class="form-control" id="sexo" name="sexo" placeholder="Sexo"> 
+        </div>
+      </div>
+      <!-- Campo de Idade -->
+      <div class="col-md-2">
+        <div>
+          <label for="idade" class="form-label mt-4">Idade</label>
+          <input [(ngModel)]="animal.idade" type="text" class="form-control" id="idade" name="idade" placeholder="Idade"> 
+        </div>
+      </div>
+      <!-- Campo de Status -->
+      <div class="col-md-3">
+        <div>
+          <label for="status" class="form-label mt-4">Status</label>
+          <input [(ngModel)]="animal.status" type="text" class="form-control" id="status" name="status" placeholder="Status"> 
+        </div>
+      </div>
+      <!-- Campo de Castração -->
+      <div class="col-md-2">
+        <div>
+          <label for="castracao" class="form-label mt-4">Castração</label>
+          <input [(ngModel)]="animal.castracao" type="text" class="form-control" id="castracao" name="castracao" placeholder="Castração"> 
+        </div>
+      </div>
+      <!-- Campo de Local de Resgate -->
+      <div class="col-md-3">
+        <div>
+          <label for="localResgate" class="form-label mt-4">Local-Resgate</label>
+          <input [(ngModel)]="animal.localResgate" type="text" class="form-control" id="localResgate" name="localResgate" placeholder="Local-Resgate"> 
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção de Vacinação e Imagem -->
+    <div class="row">
+      <!-- Campo de Vacinação -->
+      <div class="col-md-4">
+        <div>
+          <label for="vacinacao" class="form-label mt-4">Vacinação</label>
+          <input [(ngModel)]="animal.vacinacao" type="text" class="form-control" id="vacinacao" name="vacinacao" placeholder="Vacinação"> 
+        </div>
+      </div>
+      <!-- Campo de Imagem -->
+      <div class="col-md-8">
+        <div>
+          <label for="formFile" class="form-label mt-4">Imagem do pet no formato $$$ x $$$</label>
+          <input [(ngModel)]="animal.imagem" class="form-control" type="file" id="formFile">
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção de História do Pet -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div>
+          <label for="exampleTextarea" placeholder="Vacinação" class="form-label mt-4">Breve história do pet :</label>
+          <textarea class="form-control" id="exampleTextarea"  rows="4"> Escreva aqui sobre o pet...</textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botão de submissão -->
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-success mt-4 col-md-4">Cadastrar</button>
+    </div>  
+  </fieldset>
+</form>

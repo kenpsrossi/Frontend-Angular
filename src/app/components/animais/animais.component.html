@@ -8,8 +8,9 @@
             <img src="{{  animal.imagem }}" alt="Foto de {{ animal.nome }}" class="rounded img-fluid">
             <!-- Div para o botão 'Adotar' que é exibido quando o mouse passa sobre a imagem -->
             <div class="animal-wrapper p-2 ">
-                <button class="btn btn-success">Adotar</button>
+                <button class="btn btn-success mx-2"routerLink="/cadastros-adotantes"  routerLinkActive="active">Adotar</button>
             </div>
+            
         </div>
         <!-- Exibe o nome do animal em negrito -->
         <strong class="fs-4">{{ animal.nome }}</strong>

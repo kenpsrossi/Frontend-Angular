@@ -9,6 +9,8 @@ import { Pet } from 'src/app/models/pet';
   styleUrls: ['./animais.component.scss']
 })
 export class AnimaisComponent {
+
+  
   // Inicializa a lista de animais com os dados dos pets
   public animais: Array<Pet> = pets_data;
 

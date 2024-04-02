@@ -4,6 +4,8 @@ import { LoginComponent } from './views/login/login.component';
 import { MenuComponent } from './views/menu/menu.component';
 import { AdotarComponent } from './views/adotar/adotar.component';
 import { AjudarComponent } from './views/ajudar/ajudar.component';
+import { CadastrosAnimaisComponent } from './views/cadastros-animais/cadastros-animais.component';
+import { CadastrosAdotantesComponent } from './views/cadastros-adotantes/cadastros-adotantes.component';
 
 const routes: Routes = [
   {
@@ -29,6 +31,12 @@ const routes: Routes = [
   },
   {
     path: 'ajudar', component: AjudarComponent
+  },
+  {
+    path: 'cadastros-animais', component: CadastrosAnimaisComponent
+  },
+  {
+    path: 'cadastros-adotantes', component: CadastrosAdotantesComponent
   },
 ];
 

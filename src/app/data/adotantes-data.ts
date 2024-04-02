@@ -8,7 +8,13 @@ export default [
         email: 'adotante1@Email.com',
         cpf: '111.111.111-11',
         estadoCivil: 'Casado',
-        endereco: 'Rua 1'
+        cep: '11111-111',
+        logradouro: 'Rua 1',
+        numero: '1',
+        bairro: 'Bairro 1',
+        cidade: 'Cidade 1',
+        estado: 'Estado 1',
+        complemento: 'Complemento 1'
     },
     {
         id: 2,
@@ -18,7 +24,13 @@ export default [
         email: 'adotante2@Email.com',
         cpf: '222.222.222-22',
         estadoCivil: 'Casado',
-        endereco: 'Rua 2'
+        cep: '22222-222',
+        logradouro: 'Rua 2',
+        numero: '2',
+        bairro: 'Bairro 2',
+        cidade: 'Cidade 2',
+        estado: 'Estado 2',
+        complemento: 'Complemento 2'
     }
 
 ] as Array<Adotante>;

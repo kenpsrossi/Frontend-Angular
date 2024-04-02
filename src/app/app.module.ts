@@ -24,6 +24,7 @@ import { LoginComponent } from './views/login/login.component';
 import { MenuComponent } from './views/menu/menu.component';
 import { CarouselComponent } from './views/carousel/carousel.component';
 import { AnimaisComponent } from './components/animais/animais.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -48,7 +49,8 @@ import { AnimaisComponent } from './components/animais/animais.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   providers: [
     // Aqui você pode listar os serviços que serão injetados
