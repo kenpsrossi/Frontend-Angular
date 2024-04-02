@@ -1,94 +1,81 @@
+$golden: gold;
+$black: black;
+$main-color: #a7087a;
+
 .navbar-rosa-claro {
     background-color: #FFB6C1;
-}/* A classe .ajudar é o seletor para a div principal da sua página */
-.ajudar {
-  /* Adiciona espaço nas laterais da página */
-  padding: 0 20px;
+}
 
-  /* O h1 é o seletor para o título principal da sua página */
+.aligned-text {
+  text-align: justify;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.golden-button {
+  background-color: $golden;
+  color: $black;
+  margin-left: 100px; // Adiciona uma margem à esquerda do botão
+}
+
+ul, li {
+  border: none; // Remove as linhas
+  padding: 20px; // Adiciona espaço dentro da borda
+  margin-bottom: 20px; // Adiciona espaço abaixo de cada item da lista
+}
+
+.title {
+  color: $main-color;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.subtitle {
+  text-align: center; // Centraliza o texto
+}
+
+.ajudar {
+  padding: 35px 35px; 
+  background: #a8e3ef;
+
   h1 {
-    /* A propriedade color define a cor do texto. Neste caso, é um cinza escuro */
     color: #333;
-    /* A propriedade text-align define o alinhamento do texto. Neste caso, o texto será centralizado */
     text-align: center;
-    /* A propriedade font-size define o tamanho do texto. Neste caso, o texto será 1.5 vezes o tamanho do texto normal */
-    font-size: 1.5em;
-    /* A propriedade border adiciona uma borda ao redor do título */
+    font-size: 5em;
     border: 1px solid #333;
-    /* A propriedade padding adiciona espaço ao redor do texto dentro da borda */
-    padding: 20px;
-    /* A propriedade margin auto centraliza o título horizontalmente */
+    padding: 10px;
     margin: 0 auto;
-    /* A propriedade max-width define a largura máxima do título */
-    max-width: 600px;
+    max-width: 300px;
   }
 
-  /* A tag form é usada para criar um formulário HTML para entrada do usuário */
   form {
-    /* A propriedade display com o valor flex define o contêiner do formulário para exibir seus filhos em linhas ou colunas */
     display: flex;
-    /* A propriedade flex-direction define a direção principal em que os itens flexíveis são colocados no contêiner flex. Neste caso, eles são colocados em uma coluna */
     flex-direction: column;
 
-    // Adicione um contêiner para os botões
     .button-container {
       display: flex;
-      // Centraliza os botões horizontalmente
       justify-content: center;
-      // Centraliza os botões verticalmente
       align-items: center;
-
-      button {
-        // Adiciona espaço nas laterais dos botões
-        padding: 0 20px;
-        // Adiciona bordas ao redor dos botões
-        border: 1px solid #333;
-        // Adiciona espaço entre os botões
-        margin: 0 10px;
-      }
-    }
-
-    /* A tag button é usada para criar botões clicáveis. Neste caso, todos os botões dentro do formulário terão uma margem superior de 10px */
-    button {
       margin-top: 10px;
-    }
-  }
-  /* O resto do seu CSS vai aqui */
-}
-/* A classe .ajudar é o seletor para a div principal da sua página */
-.ajudar {
-  /* Resto do seu CSS */
-
-  /* A tag form é usada para criar um formulário HTML para entrada do usuário */
-  form {
-    /* Resto do seu CSS */
-
-    // Adicione um contêiner para os botões
-    .button-container {
-      display: flex;
-      // Centraliza os botões horizontalmente
-      justify-content: center;
-      // Centraliza os botões verticalmente
-      align-items: center;
-      // Adiciona espaço acima dos botões
-      margin-top: 20px;
 
       button {
-        // Adiciona espaço nas laterais dos botões
         padding: 0 20px;
-        // Adiciona bordas ao redor dos botões
         border: 1px solid #333;
-        // Adiciona espaço entre os botões
-        margin: 0 10px;
+        margin: 7px 5px;
       }
     }
-  }
-  /* O resto do seu CSS vai aqui */
-}
-/* A classe .ajudar é o seletor para a div principal da sua página */
-.ajudar {
-  /* A propriedade background define a cor de fundo da página. Neste caso, é um gradiente linear de rosa para amarelo */
-  background: rgb(231, 190, 218);
 
-  /* Resto do seu CSS */
+    button {
+      margin-top: 20px;
+    }
+  }
+}
+
+body {
+  font-weight: bold;
+  font-size: 20px; // Diminui o tamanho da fonte para 20 pixels
 }

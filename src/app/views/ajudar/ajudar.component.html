@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Seu Título Aqui</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <style>
     .aligned-text {
       text-align: justify;
@@ -9,20 +10,25 @@
     .center {
       display: flex;
       justify-content: center;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
     .golden-button {
-      background-color: gold;
-      color: black;
-      margin-left: 20px; /* Adiciona uma margem à esquerda do botão */
+      background-color: #a7087a; /* Altera a cor do botão para a cor do título */
+      color: white; /* Altera a cor do texto do botão para branco */
+      padding: 20px 40px; /* Aumenta o tamanho do botão */
+      font-size: 16px; /* Aumenta o tamanho da fonte do botão */
+      margin-right: 40px; /* Adiciona uma margem à direita do botão */
+      border-radius: 50px; /* Adiciona bordas arredondadas ao botão */
     }
     ul {
-      border: 1px solid black; /* Adiciona uma borda ao redor da lista */
-      padding: 10px; /* Adiciona espaço dentro da borda */
+      padding: 40px; /* Adiciona espaço dentro da borda */
     }
     li {
-      border-bottom: 1px solid black; /* Adiciona uma linha abaixo de cada item da lista */
-      margin-bottom: 10px; /* Adiciona espaço abaixo de cada item da lista */
+      margin-bottom: 40px; /* Adiciona espaço abaixo de cada item da lista */
+    }
+    body, html {
+      margin: 20;
+      padding: 20;
     }
   </style>
 </head>
@@ -41,7 +47,10 @@
 
         <!-- Título centralizado -->
         <h3 class="fs-3" style="color: #a7087a; font-weight: bold; font-style: italic;">Nosso projeto é financiado 100% por nós, ou seja, sua ajuda é bem-vinda.</h3>
-        
+
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100;"></div>
+        </div>
         <!-- Espaço vazio para manter o título no centro -->
         <ul class="navbar-nav"></ul>
       </div>
@@ -49,30 +58,55 @@
   </nav>
 
   <div class="ajudar">
-    <p class="aligned-text">
-      
-    </p>
     <ul>
-      <li>Doações:</li>
-      <p class="aligned-text">Você pode contribuir de diversas formas para ajudar nossos animais resgatados. Aceitamos doações de ração, cobertores, medicamentos, materiais de limpeza e de procedimento. Alternativamente, doações em dinheiro são igualmente valiosas. Sua generosidade faz toda a diferença na vida dos animais necessitados que cuidamos. Agradecemos profundamente por seu apoio.</p>
-      <li>Apadrinhamento:</li>
-      <p class="aligned-text">Apadrinhamento significa tornar-se padrinho ou madrinha de um ou de vários animais abrigados sem precisar levá-lo para casa, o bichinho continuará morando em nosso abrigo. 
-        Esta é uma ótima opção para quem gostaria de ajudar o nosso Projeto, mas não tem condições de adotar.
+      <div class="alert alert-dismissible alert-info text-center"> <!-- Adicionado text-center -->
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Quem Somos:</strong><a href="#" class="alert-link"></a>
+      </div>
+      <br> <!-- Adiciona uma quebra de linha -->
+      <p class="aligned-text">
+        O Projeto Adotar é uma iniciativa dedicada ao resgate, cuidado e busca por lares amorosos para animais abandonados e maltratados. Fundado com o objetivo de promover a adoção responsável e o bem-estar animal.
+      </p>
+      <p class="aligned-text">
+        "Nosso Compromisso: Resgatar animais em situações de abandono e maus-tratos. Oferecer abrigo, cuidado e proteção aos animais resgatados. Realizar feiras de adoção para encontrar lares permanentes para nossos animais. Fornecer suporte contínuo aos adotantes para garantir a adaptação e o bem-estar dos animais. Nossa Filosofia: Acreditamos que cada animal merece uma segunda chance e um lar amoroso. Trabalhamos arduamente para garantir que todos os animais sob nossa proteção sejam tratados com dignidade e recebam o cuidado e o carinho que merecem."
+      </p>
 
-        Não é obrigatória a escolha de um animal, você poderá definir o apadrinhamento como genérico, ou seja, para todos. Você também pode apadrinhar quantos animais desejar.
-        
-       </p>
+      <div class="row">
+        <div class="col text-center"> <!-- Adicionado text-center -->
+          <div class="alert alert-dismissible alert-success">
+            <button type="button" class="btn-close" data-bs-dismiss="Doações"></button>
+            <strong>Doações:</strong> <a href="#" class="alert-link"></a>.
+          </div>
+          <p class="aligned-text">Você pode contribuir de diversas formas para ajudar nossos animais resgatados. Aceitamos doações de ração, cobertores, medicamentos, materiais de limpeza e de procedimento. Alternativamente, doações em dinheiro são igualmente valiosas. Sua generosidade faz toda a diferença na vida dos animais necessitados que cuidamos. Agradecemos profundamente por seu apoio.</p>
+        </div>
+        <div class="col text-center"> <!-- Adicionado text-center -->
+          <div class="alert alert-dismissible alert-light">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Pix:</strong><a href="#" class="alert-link"></a>
+          </div>
+          <p class="aligned-text">Alternativamente, doações via pix são igualmente valiosas. Sua generosidade faz toda a diferença na vida dos animais necessitados que cuidamos. Agradecemos profundamente por seu apoio.</p>
+        </div>
+        <div class="col text-center"> <!-- Adicionado text-center -->
+          <div class="alert alert-dismissible alert-danger">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Apadrinhamento:</strong> <a href="#" class="alert-link"></a> 
+          </div>
+          <p class="aligned-text">Apadrinhamento significa tornar-se padrinho ou madrinha de um ou de vários animais abrigados sem precisar levá-lo para casa, o bichinho continuará morando em nosso abrigo. 
+            Esta é uma ótima opção para quem gostaria de ajudar o nosso Projeto, mas não tem condições de adotar.
+
+            Não é obrigatória a escolha de um animal, você poderá definir o apadrinhamento como genérico, ou seja, para todos. Você também pode apadrinhar quantos animais desejar.
+          </p>
+        </div>
+      </div>
+      <div class="text-right"> <!-- Adicionado text-right -->
+        <button type="button" class="golden-button">Saiba mais</button>
+      </div>
     </ul>
-
-    <div class="center">
-      <button type="button" class="golden-button">Saiba mais</button>
-    </div>
     <br>
-
-    <ul>
-      <li>Pix:</li>
-      <p class="aligned-text">Alternativamente, doações via pix são igualmente valiosas. Sua generosidade faz toda a diferença na vida dos animais necessitados que cuidamos. Agradecemos profundamente por seu apoio.</p>
-    </ul>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
