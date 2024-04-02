@@ -1,20 +1,22 @@
-<!-- Lista não ordenada com a classe 'animal-list' e 'list-unstyled' para remover a estilização padrão da lista -->
+<!-- 'ul' é uma lista não ordenada. As classes 'animal-list' e 'list-unstyled' são usadas para estilização -->
 <ul class="animal-list list-unstyled">
-    <!-- Para cada 'animal' no array 'animais', cria um item de lista -->
+    <!-- 'ngFor' é uma diretiva do Angular que replica o elemento HTML para cada item em uma coleção -->
+    <!-- Neste caso, um 'li' é criado para cada 'animal' na coleção 'animais' -->
     <li *ngFor="let animal of animais" class="d-flex flex-column">
-        <!-- Div para a imagem do animal -->
+        <!-- 'div' para a imagem do animal -->
         <div class="animal-image">
-            <!-- Imagem do animal. O caminho para a imagem e o texto alternativo são vinculados aos dados do animal -->
+            <!-- A imagem do animal é carregada dinamicamente usando a propriedade 'imagem' do objeto 'animal' -->
+            <!-- O texto alternativo da imagem também é carregado dinamicamente usando a propriedade 'nome' do objeto 'animal' -->
             <img src="{{  animal.imagem }}" alt="Foto de {{ animal.nome }}" class="rounded img-fluid">
-            <!-- Div para o botão 'Adotar' que é exibido quando o mouse passa sobre a imagem -->
+            <!-- 'div' para o botão 'Adotar' que é exibido quando o mouse passa sobre a imagem -->
             <div class="animal-wrapper p-2 ">
+                <!-- O botão 'Adotar' navega para a rota '/cadastros-adotantes' quando clicado -->
                 <button class="btn btn-success mx-2"routerLink="/cadastros-adotantes"  routerLinkActive="active">Adotar</button>
             </div>
-            
         </div>
-        <!-- Exibe o nome do animal em negrito -->
+        <!-- O nome do animal é exibido em negrito -->
         <strong class="fs-4">{{ animal.nome }}</strong>
-        <!-- Exibe várias propriedades do animal -->
+        <!-- Várias propriedades do animal são exibidas -->
         <span>pelagem: {{ animal.pelagem }}</span>
         <span>Espécie: {{ animal.especie }}</span>
         <span>Gênero: {{ animal.sexo }}</span>
@@ -23,5 +25,6 @@
     </li>
 </ul>
 
-<!-- Se não houver animais no array 'animais', exibe uma mensagem -->
+<!-- 'ngIf' é uma diretiva do Angular que condicionalmente inclui ou exclui um bloco de HTML com base na expressão fornecida -->
+<!-- Neste caso, a mensagem é exibida se a coleção 'animais' estiver vazia -->
 <h1 *ngIf="!animais.length" class="fs-3 display-3 text-center">Não há nenhum animalzinho</h1>

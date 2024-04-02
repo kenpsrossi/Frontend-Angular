@@ -4,11 +4,11 @@ import pets_data from 'src/app/data/pets-data';
 import { Pet } from 'src/app/models/pet';
 
 @Component({
-  selector: 'app-animais',
-  templateUrl: './animais.component.html',
-  styleUrls: ['./animais.component.scss']
+  selector: 'app-lista-animais',
+  templateUrl: './lista-animais.component.html',
+  styleUrls: ['./lista-animais.component.scss']
 })
-export class AnimaisComponent {
+export class ListaAnimaisComponent {
 
   // Inicializa a lista de animais com os dados dos pets
   public animais: Array<Pet> = pets_data;

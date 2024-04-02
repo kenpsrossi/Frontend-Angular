@@ -1,17 +1,17 @@
-// Importa o componente do Angular
+// Importando o componente do Angular
 import { Component } from '@angular/core';
 
-// Decorador que marca uma classe como um componente Angular e fornece metadados de configuração
+// Decorador que define que a classe a seguir é um componente do Angular
 @Component({
-  // O seletor CSS que identifica este componente no template
+  // Seletor CSS que será usado para inserir este componente em um template HTML
   selector: 'app-cadastros-animais',
-  // O local do template do componente
+  // Caminho para o arquivo HTML que define a visualização deste componente
   templateUrl: './cadastros-animais.component.html',
-  // Os estilos específicos do componente
+  // Caminho para o arquivo CSS que define os estilos aplicados a este componente
   styleUrls: ['./cadastros-animais.component.scss']
 })
 
-// Classe do componente
+// Classe que define o comportamento do componente CadastrosAnimais
 export class CadastrosAnimaisComponent {
   // Objeto que representa o animal a ser cadastrado
   // Cada propriedade do objeto corresponde a um campo do formulário
@@ -37,5 +37,4 @@ export class CadastrosAnimaisComponent {
   onSubmit() {
     console.log(this.animal);
   }
-  
 }

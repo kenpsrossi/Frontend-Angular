@@ -1,3 +1,4 @@
+/* Estilo para as imagens do carrossel, definindo que elas devem ocupar toda a largura do contêiner */
 .carousel-image {
     display: block;
     width: 100%;
@@ -5,19 +6,20 @@
 
 /* Estilos para o carrossel da aplicação */
 .app-carousel {
+    /* Estilos para cada slide do carrossel */
     slide {
         /* Estilos para imagens dentro de um slide */
         & img {
+            /* Define a largura da imagem para ocupar 100% da largura do contêiner */
             width: 100%;
-            /* Diminui a altura mínima da imagem para 300px */
+            /* Define a altura mínima da imagem para 300px */
             min-height: 300px;
-            /* Diminui a altura máxima da imagem para 500px */
+            /* Define a altura máxima da imagem para 500px */
             max-height: 500px;
             /* Ajusta a imagem para preencher o contêiner mantendo a proporção */
             object-fit: cover;
-            /* Alinha a imagem ao topo e à esquerda */
+            /* Alinha a imagem ao topo e à esquerda do contêiner */
             object-position: top left;
         }
     }
 }
-

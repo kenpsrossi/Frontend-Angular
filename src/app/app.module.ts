@@ -1,20 +1,20 @@
-// Importando os módulos necessários do Angular
+// Importa os módulos necessários do Angular
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-// Importando o módulo de roteamento da aplicação
+// Importa o módulo de roteamento da aplicação
 import { AppRoutingModule } from './app-routing.module';
 
-// Importando o componente principal da aplicação
+// Importa o componente principal da aplicação
 import { AppComponent } from './app.component';
 
-// Importando o módulo para animações do navegador
+// Importa o módulo para animações do navegador
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// Importando o módulo compartilhado, que provavelmente contém componentes, serviços e outros que são compartilhados em toda a aplicação
+// Importa o módulo compartilhado, que contém componentes, serviços e outros que são compartilhados em toda a aplicação
 import { SharedModule } from './shared/shared.module';
 
-// Importando os componentes de cada uma das views da aplicação
+// Importa os componentes de cada uma das views da aplicação
 import { CadastrosAnimaisComponent } from './views/cadastros-animais/cadastros-animais.component';
 import { CadastrosAdotantesComponent } from './views/cadastros-adotantes/cadastros-adotantes.component';
 import { ResgatesComponent } from './views/resgates/resgates.component';
@@ -25,13 +25,12 @@ import { MenuComponent } from './views/menu/menu.component';
 import { CarouselComponent } from './views/carousel/carousel.component';
 import { AnimaisComponent } from './components/animais/animais.component';
 import { FormsModule } from '@angular/forms';
+import { ListaAnimaisComponent } from './components/lista-animais/lista-animais.component';
 
-
-
-// Definindo o módulo da aplicação
+// Define o módulo da aplicação
 @NgModule({
+  // Declara os componentes que serão usados neste módulo
   declarations: [
-    // Declarando os componentes que serão usados neste módulo
     AppComponent,
     CadastrosAnimaisComponent,
     CadastrosAdotantesComponent,
@@ -42,23 +41,20 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     CarouselComponent,
     AnimaisComponent,
-    
+    ListaAnimaisComponent,
   ],
+  // Importa outros módulos que este módulo depende
   imports: [
-    // Importando outros módulos que este módulo depende
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
     FormsModule
   ],
-  providers: [
-    // Aqui você pode listar os serviços que serão injetados
-  ],
-  bootstrap: [
-    // O componente que será inicializado quando a aplicação for iniciada
-    AppComponent
-  ]
+  // Lista os serviços que serão injetados
+  providers: [],
+  // O componente que será inicializado quando a aplicação for iniciada
+  bootstrap: [AppComponent]
 })
-// Exportando a classe do módulo
+// Exporta a classe do módulo
 export class AppModule { }

@@ -1,131 +1,136 @@
+<!-- Barra de navegação no topo da página -->
 <nav class="navbar navbar-expand-lg navbar-rosa-claro" data-bs-theme="dark">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
-        <!-- Botão Home -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="btn btn-info" href="#">Home
-              <span class="visually-hidden">(current)</span>              
-            </a>
-          </li>
-        </ul>
-  
-        <!-- Título centralizado -->
-        <h2 class="fs-3" style="color: #a7087a; font-weight: bold; font-style: italic;">Cadastros-adotantes</h2>
-  
-        <!-- Espaço vazio para manter o título no centro -->
-        <ul class="navbar-nav"></ul>
-      </div>
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
+      <!-- Botão Home na barra de navegação -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="btn btn-info" href="#" style="margin-left: 50px;">Home
+            <span class="visually-hidden">(current)</span>
+        </a>             
+        </li>
+      </ul>
+
+      <!-- Título da página, centralizado na barra de navegação -->
+      <h2 class="fs-3" style="color: #a7087a; font-weight: bold; font-style: italic;">Cadastros-adotantes</h2>
+
+      <!-- Espaço vazio para manter o título no centro -->
+      <ul class="navbar-nav"></ul>
     </div>
-  </nav>
- 
-   <!-- Formulário de cadastro de animais -->
+  </div>
+</nav>
+
+<!-- Formulário de cadastro de adotantes -->
 <form class="formulario" (ngSubmit)="onSubmit()">
-  <fieldset>
-    <!-- Seção de informações pessoais -->
-    <div class="row">
-      <!-- Campo para inserir o ID do adotante -->
-      <div class="col col-md-3">
-        <label for="id" class="form-label mt-2">Id</label>
-        <input [(ngModel)]="adotante.id" type="text" class="form-control" id="id" name="id" placeholder="ID"> 
-      </div>
-      
-      <!-- Campo para inserir a matrícula do adotante -->
-      <div class="col-md-3">
-        <label for="matricula" class="form-label mt-2">Matrícula</label>
-        <input [(ngModel)]="adotante.matricula" type="text" class="form-control" id="matricula" name="matricula" placeholder="Matrícula"> 
-      </div>
-
-      <!-- Campo para inserir o email do adotante -->
-      <div class="col-md-6">
-        <label for="email" class="form-label mt-2">Email</label>
-        <input [(ngModel)]="adotante.email" type="text" class="form-control" id="email" name="email" placeholder="email@example.com"> 
-      </div>
-    </div>
-
-    <!-- Seção de informações de contato -->
-    <div class="row">
-      <!-- Campo para inserir o nome do adotante -->
-      <div class="col-md-9">
-        <label for="nome" class="form-label mt-4">Nome</label>
-        <input [(ngModel)]="adotante.nome" type="text" class="form-control" id="nome" name="nome" placeholder="Nome completo"> 
-      </div>
-
-      <!-- Campo para inserir o CPF do adotante -->
-      <div class="col-md-3">
-        <label for="cpf" class="form-label mt-4">CPF</label>
-        <input [(ngModel)]="adotante.cpf" type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF"> 
-      </div>
-    </div>
-
-    <!-- Seção de informações de endereço -->
-    <div class="row">
-      <!-- Campo para inserir o estado civil do adotante -->
-      <div class="col-md-4">
-        <label for="estadoCivil" class="form-label mt-4">Estado civil</label>
-        <input [(ngModel)]="adotante.estadoCivil" type="text" class="form-control" id="estadoCivil" name="estadoCivil" placeholder="Estado civil"> 
-      </div>
-
-      <!-- Campo para inserir o telefone do adotante -->
-      <div class="col-md-4">
-        <label for="telefone" class="form-label mt-4">Telefone</label>
-        <input [(ngModel)]="adotante.telefone" type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone"> 
-      </div>
-
-      <!-- Campo para inserir o CEP do adotante -->
-      <div class="col-md-4">
-        <label for="cep" class="form-label mt-4">CEP</label>
-        <input [(ngModel)]="adotante.cep" type="text" class="form-control" id="cep" name="cep" placeholder="CEP"> 
-      </div>
-    </div>
-
-    <!-- Seção de informações de endereço -->
-    <div class="row">
-      <!-- Campo para inserir o logradouro do adotante -->
-      <div class="col-md-7">
-        <label for="logradouro" class="form-label mt-4">Logradouro</label>
-        <input [(ngModel)]="adotante.logradouro" type="text" class="form-control" id="logradouro" name="logradouro" placeholder="Avenida, Rua..."> 
-      </div>
-
-      <!-- Campo para inserir o bairro do adotante -->
-      <div class="col-md-4">
-        <label for="bairro" class="form-label mt-4">Bairro</label>
-        <input [(ngModel)]="adotante.bairro" type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro"> 
-      </div>
-
-      <!-- Campo para inserir o número da residência do adotante -->
-      <div class="col-md-1">
-        <label for="numero" class="form-label mt-4">Número</label>
-        <input [(ngModel)]="adotante.numero" type="text" class="form-control" id="numero" name="numero" placeholder="Número"> 
-      </div>
-    </div>
-
-    <!-- Seção de informações de endereço -->
-    <div class="row">
-      <!-- Campo para inserir a cidade do adotante -->
-      <div class="col-md-5">
-        <label for="cidade" class="form-label mt-4">Cidade</label>
-        <input [(ngModel)]="adotante.cidade" type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade"> 
-      </div>
-
-      <!-- Campo para inserir o estado do adotante -->
-      <div class="col-md-1">
-        <label for="estado" class="form-label mt-4">Estado</label>
-        <input [(ngModel)]="adotante.estado" type="text" class="form-control" id="estado" name="estado" placeholder="Estado"> 
-      </div>
-
-      <!-- Campo para inserir o complemento do endereço do adotante -->
-      <div class="col-md-6">
-        <label for="complemento" class="form-label mt-4">Complemento</label>
-        <input [(ngModel)]="adotante.complemento" type="text" class="form-control" id="complemento" name="complemento" placeholder="Complement"> 
-      </div>
+<fieldset>
+  <!-- Seção de informações pessoais do adotante -->
+  <div class="row">
+    <!-- Campo para inserir o ID do adotante -->
+    <div class="col col-md-3">
+      <label for="id" class="form-label mt-2">Id</label>
+      <input [(ngModel)]="adotante.id" type="text" class="form-control" id="id" name="id" placeholder="ID"> 
     </div>
     
-    <!-- Botão de submissão do formulário -->
-    <div class="d-flex justify-content-center">
-      <button type="submit" class="btn btn-success mt-4 col-md-4">Cadastrar</button>
+    <!-- Campo para inserir a matrícula do adotante -->
+    <div class="col-md-3">
+      <label for="matricula" class="form-label mt-2">Matrícula</label>
+      <input [(ngModel)]="adotante.matricula" type="text" class="form-control" id="matricula" name="matricula" placeholder="Matrícula"> 
     </div>
-  </fieldset>
+
+    <!-- Campo para inserir o email do adotante -->
+    <div class="col-md-6">
+      <label for="email" class="form-label mt-2">Email</label>
+      <input [(ngModel)]="adotante.email" type="text" class="form-control" id="email" name="email" placeholder="email@example.com"> 
+    </div>
+  </div>
+
+  <!-- Seção de informações de contato do adotante -->
+  <div class="row">
+    <!-- Campo para inserir o nome do adotante -->
+    <div class="col-md-9">
+      <label for="nome" class="form-label mt-4">Nome</label>
+      <input [(ngModel)]="adotante.nome" type="text" class="form-control" id="nome" name="nome" placeholder="Nome completo"> 
+    </div>
+
+    <!-- Campo para inserir o CPF do adotante -->
+    <div class="col-md-3">
+      <label for="cpf" class="form-label mt-4">CPF</label>
+      <input [(ngModel)]="adotante.cpf" type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF"> 
+    </div>
+  </div>
+   <!-- Seção de informações de endereço do adotante -->
+<div class="row">
+  <!-- Campo para inserir o estado civil do adotante -->
+  <div class="col-md-4">
+    <label for="estadoCivil" class="form-label mt-4">Estado civil</label>
+    <input [(ngModel)]="adotante.estadoCivil" type="text" class="form-control" id="estadoCivil" name="estadoCivil" placeholder="Estado civil"> 
+  </div>
+
+  <!-- Campo para inserir o telefone do adotante -->
+  <div class="col-md-4">
+    <label for="telefone" class="form-label mt-4">Telefone</label>
+    <input [(ngModel)]="adotante.telefone" type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone"> 
+  </div>
+
+  <!-- Campo para inserir o CEP do adotante -->
+  <div class="col-md-4">
+    <label for="cep" class="form-label mt-4">CEP</label>
+    <input [(ngModel)]="adotante.cep" type="text" class="form-control" id="cep" name="cep" placeholder="CEP"> 
+  </div>
+</div>
+
+<!-- Seção de informações de endereço do adotante -->
+<div class="row">
+  <!-- Campo para inserir o logradouro do adotante -->
+  <div class="col-md-7">
+    <label for="logradouro" class="form-label mt-4">Logradouro</label>
+    <input [(ngModel)]="adotante.logradouro" type="text" class="form-control" id="logradouro" name="logradouro" placeholder="Avenida, Rua..."> 
+  </div>
+
+  <!-- Campo para inserir o bairro do adotante -->
+  <div class="col-md-4">
+    <label for="bairro" class="form-label mt-4">Bairro</label>
+    <input [(ngModel)]="adotante.bairro" type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro"> 
+  </div>
+
+  <!-- Campo para inserir o número da residência do adotante -->
+  <div class="col-md-1">
+    <label for="numero" class="form-label mt-4">Número</label>
+    <input [(ngModel)]="adotante.numero" type="text" class="form-control" id="numero" name="numero" placeholder="Número"> 
+  </div>
+</div>
+
+<!-- Seção de informações de endereço do adotante -->
+<div class="row">
+  <!-- Campo para inserir a cidade do adotante -->
+  <div class="col-md-5">
+    <label for="cidade" class="form-label mt-4">Cidade</label>
+    <input [(ngModel)]="adotante.cidade" type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade"> 
+  </div>
+
+  <!-- Campo para inserir o estado do adotante -->
+  <div class="col-md-1">
+    <label for="estado" class="form-label mt-4">Estado</label>
+    <input [(ngModel)]="adotante.estado" type="text" class="form-control" id="estado" name="estado" placeholder="Estado"> 
+  </div>
+
+  <!-- Campo para inserir o complemento do endereço do adotante -->
+  <div class="col-md-6">
+    <label for="complemento" class="form-label mt-4">Complemento</label>
+    <input [(ngModel)]="adotante.complemento" type="text" class="form-control" id="complemento" name="complemento" placeholder="Complement"> 
+  </div>
+</div>
+
+<!-- Botão de submissão do formulário -->
+<div class="d-flex justify-content-center">
+  <button type="submit" class="btn btn-success mt-5 col-md-4">Cadastrar</button>
+</div>
+
+<!-- Link para a página de escolha do pet -->
+<li class="d-flex justify-content-center">
+  <a class="btn btn-primary mt-4 col-md-4" routerLink="/lista-animais" routerLinkActive="active">Escolha o Pet</a>
+</li>
+</fieldset>
 </form>
   
     

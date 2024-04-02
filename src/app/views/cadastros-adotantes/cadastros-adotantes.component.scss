@@ -1,8 +1,14 @@
+/* Estilo para a barra de navegação, definindo a cor de fundo como rosa claro */
 .navbar-rosa-claro {
     background-color: #FFB6C1;
 }
 
-
+/* Estilo para o formulário de cadastro
+   - Cor de fundo definida como um tom claro de rosa
+   - Padding de 60px para dar espaço ao redor do conteúdo do formulário
+   - Bordas arredondadas para um visual mais suave
+   - Sombra ao redor do formulário para dar um efeito 3D e destacá-lo no restante da página
+*/
 .formulario {
     background-color: #f3e3e5;
     padding: 60px;

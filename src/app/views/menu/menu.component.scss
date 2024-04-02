@@ -1,31 +1,44 @@
+/* Define a cor de fundo da barra de navegação */
 .navbar-rosa-claro {
-    background-color: #FFB6C1;
+  background-color: #FFB6C1;
 }
 
-
+/* Define a cor dos links ativos */
 $link-active: #0c185f;
 
+/* Estiliza o menu */
 .menu {
-  background-color: var(--secondary-color);
+/* Define a cor de fundo do menu */
+background-color: var(--secondary-color);
 
-  & li > a {
-    text-decoration: none;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+/* Estiliza os links do menu */
+& li > a {
+  /* Remove a decoração do texto dos links */
+  text-decoration: none;
+  /* Define a cor do texto dos links */
+  color: white;
+  /* Define o padding dos links */
+  padding: 0.5rem;
+  /* Define o raio da borda dos links */
+  border-radius: 0.5rem;
 
-    &.active {
-      background-color: lighten($link-active, 15);
-    }
+  /* Estiliza os links ativos */
+  &.active {
+    /* Define a cor de fundo dos links ativos */
+    background-color: lighten($link-active, 15);
   }
 }
-
-h1 {
-  position: relative;
-  top: 0.3em;
 }
 
+/* Estiliza o título h1 */
+h1 {
+/* Posiciona o título um pouco abaixo do topo */
+position: relative;
+top: 0.3em;
+}
+
+/* Estiliza o rodapé */
 footer {
-  /* Usa a cor secundária como cor de fundo */
-    background-color: #FFB6C1;
+/* Define a cor de fundo do rodapé */
+background-color: #FFB6C1;
 }

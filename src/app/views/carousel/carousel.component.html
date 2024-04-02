@@ -1,29 +1,26 @@
-
-
+<!-- Container para o carrossel de imagens -->
 <div class="app-carousel">
-    <carousel [isAnimated]="true" [interval]="slideInterval" [(activeSlide)]="activeSlideIndex">
-      <!-- Usando *ngFor para iterar sobre as slides -->
-      <slide *ngFor="let slide of slides; let index=index">
-        <!-- Imagem do Carousel com texto alternativo descritivo -->
-        <img [src]="slide.image" alt="Imagem de {{ slide.text }}" class="carousel-image">
-        <div class="carousel-caption">
-          <!-- Texto da slide -->
-          <h4>{{ slide.text }}</h4>
-        </div>
-      </slide>
-    </carousel>
-  </div>
+  <!-- Componente de carrossel com animação e intervalo entre as slides -->
+  <carousel [isAnimated]="true" [interval]="slideInterval" [(activeSlide)]="activeSlideIndex">
+    <!-- Usando *ngFor para iterar sobre as slides -->
+    <slide *ngFor="let slide of slides; let index=index">
+      <!-- Imagem do carrossel com texto alternativo descritivo -->
+      <img [src]="slide.image" alt="Imagem de {{ slide.text }}" class="carousel-image">
+      <div class="carousel-caption">
+        <!-- Texto da slide -->
+        <h4>{{ slide.text }}</h4>
+      </div>
+    </slide>
+  </carousel>
+</div>
 
-  
-  <div>
-    
-    <main>
-      <h2 class="text-center fw-medium text-danger ">{{ pageCurrentTitle }}</h2>
-      <router-outlet></router-outlet>
-    </main>
-    
-   
-  </div>
-  
-
-  
+<!-- Container principal da página -->
+<div>
+  <!-- Seção principal da página -->
+  <main>
+    <!-- Título da página atual, centralizado e com estilo específico -->
+    <h2 class="text-center fw-medium text-danger ">{{ pageCurrentTitle }}</h2>
+    <!-- Local onde o conteúdo do roteamento será exibido -->
+    <router-outlet></router-outlet>
+  </main>
+</div>
