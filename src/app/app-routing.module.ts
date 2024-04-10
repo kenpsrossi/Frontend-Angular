@@ -10,6 +10,7 @@ import { AjudarComponent } from './views/ajudar/ajudar.component';
 import { CadastrosAnimaisComponent } from './views/cadastros-animais/cadastros-animais.component';
 import { CadastrosAdotantesComponent } from './views/cadastros-adotantes/cadastros-adotantes.component';
 import { ListaAnimaisComponent } from './components/lista-animais/lista-animais.component';
+import { AdotanteComponent } from './adotante/adotante.component';
 
 // Define as rotas da aplicação
 const routes: Routes = [
@@ -48,6 +49,9 @@ const routes: Routes = [
   },
   {
     path: 'lista-animais', component: ListaAnimaisComponent
+  },
+  {
+    path: 'adotante', component: AdotanteComponent
   },
 ];
 

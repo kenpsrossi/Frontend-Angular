@@ -6,6 +6,7 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <!-- Link para a página inicial -->
+          <!-- O atributo href define o destino do link -->
           <a class="btn btn-info" href="#" style="margin-left: 50px;">Home
             <span class="visually-hidden">(current)</span>
         </a>             
@@ -13,15 +14,17 @@
       </ul>
 
       <!-- Título centralizado -->
+      <!-- O título da página é exibido no centro da barra de navegação -->
       <h2 class="fs-3" style="color: #a7087a; font-weight: bold; font-style: italic;">Pets</h2>
 
       <!-- Espaço vazio para manter o título no centro -->
+      <!-- Este é um truque para centralizar o título quando a barra de navegação é justificada entre -->
       <ul class="navbar-nav"></ul>
     </div>
   </div>
 </nav>
 
-<!-- Lista não ordenada com a classe 'animal-list' e 'list-unstyled' para remover a estilização padrão da lista -->
+<!-- Lista não ordenada para exibir a lista de animais -->
 <ul class="animal-list list-unstyled">
   <!-- 'ngFor' é uma diretiva do Angular que replica o elemento HTML para cada item em uma coleção -->
   <!-- Neste caso, um 'li' é criado para cada 'animal' na coleção 'animais' -->
@@ -40,6 +43,7 @@
       <!-- O nome do animal é exibido em negrito -->
       <strong class="fs-4">{{ animal.nome }}</strong>
       <!-- Várias propriedades do animal são exibidas -->
+      <!-- Cada propriedade é exibida em uma linha separada -->
       <span>Pelagem: {{ animal.pelagem }}</span>
       <span>Espécie: {{ animal.especie }}</span>
       <span>Gênero: {{ animal.sexo }}</span>
@@ -57,4 +61,12 @@
 
 <!-- 'ngIf' é uma diretiva do Angular que condicionalmente inclui ou exclui um bloco de HTML com base na expressão fornecida -->
 <!-- Neste caso, a mensagem é exibida se a coleção 'animais' estiver vazia -->
+<!-- Isso é útil para fornecer feedback ao usuário quando não há dados para exibir -->
 <h1 *ngIf="!animais.length" class="fs-3 display-3 text-center">Não há nenhum animalzinho</h1>
+
+
+<!--A lista não ordenada usa a diretiva *ngFor do Angular para criar um item de lista para cada animal na lista de animais.
+Cada item de lista exibe várias propriedades do animal, incluindo uma imagem que é carregada dinamicamente usando a propriedade
+imagem do objeto animal.Quando o mouse passa sobre a imagem do animal, um botão "Adotar" é exibido. Quando este botão é clicado, 
+o usuário é redirecionado para a rota '/cadastros-adotantes'.
+Se a lista de animais estiver vazia, uma mensagem é exibida usando a diretiva *ngIf do Angular.-->

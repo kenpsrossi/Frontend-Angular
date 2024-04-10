@@ -24,8 +24,22 @@ import { LoginComponent } from './views/login/login.component';
 import { MenuComponent } from './views/menu/menu.component';
 import { CarouselComponent } from './views/carousel/carousel.component';
 import { AnimaisComponent } from './components/animais/animais.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListaAnimaisComponent } from './components/lista-animais/lista-animais.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { AdotanteComponent } from './adotante/adotante.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AdotanteFormComponent } from './adotante-form/adotante-form.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
+
+
 
 // Define o módulo da aplicação
 @NgModule({
@@ -42,6 +56,10 @@ import { ListaAnimaisComponent } from './components/lista-animais/lista-animais.
     CarouselComponent,
     AnimaisComponent,
     ListaAnimaisComponent,
+    AdotanteComponent,
+    AdotanteFormComponent,
+   
+   
   ],
   // Importa outros módulos que este módulo depende
   imports: [
@@ -49,7 +67,17 @@ import { ListaAnimaisComponent } from './components/lista-animais/lista-animais.
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatTableModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatFormFieldModule,
+    MatInputModule
+    
   ],
   // Lista os serviços que serão injetados
   providers: [],

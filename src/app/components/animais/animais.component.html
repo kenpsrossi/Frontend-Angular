@@ -28,3 +28,13 @@
 <!-- 'ngIf' é uma diretiva do Angular que condicionalmente inclui ou exclui um bloco de HTML com base na expressão fornecida -->
 <!-- Neste caso, a mensagem é exibida se a coleção 'animais' estiver vazia -->
 <h1 *ngIf="!animais.length" class="fs-3 display-3 text-center">Não há nenhum animalzinho</h1>
+
+
+
+
+<!-- não precisa de alterações para receber dados do back-end. 
+Ele está configurado para exibir dinamicamente os dados dos animais, que são fornecidos pela propriedade animais do componente.
+Quando atualiza a propriedade animais no arquivo TypeScript do componente para receber dados do back-end 
+ o Angular automaticamente atualiza a visualização (HTML) para refletir essas mudanças.
+desde que os objetos de animal que você está recebendo do back-end tenham as propriedades que está usando
+ no HTML (como imagem, nome, pelagem, especie, sexo, idade e raca), código HTML deve funcionar corretamente sem necessidade de alterações.-->
