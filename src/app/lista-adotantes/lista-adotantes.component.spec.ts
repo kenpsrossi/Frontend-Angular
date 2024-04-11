@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdotanteComponent } from './adotante.component';
+import { ListaAdotantesComponent } from './lista-adotantes.component';
 
-describe('AdotanteComponent', () => {
-  let component: AdotanteComponent;
-  let fixture: ComponentFixture<AdotanteComponent>;
+describe('ListaAdotantesComponent', () => {
+  let component: ListaAdotantesComponent;
+  let fixture: ComponentFixture<ListaAdotantesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdotanteComponent ]
+      declarations: [ ListaAdotantesComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AdotanteComponent);
+    fixture = TestBed.createComponent(ListaAdotantesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

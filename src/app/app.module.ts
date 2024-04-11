@@ -28,7 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListaAnimaisComponent } from './components/lista-animais/lista-animais.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { AdotanteComponent } from './adotante/adotante.component';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -37,6 +37,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AdotanteFormComponent } from './adotante-form/adotante-form.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ListaAdotantesComponent } from './lista-adotantes/lista-adotantes.component';
 
 
 
@@ -56,8 +57,9 @@ import { MatInputModule } from '@angular/material/input';
     CarouselComponent,
     AnimaisComponent,
     ListaAnimaisComponent,
-    AdotanteComponent,
+   
     AdotanteFormComponent,
+    ListaAdotantesComponent,
    
    
   ],

@@ -1,18 +1,17 @@
-// adotante.component.ts
-
-
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Adotante } from '../models/adotante';
 import { AdotanteService } from '../services/adotante.service';
 import { AdotanteFormComponent } from '../adotante-form/adotante-form.component';
 
+
 @Component({
-  selector: 'app-adotante',
-  templateUrl: './adotante.component.html',
-  styleUrls: ['./adotante.component.scss']
+  selector: 'app-lista-adotantes',
+  templateUrl: './lista-adotantes.component.html',
+  styleUrls: ['./lista-adotantes.component.scss']
 })
-export class AdotanteComponent implements OnInit {
+
+export class ListaAdotantesComponent  implements OnInit {
   // Colunas a serem exibidas na tabela
   displayedColumns: string[] = ['id', 'matricula', 'nome', 'telefone', 'email', 'cpf', 
   'estadoCivil', 'logradouro', 'cep', 'numero', 'bairro', 'cidade', 'estado', 'complemento', 'acao'];
