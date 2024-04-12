@@ -9,8 +9,8 @@ import { MenuComponent } from './views/menu/menu.component';
 import { AjudarComponent } from './views/ajudar/ajudar.component';
 import { CadastrosAnimaisComponent } from './views/cadastros-animais/cadastros-animais.component';
 import { CadastrosAdotantesComponent } from './views/cadastros-adotantes/cadastros-adotantes.component';
-import { ListaAnimaisComponent } from './components/lista-animais/lista-animais.component';
 import { ListaAdotantesComponent } from './lista-adotantes/lista-adotantes.component';
+import { ListaAnimaisComponent } from './lista-animais/lista-animais.component';
 
 
 // Define as rotas da aplicação
@@ -48,11 +48,12 @@ const routes: Routes = [
   {
     path: 'cadastros-adotantes', component: CadastrosAdotantesComponent
   },
-  {
-    path: 'lista-animais', component: ListaAnimaisComponent
-  },
+  
   {
     path: 'lista-adotantes', component: ListaAdotantesComponent
+  },
+  {
+    path: 'lista-animais', component: ListaAnimaisComponent
   },
 ];
 

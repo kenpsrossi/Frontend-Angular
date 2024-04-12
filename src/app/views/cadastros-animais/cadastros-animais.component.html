@@ -20,110 +20,71 @@
   </div>
 </nav>
 
+
+
 <!-- Formulário de cadastro de animais -->
-<form class="formulario" (ngSubmit)="onSubmit()">
+
+<form [formGroup]="profileForm" class="formulario" (ngSubmit)="onSubmit()">
   <fieldset>
-    <!-- Seção de informações do animal -->
     <div class="row">
-      <!-- Campo para inserir o ID do animal -->
-      <div class="col col-md-3">
-        <label for="id" class="form-label mt-2">Id</label>
-        <input [(ngModel)]="animal.id" type="text" class="form-control" id="id" name="id" placeholder="ID"> 
-      </div>
+      <div class="col col-md-8">
+
+        <label class="form-label mt-4">Nome:
+          <input type="text" formControlName="nome" placeholder="Nome">
+        </label>
+
+        <label class="form-label mt-4">Matrícula:
+          <input type="text" formControlName="matricula" placeholder="Matricula">
+        </label>
+        
+        <label class="form-label mt-4">Espécie: 
+          <input type="text" formControlName="especie" placeholder="Espécie">
+        </label>
+                
+        <label class="form-label mt-4">Pelagem:
+          <input type="text" formControlName="pelagem" placeholder="Pelagem">          
+        </label>
+
+        <label class="form-label mt-4">Raça:
+          <input type="text" formControlName="raca" placeholder="Raça">
+        </label>
+
+        <label class="form-label mt-4">Sexo:
+          <input type="text" formControlName="sexo" placeholder="Sexo">
+        </label>
+
+        <label class="form-label mt-4">Castração:
+          <input type="text" formControlName="castracao" placeholder="Castração">
+        </label>
+
+        <label class="form-label mt-4">Vacinação:
+          <input type="text" formControlName="vacinacao" placeholder="Vacinacao">
+        </label>
+
+        <label class="form-label mt-4">Local Resgate:
+          <input type="text" formControlName="localResgate" placeholder="Local Resgate">
+        </label>
+
+        
+          <label for="exampleTextarea" placeholder="Vacinação" class="form-label mt-4">Breve história do pet :</label>
+          <textarea class="form-control" id="exampleTextarea"  rows="4"> Escreva aqui sobre o pet...</textarea>
       
-      <!-- Campo para inserir a matrícula do animal -->
-      <div class="col-md-3">
-        <label for="matricula" class="form-label mt-2">Matrícula</label>
-        <input [(ngModel)]="animal.matricula" type="text" class="form-control" id="matricula" name="matricula" placeholder="Matrícula"> 
-      </div>
 
-      <!-- Campo para inserir a espécie do animal -->
-      <div class="col-md-3">
-        <label for="especie" class="form-label mt-2">Espécie</label>
-        <input [(ngModel)]="animal.especie" type="text" class="form-control" id="especie" name="especie" placeholder="Espécie"> 
-      </div>
+        <label class="form-label mt-4">Status:
+          <input type="text" formControlName="status" placeholder="Status">
+        </label>
 
-      <!-- Campo para inserir a raça do animal -->
-      <div class="col-md-3">
-        <label for="raca" class="form-label mt-2">Raça</label>
-        <input [(ngModel)]="animal.raca" type="text" class="form-control" id="raca" name="raca" placeholder="Raça"> 
+        <label for="formFile" class="form-label mt-4">Imagem do pet no formato $$$ x $$$</label>
+        <input type="text" formControlName="imagem" class="form-control" type="file" id="formFile">
+
+        <label class="form-label mt-4">Idade:
+          <input type="text" formControlName="idade" placeholder="Idade">
+        </label>
       </div>
     </div>
 
-    <!-- Seção de informações do nome e pelagem do animal -->
-    <div class="row">
-      <!-- Campo para inserir o nome do animal -->
-      <div class="col-md-8">
-        <label for="nome" class="form-label mt-4">Nome</label>
-        <input [(ngModel)]="animal.nome" type="text" class="form-control" id="nome" name="nome" placeholder="Nome"> 
-      </div>
-
-      <!-- Campo para inserir a pelagem do animal -->
-      <div class="col-md-4">
-        <label for="pelagem" class="form-label mt-4">Pelagem</label>
-        <input [(ngModel)]="animal.pelagem" type="text" class="form-control" id="pelagem" name="pelagem" placeholder="Pelagem"> 
-      </div>
-    </div>
-
-   <!-- Seção de informações adicionais do animal -->
-<div class="row">
-  <!-- Campo para inserir o sexo do animal -->
-  <div class="col-md-2">
-    <label for="sexo" class="form-label mt-4">Sexo</label>
-    <input [(ngModel)]="animal.sexo" type="text" class="form-control" id="sexo" name="sexo" placeholder="Sexo"> 
-  </div>
-
-  <!-- Campo para inserir a idade do animal -->
-  <div class="col-md-2">
-    <label for="idade" class="form-label mt-4">Idade</label>
-    <input [(ngModel)]="animal.idade" type="text" class="form-control" id="idade" name="idade" placeholder="Idade"> 
-  </div>
-
-  <!-- Campo para inserir o status do animal -->
-  <div class="col-md-3">
-    <label for="status" class="form-label mt-4">Status</label>
-    <input [(ngModel)]="animal.status" type="text" class="form-control" id="status" name="status" placeholder="Status"> 
-  </div>
-
-  <!-- Campo para inserir a informação de castração do animal -->
-  <div class="col-md-2">
-    <label for="castracao" class="form-label mt-4">Castração</label>
-    <input [(ngModel)]="animal.castracao" type="text" class="form-control" id="castracao" name="castracao" placeholder="Castração"> 
-  </div>
-
-  <!-- Campo para inserir o local de resgate do animal -->
-  <div class="col-md-3">
-    <label for="localResgate" class="form-label mt-4">Local-Resgate</label>
-    <input [(ngModel)]="animal.localResgate" type="text" class="form-control" id="localResgate" name="localResgate" placeholder="Local-Resgate"> 
-  </div>
-</div>
-
-<!-- Seção de informações de vacinação e imagem do animal -->
-<div class="row">
-  <!-- Campo para inserir a informação de vacinação do animal -->
-  <div class="col-md-4">
-    <label for="vacinacao" class="form-label mt-4">Vacinação</label>
-    <input [(ngModel)]="animal.vacinacao" type="text" class="form-control" id="vacinacao" name="vacinacao" placeholder="Vacinação"> 
-  </div>
-
-  <!-- Campo para inserir a imagem do animal -->
-  <div class="col-md-8">
-    <label for="formFile" class="form-label mt-4">Imagem do pet no formato $$$ x $$$</label>
-    <input [(ngModel)]="animal.imagem" class="form-control" type="file" id="formFile">
-  </div>
-</div>
-
-<!-- Seção para inserir a história do animal -->
-<div class="row">
-  <div class="col-sm-12">
-    <label for="exampleTextarea" placeholder="Vacinação" class="form-label mt-4">Breve história do pet :</label>
-    <textarea class="form-control" id="exampleTextarea"  rows="4"> Escreva aqui sobre o pet...</textarea>
-  </div>
-</div>
-
-<!-- Botão de submissão do formulário -->
-<div class="d-flex justify-content-center">
-  <button type="submit" class="btn btn-success mt-4 col-md-4">Cadastrar</button>
-</div>  
-</fieldset>
+  <!-- Botão para submeter o formulário -->
+<!-- A diretiva disabled desabilita este botão se o FormGroup 'profileForm' não é válido -->
+<button type="submit" [disabled]="!profileForm.valid">Cadastrar</button>
+  </fieldset>
 </form>

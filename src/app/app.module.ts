@@ -25,7 +25,6 @@ import { MenuComponent } from './views/menu/menu.component';
 import { CarouselComponent } from './views/carousel/carousel.component';
 import { AnimaisComponent } from './components/animais/animais.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ListaAnimaisComponent } from './components/lista-animais/lista-animais.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -38,6 +37,8 @@ import { AdotanteFormComponent } from './adotante-form/adotante-form.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ListaAdotantesComponent } from './lista-adotantes/lista-adotantes.component';
+import { ListaAnimaisComponent } from './lista-animais/lista-animais.component';
+import { AnimalFormComponent } from './animal-form/animal-form.component';
 
 
 
@@ -56,10 +57,12 @@ import { ListaAdotantesComponent } from './lista-adotantes/lista-adotantes.compo
     MenuComponent,
     CarouselComponent,
     AnimaisComponent,
-    ListaAnimaisComponent,
+    
    
     AdotanteFormComponent,
     ListaAdotantesComponent,
+    ListaAnimaisComponent,
+    AnimalFormComponent,
    
    
   ],

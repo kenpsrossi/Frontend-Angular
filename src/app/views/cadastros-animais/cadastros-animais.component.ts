@@ -1,40 +1,82 @@
-// Importando o componente do Angular
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Pet } from 'src/app/models/pet';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { AnimalService } from 'src/app/services/animal.service';
 
-// Decorador que define que a classe a seguir é um componente do Angular
 @Component({
-  // Seletor CSS que será usado para inserir este componente em um template HTML
   selector: 'app-cadastros-animais',
-  // Caminho para o arquivo HTML que define a visualização deste componente
   templateUrl: './cadastros-animais.component.html',
-  // Caminho para o arquivo CSS que define os estilos aplicados a este componente
   styleUrls: ['./cadastros-animais.component.scss']
 })
+export class CadastrosAnimaisComponent implements OnInit {
+  // Definição do formulário
+  profileForm = new FormGroup({
+    nome: new FormControl(''),
+    matricula: new FormControl(''),
+    especie: new FormControl(''),
+    pelagem: new FormControl(''), 
+    raca: new FormControl(''),
+    sexo: new FormControl(''),
+    castracao: new FormControl(''),
+    vacinacao: new FormControl(''),
+    localResgate: new FormControl(''),
+    observacao: new FormControl(''),
+    status: new FormControl(''),
+    imagem: new FormControl(''), 
+    idade: new FormControl('')
+  });
 
-// Classe que define o comportamento do componente CadastrosAnimais
-export class CadastrosAnimaisComponent {
-  // Objeto que representa o animal a ser cadastrado
-  // Cada propriedade do objeto corresponde a um campo do formulário
-  animal = {
-    id:  '',
-    matricula: '',
-    nome: '',
-    especie: '',
-    pelagem: '',
-    raca: '',
-    sexo: '',
-    castracao: '',
-    vacinacao: '',
-    localResgate: '',
-    observacao: '',
-    status: '',
-    imagem: '',
-    idade: ''
-  };
+  // Fonte de dados para a tabela
+  dataSource: Pet[] = [];
 
-  // Método para lidar com o envio do formulário
-  // Atualmente, apenas imprime o objeto animal no console
+  // Injetando MatSnackBar e AnimalService no construtor
+  constructor(private snackBar: MatSnackBar, private animalService: AnimalService) { }
+
+  // Método chamado quando o componente é inicializado
+  ngOnInit(): void {
+    // Inicializa a fonte de dados da tabela com os animais do serviço
+    this.animalService.getAnimais().subscribe(animais => {
+      this.dataSource = animais;
+    });
+  }
+
+  // Método chamado quando o formulário é submetido
   onSubmit() {
-    console.log(this.animal);
+    // Acessando o valor do formulário
+    const formValues = this.profileForm.value;
+
+    // Criando um novo adotante com os valores do formulário
+    const newAnimal: Pet = {
+      id: 0, // O id será gerado pelo serviço
+      matricula: 0, 
+      nome: formValues.nome ?? '', 
+      especie: formValues.especie ?? '', 
+      pelagem: formValues.pelagem ?? '', 
+      raca: formValues.raca ?? '', 
+      sexo: formValues.sexo ?? '', 
+      castracao: formValues.castracao ?? '',
+      vacinacao: formValues.vacinacao ?? '', 
+      localResgate: formValues.localResgate ?? '', 
+      observacao: formValues.observacao ?? '', 
+      status: formValues.status ?? '',
+      imagem:'',
+      idade:0
+    };
+  
+  
+
+    // Adicionando o novo animal ao serviço
+    this.animalService.addAnimal(newAnimal).subscribe(() => {
+      // Exibindo a mensagem de sucesso
+      this.snackBar.open('Animal cadastrado com sucesso!', 'Fechar', {
+        duration: 5000, // A mensagem será exibida por 5 segundos
+        verticalPosition: 'top', // A mensagem será exibida no topo da tela
+      });
+
+      // Resetando o formulário
+      this.profileForm.reset();
+    });
   }
 }
+

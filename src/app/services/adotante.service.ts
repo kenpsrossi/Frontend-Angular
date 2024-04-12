@@ -1,49 +1,72 @@
-// AdotanteService
+
 import { Injectable } from '@angular/core';
 import { Adotante } from '../models/adotante';
 import { BehaviorSubject } from 'rxjs';
 import adotantesData from '../data/adotantes-data';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root' // Especificando que este serviço é fornecido no nível raiz da aplicação
 })
 export class AdotanteService {
+  // Inicializando a lista de adotantes com os dados de exemplo
   private adotantes: Adotante[] = adotantesData;
+  // Criando um BehaviorSubject para os adotantes, inicializado com os dados de exemplo
   private adotantes$ = new BehaviorSubject<Adotante[]>(this.adotantes);
 
+  // Método para obter a lista de adotantes como um objeto observável
   getAdotantes() {
     return this.adotantes$.asObservable();
   }
 
+  // Método para adicionar um novo adotante
   addAdotante(adotante: Adotante) {
+    // Atribuindo um ID único ao novo adotante
     adotante.id = this.adotantes.length > 0 ? Math.max(...this.adotantes.map(a => a.id)) + 1 : 1;
+    // Adicionando o novo adotante à lista
     this.adotantes.push(adotante);
+    // Emitindo uma nova lista de adotantes através do BehaviorSubject
     this.adotantes$.next(this.adotantes);
+    // Exibindo informações de log
     console.log('Adotante adicionado:', adotante);
     console.log('Adotantes agora:', this.adotantes);
+    // Retornando o BehaviorSubject para permitir a inscrição
     return this.adotantes$;
   }
 
+  // Método para editar um adotante existente
   editAdotante(adotante: Adotante) {
+    // Encontrando o índice do adotante na lista
     const index = this.adotantes.findIndex(a => a.id === adotante.id);
+    // Verificando se o adotante existe na lista
     if (index !== -1) {
+      // Substituindo o adotante na lista pelo adotante editado
       this.adotantes[index] = adotante;
+      // Emitindo uma nova lista de adotantes através do BehaviorSubject
       this.adotantes$.next(this.adotantes);
     }
+    // Exibindo informações de log
     console.log('Adotante editado:', adotante);
     console.log('Adotantes agora:', this.adotantes);
+    // Retornando o BehaviorSubject para permitir a inscrição
     return this.adotantes$;
   }
 
+  // Método para excluir um adotante existente com base no ID
   deleteAdotante(id: number) {
+    // Encontrando o índice do adotante na lista
     const index = this.adotantes.findIndex(a => a.id === id);
+    // Verificando se o adotante existe na lista
     if (index !== -1) {
+      // Removendo o adotante da lista
       this.adotantes.splice(index, 1);
+      // Emitindo uma nova lista de adotantes através do BehaviorSubject
       this.adotantes$.next(this.adotantes);
     }
+    // Retornando o BehaviorSubject para permitir a inscrição
     return this.adotantes$;
   }
 }
+
 
 
 //Para integrar back-end  

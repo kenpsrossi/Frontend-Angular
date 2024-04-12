@@ -1,0 +1,85 @@
+<!-- animal-form.component.html -->
+
+<h1 mat-dialog-title>Animal</h1>
+<div mat-dialog-content>
+
+  <mat-form-field>
+    <mat-label>Id</mat-label>
+    <input matInput [(ngModel)]="data.id">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Matrícula</mat-label>
+    <input matInput [(ngModel)]="data.matricula">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="data.nome">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Especie</mat-label>
+    <input matInput [(ngModel)]="data.especie">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Pelagem</mat-label>
+    <input matInput [(ngModel)]="data.pelagem">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Raça</mat-label>
+    <input matInput [(ngModel)]="data.raca">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Sexo</mat-label>
+    <input matInput [(ngModel)]="data.sexo">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Castração</mat-label>
+    <input matInput [(ngModel)]="data.castracao">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Vacinação</mat-label>
+    <input matInput [(ngModel)]="data.vacinacao">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Local Resgate</mat-label>
+    <input matInput [(ngModel)]="data.localResgate">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Observação</mat-label>
+    <input matInput [(ngModel)]="data.observacao">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Status</mat-label>
+    <input matInput [(ngModel)]="data.status">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Imagem</mat-label>
+    <input matInput [(ngModel)]="data.imagem">
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Idade</mat-label>
+    <input matInput [(ngModel)]="data.idade">
+  </mat-form-field>
+  
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button (click)="save()" [mat-dialog-close]="data">Salvar</button>
+</div> 
+
+
+
+
+

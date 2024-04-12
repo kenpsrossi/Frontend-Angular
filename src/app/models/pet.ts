@@ -3,7 +3,7 @@ export interface Pet {
     id: number; // Identificador único para o pet
     matricula: number; // Número de matrícula do pet
     nome: string; // Nome do pet
-    especie:  'Cachorro' | 'Gato'; // Espécie do pet, pode ser 'Cachorro' ou 'Gato'
+    especie: string; // Espécie do pet, pode ser 'Cachorro' ou 'Gato'
     pelagem: string; // Descrição da pelagem do pet, é opcional
     raca: string; // Raça do pet
     sexo: string; // Sexo do pet
