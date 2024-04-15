@@ -96,3 +96,92 @@ adotante: any;
 // Este código é responsável por exibir uma lista de adotantes em uma tabela,
 // bem como por abrir um diálogo para adicionar ou editar adotantes.
 // Ele usa o serviço AdotanteService para realizar essas operações.
+
+/*
+//====================================CAMPOS ATUALIZADO====================================
+
+
+
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Adotante } from '../models/adotante';
+import { AdotanteService } from '../services/adotante.service';
+import { AdotanteFormComponent } from '../adotante-form/adotante-form.component';
+
+@Component({
+  selector: 'app-lista-adotantes',
+  templateUrl: './lista-adotantes.component.html',
+  styleUrls: ['./lista-adotantes.component.scss']
+})
+
+export class ListaAdotantesComponent implements OnInit {
+  displayedColumns: string[] = ['matricula', 'nome', 'telefone', 'email', 'cpf', 'estadoCivil', 'logradouro', 'cep', 'numero', 'bairro', 'cidade', 'estado', 'complemento', 'acao'];
+  dataSource: Adotante[] = [];
+
+  newAdotante: Adotante = {
+    matricula: 0,
+    nome: '',
+    telefone: '',
+    email: '',
+    cpf: '',
+    estadoCivil: '',
+    logradouro: '',
+    cep: '',
+    numero: '',
+    bairro: '',
+    cidade: '',
+    estado: '',
+    complemento: ''
+  };
+
+  constructor(private adotanteService: AdotanteService, public dialog: MatDialog) { }
+
+  openDialog(adotante: Adotante): void {
+    const dialogRef = this.dialog.open(AdotanteFormComponent, {
+      width: '500px',
+      data: adotante
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        if (result.cpf) {
+          this.editAdotante(result);
+        } else {
+          this.addAdotante(result);
+        }
+        this.adotanteService.getAdotantes().subscribe(adotantes => {
+          this.dataSource = adotantes;
+          console.log('Adotantes recebidos do serviço:', adotantes);
+        });
+      }
+    });
+  }
+
+  ngOnInit(): void {
+    this.adotanteService.getAdotantes().subscribe(adotantes => {
+      this.dataSource = adotantes;
+    });
+  }
+
+  addAdotante(adotante: Adotante) {
+    this.adotanteService.addAdotante(adotante).subscribe(adotantes => {
+      this.dataSource = adotantes;
+    });
+  }
+
+  editAdotante(adotante: Adotante) {
+    this.adotanteService.editAdotante(adotante).subscribe(adotantes => {
+      this.dataSource = adotantes;
+    });
+  }
+
+  deleteAdotante(cpf: string) {
+    this.adotanteService.deleteAdotante(cpf).subscribe(adotantes => {
+      this.dataSource = adotantes;
+    });
+  }
+}
+
+
+//====================================FIM====================================
+*/

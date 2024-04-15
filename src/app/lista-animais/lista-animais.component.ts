@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Pet } from '../models/pet';
@@ -96,8 +95,112 @@ newanimal: any;
   }
 }
 
-//Primeira versao testes abertura de de dialogo diferentes, um para cadastro outro para editar e ja vim com dados para editar
+
 /*
+
+===========================================CAMPOS ATUALIZADO===========================================
+
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Pet } from '../models/pet';
+import { AnimalService } from '../services/animal.service';
+import { AnimalFormComponent } from '../animal-form/animal-form.component';
+import { CadastrosAnimaisComponent } from '../views/cadastros-animais/cadastros-animais.component';
+
+@Component({
+  selector: 'app-lista-animais',
+  templateUrl: './lista-animais.component.html',
+  styleUrls: ['./lista-animais.component.scss']
+})
+export class ListaAnimaisComponent implements OnInit {
+  displayedColumns: string[] = ['matricula', 'nome', 'especie', 'pelagem', 'raca', 
+    'sexo', 'castracao', 'vacinacao', 'localResgate', 'observacao', 'status', 'imagem', 'idade', 'acao'];
+  dataSource: Pet[] = [];
+
+  constructor(private animalService: AnimalService, public dialog: MatDialog) {}
+
+   // Objeto para armazenar os dados do novo animal
+   newAnimal: Pet = {
+    matricula: 0,
+    nome: '',
+    especie: '',
+    pelagem: '',
+    raca: '',
+    sexo: '',
+    castracao: '',
+    vacinacao: '',
+    localResgate: '',
+    observacao: '',
+    status: '',
+    imagem: '',
+    idade: 0
+  };
+newanimal: any;
+
+  ngOnInit(): void {
+    this.animalService.getAnimais().subscribe(animais => {
+      this.dataSource = animais;
+    });
+  }
+
+  openCadastroAnimaisDialog(animal: Pet): void {
+    const dialogRef = this.dialog.open(CadastrosAnimaisComponent, {
+      width: '900px',
+      data: animal
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        if (result.matricula) {
+          this.editAnimal(result);
+        } else {
+          this.addAnimal(result);
+        }
+      }
+    });
+  }
+
+  openAnimalFormDialog(animal: Pet): void {
+    const dialogRef = this.dialog.open(AnimalFormComponent, {
+      width: '800px',
+      data: animal
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        if (result.matricula) {
+          this.editAnimal(result);
+        } else {
+          this.addAnimal(result);
+        }
+      }
+    });
+  }
+
+  addAnimal(animal: Pet) {
+    this.animalService.addAnimal(animal).subscribe(animais => {
+      this.dataSource = animais;
+    });
+  }
+
+  editAnimal(animal: Pet) {
+    this.animalService.editAnimal(animal).subscribe(animais => {
+      this.dataSource = animais;
+    });
+  }
+
+  deleteAnimal(matricula: number) {
+    this.animalService.deleteAnimal(matricula).subscribe(animais => {
+      this.dataSource = animais;
+    });
+  }
+}
+
+===========================================FIM===========================================
+
+
+//Primeira versao testes abertura de de dialogo diferentes, um para cadastro outro para editar e ja vim com dados para editar
+
 import { Component,OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Pet } from '../models/pet';
@@ -198,8 +301,6 @@ animal: any;
     deleteAnimal(id: number) {
       this.animalService.deleteAnimal(id).subscribe(animais => {
         this.dataSource = animais;
-    });
-  }
+    });
+  }
 }*/
-
-

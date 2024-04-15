@@ -56,3 +56,65 @@ export class AnimalService {
     return this.animais$; // Retorna o observable da lista de animais
   }
 }
+
+
+//====================================CAMPOS ATUALIZAR====================================
+/*
+
+import { Injectable } from '@angular/core';
+import { Animal } from '../models/animal';
+import { BehaviorSubject } from 'rxjs';
+import animaisData from '../data/animais-data';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AnimalService {
+  private animais: Animal[] = animaisData;
+  private animais$ = new BehaviorSubject<Animal[]>(this.animais);
+
+  getAnimais() {
+    return this.animais$.asObservable();
+  }
+
+  addAnimal(animal: Animal) {
+    const index = this.animais.findIndex(a => a.matricula === animal.matricula);
+    if (index === -1) {
+      this.animais.push(animal);
+      this.animais$.next(this.animais);
+      console.log('Animal adicionado:', animal);
+    } else {
+      console.log('Matrícula já existe. Animal não adicionado.');
+    }
+    console.log('Animais agora:', this.animais);
+    return this.animais$;
+  }
+
+  editAnimal(animal: Animal) {
+    const index = this.animais.findIndex(a => a.matricula === animal.matricula);
+    if (index !== -1) {
+      this.animais[index] = animal;
+      this.animais$.next(this.animais);
+      console.log('Animal editado:', animal);
+    } else {
+      console.log('Matrícula não encontrada. Animal não editado.');
+    }
+    console.log('Animais agora:', this.animais);
+    return this.animais$;
+  }
+
+  deleteAnimal(matricula: string) {
+    const index = this.animais.findIndex(a => a.matricula === matricula);
+    if (index !== -1) {
+      this.animais.splice(index, 1);
+      this.animais$.next(this.animais);
+      console.log('Animal deletado:', matricula);
+    } else {
+      console.log('Matrícula não encontrada. Animal não deletado.');
+    }
+    return this.animais$;
+  }
+}
+============================================FIM================================================================ 
+
+*/

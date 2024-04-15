@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 import { Adotante } from '../models/adotante';
 import { BehaviorSubject } from 'rxjs';
@@ -69,8 +68,68 @@ export class AdotanteService {
 
 
 
-//Para integrar back-end  
 /*
+=======================================================ATUALIZAR CAMPOS======================================================================
+
+import { Injectable } from '@angular/core';
+import { Adotante } from '../models/adotante';
+import { BehaviorSubject } from 'rxjs';
+import adotantesData from '../data/adotantes-data';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AdotanteService {
+  private adotantes: Adotante[] = adotantesData;
+  private adotantes$ = new BehaviorSubject<Adotante[]>(this.adotantes);
+
+  getAdotantes() {
+    return this.adotantes$.asObservable();
+  }
+
+  addAdotante(adotante: Adotante) {
+    const index = this.adotantes.findIndex(a => a.cpf === adotante.cpf);
+    if (index === -1) {
+      this.adotantes.push(adotante);
+      this.adotantes$.next(this.adotantes);
+      console.log('Adotante adicionado:', adotante);
+    } else {
+      console.log('CPF já existe. Adotante não adicionado.');
+    }
+    console.log('Adotantes agora:', this.adotantes);
+    return this.adotantes$;
+  }
+
+  editAdotante(adotante: Adotante) {
+    const index = this.adotantes.findIndex(a => a.cpf === adotante.cpf);
+    if (index !== -1) {
+      this.adotantes[index] = adotante;
+      this.adotantes$.next(this.adotantes);
+      console.log('Adotante editado:', adotante);
+    } else {
+      console.log('CPF não encontrado. Adotante não editado.');
+    }
+    console.log('Adotantes agora:', this.adotantes);
+    return this.adotantes$;
+  }
+
+  deleteAdotante(cpf: string) {
+    const index = this.adotantes.findIndex(a => a.cpf === cpf);
+    if (index !== -1) {
+      this.adotantes.splice(index, 1);
+      this.adotantes$.next(this.adotantes);
+      console.log('Adotante deletado:', cpf);
+    } else {
+      console.log('CPF não encontrado. Adotante não deletado.');
+    }
+    return this.adotantes$;
+  }
+}
+
+===============================================================FIM===========================================================================
+
+//Para integrar back-end 
+
 // AdotanteService
 import { Injectable } from '@angular/core';
 import { Adotante } from '../models/adotante';
@@ -98,15 +157,15 @@ export class AdotanteService {
 
   // Editar um adotante existente no back-end
   editAdotante(adotante: Adotante): Observable<Adotante> {
-    return this.http.put<Adotante>(`${this.baseUrl}/${adotante.id}`, adotante);
+    return this.http.put<Adotante>(${this.baseUrl}/${adotante.id}, adotante);
   }
 
   // Deletar um adotante do back-end
   deleteAdotante(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.baseUrl}/${id}`);
+    return this.http.delete<void>(${this.baseUrl}/${id});
   }
 } */
 
 /* código agora faz chamadas HTTP para um back-end, em vez de manipular os dados localmente.
  As funções retornam Observables que emitem os dados quando a resposta é recebida do back-end.
-você precisa substituir 'http://localhost:3000/adotantes' pela URL real do seu back-end.*/
+você precisa substituir 'http://localhost:3000/adotantes' pela URL real do seu back-end.*/
