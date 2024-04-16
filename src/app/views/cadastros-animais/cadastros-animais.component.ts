@@ -4,14 +4,17 @@ import { Pet } from 'src/app/models/pet';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AnimalService } from 'src/app/services/animal.service';
 
+// Decorador para definir um componente
 @Component({
   selector: 'app-cadastros-animais',
   templateUrl: './cadastros-animais.component.html',
   styleUrls: ['./cadastros-animais.component.scss']
 })
+// Classe do componente
 export class CadastrosAnimaisComponent implements OnInit {
   // Definição do formulário
   profileForm = new FormGroup({
+    // Campos do formulário
     nome: new FormControl(''),
     matricula: new FormControl(''),
     especie: new FormControl(''),
@@ -46,25 +49,22 @@ export class CadastrosAnimaisComponent implements OnInit {
     // Acessando o valor do formulário
     const formValues = this.profileForm.value;
 
-    // Criando um novo adotante com os valores do formulário
+    // Criando um novo animal com os valores do formulário
     const newAnimal: Pet = {
-      id: 0, // O id será gerado pelo serviço
-      matricula: 0, 
+      matricula:'', 
       nome: formValues.nome ?? '', 
       especie: formValues.especie ?? '', 
       pelagem: formValues.pelagem ?? '', 
-      raca: formValues.raca ?? '', 
+      raca: formValues.raca ?? '',
       sexo: formValues.sexo ?? '', 
-      castracao: formValues.castracao ?? '',
+      castracao: formValues.castracao ?? '', 
       vacinacao: formValues.vacinacao ?? '', 
       localResgate: formValues.localResgate ?? '', 
       observacao: formValues.observacao ?? '', 
-      status: formValues.status ?? '',
-      imagem:'',
-      idade:0
+      status: formValues.status ?? '', 
+      imagem:'', 
+      idade:0 
     };
-  
-  
 
     // Adicionando o novo animal ao serviço
     this.animalService.addAnimal(newAnimal).subscribe(() => {
@@ -79,4 +79,3 @@ export class CadastrosAnimaisComponent implements OnInit {
     });
   }
 }
-

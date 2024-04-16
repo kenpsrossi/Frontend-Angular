@@ -1,144 +1,136 @@
-
-
 <!-- Barra de navegação no topo da página -->
 <nav class="navbar navbar-expand-lg navbar-rosa-claro" data-bs-theme="dark">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
-        <!-- Botão Home na barra de navegação -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <!-- O atributo href define o destino do link -->
-            <a class="btn btn-info" href="#" style="margin-left: 50px;">Home
-              <span class="visually-hidden">(current)</span> 
-            </a>  
-            <button mat-raised-button color="primary" (click)="openDialog(newAdotante)">Adicionar Adotante</button>
-          </li>
-        </ul>
-  
-        <!-- Título da página, centralizado na barra de navegação -->
-        <h2 class="fs-3" style="color: #a7087a; font-weight: bold; font-style: italic;">Cadastros-adotantes</h2>
-  
-        <!-- Espaço vazio para manter o título no centro -->
-        <ul class="navbar-nav"></ul>
-      </div>
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
+      <!-- Botão Home na barra de navegação -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <!-- O atributo href define o destino do link -->
+          <a class="btn btn-info" href="#" style="margin-left: 50px;">Home
+            <span class="visually-hidden">(current)</span> 
+          </a>  
+          <!-- Botão para abrir o diálogo de adição de um novo adotante -->
+          <button mat-raised-button color="primary" (click)="openDialog(newAdotante)">Adicionar Adotante</button>
+        </li>
+      </ul>
+
+      <!-- Título da página, centralizado na barra de navegação -->
+      <h2 class="fs-3" style="color: #a7087a; font-weight: bold; font-style: italic;">Cadastros-adotantes</h2>
+
+      <!-- Espaço vazio para manter o título no centro -->
+      <ul class="navbar-nav"></ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  
-  <div>
-    <!-- Tabela Angular Material -->
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  
-      <!-- Coluna ID -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> ID </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.id}} </td>
-      </ng-container>
-  
-      <!-- Coluna Matrícula -->
-      <ng-container matColumnDef="matricula">
-        <th mat-header-cell *matHeaderCellDef> Matrícula </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.matricula}} </td>
-      </ng-container>
-  
-      <!-- Coluna Nome -->
-      <ng-container matColumnDef="nome">
-        <th mat-header-cell *matHeaderCellDef> Nome </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.nome}} </td>
-      </ng-container>
-  
-      <!-- Coluna Telefone -->
-      <ng-container matColumnDef="telefone">
-        <th mat-header-cell *matHeaderCellDef> Telefone </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.telefone}} </td>
-      </ng-container>
+<!-- Tabela Angular Material para exibir os dados dos adotantes -->
+<div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Definição das colunas da tabela. Cada coluna é definida dentro de um ng-container -->
+    <!-- Coluna Matrícula -->
+    <ng-container matColumnDef="matricula">
+      <th mat-header-cell *matHeaderCellDef> Matrícula </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.matricula}} </td>
+    </ng-container>
 
-      <!-- Coluna Email -->
-      <ng-container matColumnDef="email">
-        <th mat-header-cell *matHeaderCellDef> Email </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.email}} </td>
-      </ng-container>
+    <!-- Coluna Nome -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.nome}} </td>
+    </ng-container>
 
-      <!-- Coluna CPF -->
-      <ng-container matColumnDef="cpf">
-        <th mat-header-cell *matHeaderCellDef> CPF </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.cpf}} </td>
-      </ng-container>
+    <!-- Coluna Telefone -->
+    <ng-container matColumnDef="telefone">
+      <th mat-header-cell *matHeaderCellDef> Telefone </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.telefone}} </td>
+    </ng-container>
 
-      <!-- Coluna Estado Civil -->
-      <ng-container matColumnDef="estadoCivil">
-        <th mat-header-cell *matHeaderCellDef> Estado Civil </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.estadoCivil}} </td>
-      </ng-container>
+    <!-- Coluna Email -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.email}} </td>
+    </ng-container>
 
-      <!-- Coluna Logradouro -->
-      <ng-container matColumnDef="logradouro">
-        <th mat-header-cell *matHeaderCellDef> Logradouro </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.logradouro}} </td>
-      </ng-container>
+    <!-- Coluna CPF -->
+    <ng-container matColumnDef="cpf">
+      <th mat-header-cell *matHeaderCellDef> CPF </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.cpf}} </td>
+    </ng-container>
 
-      <!-- Coluna CEP -->
-      <ng-container matColumnDef="cep">
-        <th mat-header-cell *matHeaderCellDef> CEP </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.cep}} </td>
-      </ng-container>
+    <!-- Coluna Estado Civil -->
+    <ng-container matColumnDef="estadoCivil">
+      <th mat-header-cell *matHeaderCellDef> Estado Civil </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.estadoCivil}} </td>
+    </ng-container>
 
-      <!-- Coluna Número -->
-      <ng-container matColumnDef="numero">
-        <th mat-header-cell *matHeaderCellDef> Número </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.numero}} </td>
-      </ng-container>
+    <!-- Coluna Logradouro -->
+    <ng-container matColumnDef="logradouro">
+      <th mat-header-cell *matHeaderCellDef> Logradouro </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.logradouro}} </td>
+    </ng-container>
 
-      <!-- Coluna Bairro -->
-      <ng-container matColumnDef="bairro">
-        <th mat-header-cell *matHeaderCellDef> Bairro </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.bairro}} </td>
-      </ng-container>
+    <!-- Coluna CEP -->
+    <ng-container matColumnDef="cep">
+      <th mat-header-cell *matHeaderCellDef> CEP </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.cep}} </td>
+    </ng-container>
 
-      <!-- Coluna Cidade -->
-      <ng-container matColumnDef="cidade">
-        <th mat-header-cell *matHeaderCellDef> Cidade </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.cidade}} </td>
-      </ng-container>
+    <!-- Coluna Número -->
+    <ng-container matColumnDef="numero">
+      <th mat-header-cell *matHeaderCellDef> Número </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.numero}} </td>
+    </ng-container>
 
-      <!-- Coluna Estado -->
-      <ng-container matColumnDef="estado">
-        <th mat-header-cell *matHeaderCellDef> Estado </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.estado}} </td>
-      </ng-container>
+    <!-- Coluna Bairro -->
+    <ng-container matColumnDef="bairro">
+      <th mat-header-cell *matHeaderCellDef> Bairro </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.bairro}} </td>
+    </ng-container>
 
-      <!-- Coluna Complemento -->
-      <ng-container matColumnDef="complemento">
-        <th mat-header-cell *matHeaderCellDef> Complemento </th>
-        <td mat-cell *matCellDef="let adotante"> {{adotante.complemento}} </td>
-      </ng-container>
-  
-      <!-- Coluna Ação -->
-      <ng-container matColumnDef="acao">
-        <th mat-header-cell *matHeaderCellDef> Ações </th>
-        <td mat-cell *matCellDef="let adotante">
-          <!-- Botão para abrir o diálogo de edição -->
-          <button mat-icon-button color="primary" (click)="openDialog(adotante)">
-            <mat-icon>edit</mat-icon>
-          </button>
-          <!-- Botão para deletar o adotante -->
-          <button mat-icon-button color="warn" (click)="deleteAdotante(adotante)">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </td>
-      </ng-container>
-  
-      <!-- Linha do cabeçalho -->
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <!-- Linhas de dados -->
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+    <!-- Coluna Cidade -->
+    <ng-container matColumnDef="cidade">
+      <th mat-header-cell *matHeaderCellDef> Cidade </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.cidade}} </td>
+    </ng-container>
+
+    <!-- Coluna Estado -->
+    <ng-container matColumnDef="estado">
+      <th mat-header-cell *matHeaderCellDef> Estado </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.estado}} </td>
+    </ng-container>
+
+    <!-- Coluna Complemento -->
+    <ng-container matColumnDef="complemento">
+      <th mat-header-cell *matHeaderCellDef> Complemento </th>
+      <td mat-cell *matCellDef="let adotante"> {{adotante.complemento}} </td>
+    </ng-container>
+
+    <!-- Coluna Ação -->
+    <ng-container matColumnDef="acao">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let adotante">
+        <!-- Botão para abrir o diálogo de edição -->
+        <button mat-icon-button color="primary" (click)="openDialog(adotante)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <!-- Botão para deletar o adotante -->
+        <button mat-icon-button color="warn" (click)="deleteAdotante(adotante)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Linha do cabeçalho -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <!-- Linhas de dados -->
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
 </div>
 
-  <!-- Rodapé do site -->
+<!-- Rodapé do site -->
 <footer class="text-center py-3 text-white">
-    <span class="copyright"> Criado por PI-1 007 013 </span>
-  </footer>
+  <span class="copyright"> Criado por PI-1 007 013 </span>
+</footer>
 
   <!--
     O botão "Adicionar Adotante" na barra de navegação abre o diálogo de formulário

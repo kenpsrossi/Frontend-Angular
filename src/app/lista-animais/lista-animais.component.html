@@ -29,12 +29,6 @@
     <!-- Tabela Angular Material -->
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   
-      <!-- Coluna ID -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> ID </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.id}} </td>
-      </ng-container>
-  
       <!-- Coluna Matrícula -->
       <ng-container matColumnDef="matricula">
         <th mat-header-cell *matHeaderCellDef> Matrícula </th>

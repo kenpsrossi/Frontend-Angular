@@ -1,8 +1,7 @@
 import { Pet } from './../models/pet';
 export default [
-    {
-        id: 1,
-        matricula: 1,
+    {     
+        matricula: '1',
         nome: 'Dog 1',
         especie: 'Cachorro',
         pelagem: 'Curta',
@@ -16,9 +15,8 @@ export default [
         imagem: 'assets/imagens/cachorro1.jpeg',
         idade: 2
     },
-    {
-        id: 2,
-        matricula: 2,
+    {        
+        matricula: '2',
         nome: 'Dog 2',
         especie: 'Cachorro',
         pelagem: 'Curta',
@@ -32,9 +30,8 @@ export default [
         imagem: 'assets/imagens/cachorro2.jpeg',
         idade: 3
     },
-    {
-        id: 3,
-        matricula: 3,
+    {      
+        matricula: '3',
         nome: 'Cat 7',
         especie: 'Gato',
         pelagem: 'Curta',
@@ -48,9 +45,8 @@ export default [
         imagem: 'assets/imagens/gato1.jpeg',
         idade: 4
     },
-    {
-        id: 4,
-        matricula: 4,
+    {       
+        matricula: '4',
         nome: 'Cat 8',
         especie: 'Gato',
         pelagem: 'Curta',
@@ -64,9 +60,8 @@ export default [
         imagem: 'assets/imagens/gato2.jpeg',    
         idade: 5
     },
-    {
-        id: 5,
-        matricula: 5,
+    {       
+        matricula: '5',
         nome: 'Dog 3',
         especie: 'Cachorro',
         pelagem: 'Curta',
@@ -80,9 +75,8 @@ export default [
         imagem: 'assets/imagens/cachorro3.jpeg',
         idade: 6
     },  
-    {
-        id: 6,  
-        matricula: 6,
+    {        
+        matricula: '6',
         nome: 'Dog 4',
         especie: 'Cachorro',
         pelagem: 'Curta',
@@ -96,9 +90,8 @@ export default [
         imagem: 'assets/imagens/cachorro4.jpeg',
         idade: 7
     },
-    {
-        id: 7,
-        matricula: 7,
+    {       
+        matricula: '7',
         nome: 'Cat 3',
         especie: 'Gato',
         pelagem: 'Curta',
@@ -112,9 +105,8 @@ export default [
         imagem: 'assets/imagens/gato3.jpeg',
         idade: 8
     },
-    {
-        id: 8,
-        matricula: 8,
+    {    
+        matricula: '8',
         nome: 'Cat 4',
         especie: 'Gato',
         pelagem: 'Curta',
@@ -128,9 +120,8 @@ export default [
         imagem: 'assets/imagens/gato4.jpeg',
         idade: 9
     },
-    {
-        id: 9,
-        matricula: 9,
+    {       
+        matricula: '9',
         nome: 'Dog 5',
         especie: 'Cachorro',
         pelagem: 'Curta',
@@ -144,9 +135,8 @@ export default [
         imagem: 'assets/imagens/cachorro5.jpeg',
         idade: 10
     },
-    {
-        id: 10,
-        matricula: 10,
+    {      
+        matricula: '10',
         nome: 'Dog 6',
         especie: 'Cachorro',
         pelagem: 'Curta',
@@ -160,9 +150,8 @@ export default [
         imagem: 'assets/imagens/cachorro6.jpeg',
         idade: 11
     },
-    {
-        id: 11,
-        matricula: 11,
+    {      
+        matricula: '11',
         nome: 'Cat 5',
         especie: 'Gato',
         pelagem: 'Curta',
@@ -176,9 +165,8 @@ export default [
         imagem: 'assets/imagens/gato5.jpeg',
         idade: 12
     },
-    {
-        id: 12,
-        matricula: 12,
+    {      
+        matricula: '12',
         nome: 'Cat 6',
         especie: 'Gato',
         pelagem: 'Curta',
@@ -192,9 +180,8 @@ export default [
         imagem: 'assets/imagens/gato6.jpeg',
         idade: 13
     },
-    {
-        id: 13,
-        matricula: 13,
+    {       
+        matricula: '13',
         nome: 'Dog 7',
         especie: 'Cachorro',
         pelagem: 'Curta',
@@ -208,9 +195,8 @@ export default [
         imagem: 'assets/imagens/cachorro1.jpeg',
         idade: 14
     },
-    {
-        id: 14,
-        matricula: 14,
+    {       
+        matricula: '14',
         nome: 'Dog 8',
         especie: 'Cachorro',
         pelagem: 'Curta',
@@ -224,9 +210,8 @@ export default [
         imagem: 'assets/imagens/cachorro2.jpeg',
         idade: 15
     },
-    {
-        id: 15,
-        matricula: 15,
+    {      
+        matricula: '15',
         nome: 'Cat 1',
         especie: 'Gato',
         pelagem: 'Curta',
@@ -240,9 +225,8 @@ export default [
         imagem: 'assets/imagens/gato1.jpeg',
         idade: 16
     },
-    {
-        id: 16,
-        matricula: 16,
+    {       
+        matricula: '16',
         nome: 'Cat 2',
         especie: 'Gato',
         pelagem: 'Curta',

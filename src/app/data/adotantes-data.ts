@@ -2,9 +2,7 @@ import { Adotante } from '../models/adotante';
 
 // Array de objetos Adotante
 export default [
-    {
-        // Cada objeto Adotante tem várias propriedades
-        id: 1,
+    {       
         matricula: '1',
         nome: 'Ana',
         telefone: '99999',
@@ -19,8 +17,7 @@ export default [
         estado: 'PE',
         complemento: 'APTO 1'
     },
-    {
-        id: 2,
+    {      
         matricula:'2',
         nome: 'Rodrigo',
         telefone: '88888',
@@ -35,8 +32,7 @@ export default [
         estado: 'SP',
         complemento: 'Condominio'
     },
-    {
-        id: 5,
+    {    
         matricula: '7',
         nome: 'Paula',
         telefone: '55555',
@@ -51,9 +47,8 @@ export default [
         estado: 'PR',
         complemento: 'Complemento'
     },
-    {
-        id: 5,
-        matricula: 7,
+    {       
+        matricula: '7',
         nome: 'Paula',
         telefone: '55555',
         email: 'adot77777@Email.com',
@@ -67,8 +62,7 @@ export default [
         estado: 'RJ',
         complemento: 'Apartamento'
     },
-    {
-        id: 8,
+    {      
         matricula: '9',
         nome: 'Aline',
         telefone: '55555',
@@ -84,7 +78,6 @@ export default [
         complemento: 'Complement'
     },
     {
-        id: 12,
         matricula:'10',
         nome: 'Rone',
         telefone: '8887765',
@@ -100,6 +93,4 @@ export default [
         complemento: 'Casa'
     },
  
-
-
 ] as Array<Adotante>; // O array é tipado como Array<Adotante> para garantir que todos os objetos no array sigam a estrutura do modelo Adotante
