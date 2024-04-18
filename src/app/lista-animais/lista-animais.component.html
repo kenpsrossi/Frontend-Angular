@@ -1,135 +1,132 @@
-
-
 <!-- Barra de navegação no topo da página -->
 <nav class="navbar navbar-expand-lg navbar-rosa-claro" data-bs-theme="dark">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
-        <!-- Botão Home na barra de navegação -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <!-- O atributo href define o destino do link -->
-            <a class="btn btn-info" href="#" style="margin-left: 50px;">Home
-              <span class="visually-hidden">(current)</span> 
-            </a>  
-            <button mat-raised-button color="primary" (click)="openCadastroAnimaisDialog(newanimal)">Adicionar Animal</button>
-          </li>
-        </ul>
-  
-        <!-- Título da página, centralizado na barra de navegação -->
-        <h2 class="fs-3" style="color: #a7087a; font-weight: bold; font-style: italic;">Animais</h2>
-  
-        <!-- Espaço vazio para manter o título no centro -->
-        <ul class="navbar-nav"></ul>
-      </div>
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
+      <!-- Botão Home na barra de navegação -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <!-- O atributo href define o destino do link -->
+          <a class="btn btn-info" href="#" style="margin-left: 50px;">Home
+            <span class="visually-hidden">(current)</span> 
+          </a>  
+          <button mat-raised-button color="primary" (click)="openCadastroAnimaisDialog(newanimal)">Adicionar Animal</button>
+        </li>
+      </ul>
+
+      <!-- Título da página, centralizado na barra de navegação -->
+      <h2 class="fs-3" style="color: #a7087a; font-weight: bold; font-style: italic;">Animais</h2>
+
+      <!-- Espaço vazio para manter o título no centro -->
+      <ul class="navbar-nav"></ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  
-  <div>
-    <!-- Tabela Angular Material -->
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  
-      <!-- Coluna Matrícula -->
-      <ng-container matColumnDef="matricula">
-        <th mat-header-cell *matHeaderCellDef> Matrícula </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.matricula}} </td>
-      </ng-container>
-  
-      <!-- Coluna Nome -->
-      <ng-container matColumnDef="nome">
-        <th mat-header-cell *matHeaderCellDef> Nome </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.nome}} </td>
-      </ng-container>
-  
-      <!-- Coluna Espécie -->
-      <ng-container matColumnDef="especie">
-        <th mat-header-cell *matHeaderCellDef> Espécie </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.especie}} </td>
-      </ng-container>
+<div>
+  <!-- Tabela Angular Material -->
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-      <!-- Coluna Pelagem -->
-      <ng-container matColumnDef="pelagem">
-        <th mat-header-cell *matHeaderCellDef> Pelagem </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.pelagem}} </td>
-      </ng-container>
+    <!-- Coluna Matrícula -->
+    <ng-container matColumnDef="matricula">
+      <th mat-header-cell *matHeaderCellDef> Matrícula </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.matricula}} </td>
+    </ng-container>
 
-      <!-- Coluna Raça -->
-      <ng-container matColumnDef="raca">
-        <th mat-header-cell *matHeaderCellDef> Raça </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.raca}} </td>
-      </ng-container>
+    <!-- Coluna Nome -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.nome}} </td>
+    </ng-container>
 
-      <!-- Coluna Sexo -->
-      <ng-container matColumnDef="sexo">
-        <th mat-header-cell *matHeaderCellDef> Sexo </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.sexo}} </td>
-      </ng-container>
+    <!-- Coluna Espécie -->
+    <ng-container matColumnDef="especie">
+      <th mat-header-cell *matHeaderCellDef> Espécie </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.especie}} </td>
+    </ng-container>
 
-      <!-- Coluna Castração -->
-      <ng-container matColumnDef="castracao">
-        <th mat-header-cell *matHeaderCellDef> Castração  </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.castracao}} </td>
-      </ng-container>
+    <!-- Coluna Pelagem -->
+    <ng-container matColumnDef="pelagem">
+      <th mat-header-cell *matHeaderCellDef> Pelagem </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.pelagem}} </td>
+    </ng-container>
 
-      <!-- Coluna Vacinação -->
-      <ng-container matColumnDef="vacinacao">
-        <th mat-header-cell *matHeaderCellDef> Vacinação </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.vacinacao}} </td>
-      </ng-container>
+    <!-- Coluna Raça -->
+    <ng-container matColumnDef="raca">
+      <th mat-header-cell *matHeaderCellDef> Raça </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.raca}} </td>
+    </ng-container>
 
-      <!-- Coluna Local Resgate -->
-      <ng-container matColumnDef="localResgate">
-        <th mat-header-cell *matHeaderCellDef> Local Resgate </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.localResgate}} </td>
-      </ng-container>
+    <!-- Coluna Sexo -->
+    <ng-container matColumnDef="sexo">
+      <th mat-header-cell *matHeaderCellDef> Sexo </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.sexo}} </td>
+    </ng-container>
 
-      <!-- Coluna Observação -->
-      <ng-container matColumnDef="observacao">
-        <th mat-header-cell *matHeaderCellDef>  Observação  </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.observacao}} </td>
-      </ng-container>
+    <!-- Coluna Castração -->
+    <ng-container matColumnDef="castracao">
+      <th mat-header-cell *matHeaderCellDef> Castração  </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.castracao}} </td>
+    </ng-container>
 
-      <!-- Coluna status-->
-      <ng-container matColumnDef="status">
-        <th mat-header-cell *matHeaderCellDef> Status </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.status}} </td>
-      </ng-container>
+    <!-- Coluna Vacinação -->
+    <ng-container matColumnDef="vacinacao">
+      <th mat-header-cell *matHeaderCellDef> Vacinação </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.vacinacao}} </td>
+    </ng-container>
 
-      <!-- Coluna Imagem -->
-      <ng-container matColumnDef="imagem">
-        <th mat-header-cell *matHeaderCellDef> Imagem </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.imagem}} </td>
-      </ng-container>
+    <!-- Coluna Local Resgate -->
+    <ng-container matColumnDef="localResgate">
+      <th mat-header-cell *matHeaderCellDef> Local Resgate </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.localResgate}} </td>
+    </ng-container>
 
-      <!-- Coluna Idade -->
-      <ng-container matColumnDef="idade">
-        <th mat-header-cell *matHeaderCellDef> Idade </th>
-        <td mat-cell *matCellDef="let animal"> {{animal.idade}} </td>
-      </ng-container>
-  
-      <!-- Coluna Ação -->
-      <ng-container matColumnDef="acao">
-        <th mat-header-cell *matHeaderCellDef> Ações </th>
-        <td mat-cell *matCellDef="let animal">
-          <!-- Botão para abrir o diálogo de edição -->
-          <button mat-icon-button color="primary" (click)=" openAnimalFormDialog(animal)">
-            <mat-icon>edit</mat-icon>
-          </button>
-          <!-- Botão para deletar o adotante -->
-          <button mat-icon-button color="warn" (click)="deleteAnimal(animal)">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </td>
-      </ng-container>
-  
-      <!-- Linha do cabeçalho -->
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <!-- Linhas de dados -->
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+    <!-- Coluna Observação -->
+    <ng-container matColumnDef="observacao">
+      <th mat-header-cell *matHeaderCellDef>  Observação  </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.observacao}} </td>
+    </ng-container>
+
+    <!-- Coluna status-->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.status}} </td>
+    </ng-container>
+
+    <!-- Coluna Imagem -->
+    <ng-container matColumnDef="imagem">
+      <th mat-header-cell *matHeaderCellDef> Imagem </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.imagem}} </td>
+    </ng-container>
+
+    <!-- Coluna Idade -->
+    <ng-container matColumnDef="idade">
+      <th mat-header-cell *matHeaderCellDef> Idade </th>
+      <td mat-cell *matCellDef="let animal"> {{animal.idade}} </td>
+    </ng-container>
+
+    <!-- Coluna Ação -->
+    <ng-container matColumnDef="acao">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let animal">
+        <!-- Botão para abrir o diálogo de edição -->
+        <button mat-icon-button color="primary" (click)=" openAnimalFormDialog(animal)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <!-- Botão para deletar o adotante -->
+        <button mat-icon-button color="warn" (click)="deleteAnimal(animal)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Linha do cabeçalho -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <!-- Linhas de dados -->
+    <tr mat-row *matRowDef="let row; columns: displayedColumns; let i = index" [ngClass]="i % 2 == 0 ? 'even-row' : 'odd-row'"></tr>
+  </table>
 </div>
 
-  <!-- Rodapé do site -->
+<!-- Rodapé do site -->
 <footer class="text-center py-3 text-white">
-    <span class="copyright"> Criado por PI-1 007 013 </span>
-  </footer>
+  <span class="copyright"> Criado por PI-1 007 013 </span>
+</footer>
