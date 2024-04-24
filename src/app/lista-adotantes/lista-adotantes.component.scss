@@ -2,14 +2,11 @@
     background-color: #FFB6C1;
 }
 
-
 .container {
     /* Define a cor de fundo do container */
     background-color: #fccfd6;
     padding: 50px 80px;
-    
-    }
-
+}
 
 footer {
     /* Define a cor de fundo do rodapé */
@@ -17,4 +14,14 @@ footer {
     padding: 20px 50px;
     display: flex;
     flex-direction: row-reverse;
-    }
+}
+
+/* Light row */
+:host ::ng-deep .even-row {
+    background-color: #f2f2f2; /* or any light color of your choice */
+}
+
+/* Dark row */
+:host ::ng-deep .odd-row {
+    background-color: #d9d9d9; /* or any dark color of your choice */
+}

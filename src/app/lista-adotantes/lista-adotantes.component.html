@@ -123,7 +123,7 @@
     <!-- Linha do cabeçalho -->
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <!-- Linhas de dados -->
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns; let i = index" [ngClass]="i % 2 == 0 ? 'even-row' : 'odd-row'"></tr>
   </table>
 </div>
 
@@ -132,16 +132,16 @@
   <span class="copyright"> Criado por PI-1 007 013 </span>
 </footer>
 
-  <!--
-    O botão "Adicionar Adotante" na barra de navegação abre o diálogo de formulário
-    com um adotante vazio para adicionar um novo adotante.
-    Cada linha da tabela tem um botão de edição e um botão de deletar.
-    O botão de edição abre o diálogo de formulário com os dados do adotante dessa linha para editar esse adotante.
-    O botão de deletar deleta o adotante dessa linha.
-    Quando o diálogo de formulário é fechado, o componente verifica se um resultado foi retornado e, em caso afirmativo,
-    adiciona ou edita o adotante conforme necessário.
-    O componente obtém a lista inicial de adotantes do serviço AdotanteService quando é inicializado.
+<!--
+  O botão "Adicionar Adotante" na barra de navegação abre o diálogo de formulário
+  com um adotante vazio para adicionar um novo adotante.
+  Cada linha da tabela tem um botão de edição e um botão de deletar.
+  O botão de edição abre o diálogo de formulário com os dados do adotante dessa linha para editar esse adotante.
+  O botão de deletar deleta o adotante dessa linha.
+  Quando o diálogo de formulário é fechado, o componente verifica se um resultado foi retornado e, em caso afirmativo,
+  adiciona ou edita o adotante conforme necessário.
+  O componente obtém a lista inicial de adotantes do serviço AdotanteService quando é inicializado.
 
-    Este código cria uma tabela com uma coluna para cada campo do adotante.
-     Ele também tem uma coluna de ações com botões para editar e deletar cada adotante.
-     Os dados para a tabela são fornecidos pela variável dataSource do componente. -->
+  Este código cria uma tabela com uma coluna para cada campo do adotante.
+   Ele também tem uma coluna de ações com botões para editar e deletar cada adotante.
+   Os dados para a tabela são fornecidos pela variável dataSource do componente. -->

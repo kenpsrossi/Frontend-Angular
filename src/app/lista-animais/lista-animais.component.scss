@@ -18,3 +18,10 @@ footer {
     display: flex;
     flex-direction: row-reverse;
     }
+    :host ::ng-deep .even-row {
+        background-color: #f2f2f2; /* or any light color of your choice */
+    }
+    
+    :host ::ng-deep .odd-row {
+        background-color: #d9d9d9; /* or any dark color of your choice */
+    }
