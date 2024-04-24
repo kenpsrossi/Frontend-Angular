@@ -17,9 +17,7 @@ import { SharedModule } from './shared/shared.module';
 // Importa os componentes de cada uma das views da aplicação
 import { CadastrosAnimaisComponent } from './views/cadastros-animais/cadastros-animais.component';
 import { CadastrosAdotantesComponent } from './views/cadastros-adotantes/cadastros-adotantes.component';
-import { ResgatesComponent } from './views/resgates/resgates.component';
 import { AjudarComponent } from './views/ajudar/ajudar.component';
-import { AdotarComponent } from './views/adotar/adotar.component';
 import { LoginComponent } from './views/login/login.component';
 import { MenuComponent } from './views/menu/menu.component';
 import { CarouselComponent } from './views/carousel/carousel.component';
@@ -50,9 +48,7 @@ import { AnimalFormComponent } from './animal-form/animal-form.component';
     AppComponent,
     CadastrosAnimaisComponent,
     CadastrosAdotantesComponent,
-    ResgatesComponent,
     AjudarComponent,
-    AdotarComponent,
     LoginComponent,
     MenuComponent,
     CarouselComponent,

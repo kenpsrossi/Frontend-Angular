@@ -37,7 +37,7 @@ const routes: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: 'adotar', component: CadastrosAdotantesComponent
+    path: 'cadastro-adotante', component: CadastrosAdotantesComponent
   },
   {
     path: 'ajudar', component: AjudarComponent

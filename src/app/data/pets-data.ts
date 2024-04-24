@@ -27,7 +27,7 @@ export default [
         localResgate: 'Rua 2, Bairro 2',
         observacao: 'Cachorra muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'assets/imagens/cachorro2.jpeg',
+        imagem: 'assets/imagens/cachorro4.jpeg',
         idade: 3
     },
     {      
@@ -42,7 +42,7 @@ export default [
         localResgate: 'Rua 3, Bairro 3',
         observacao: 'Gata muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'assets/imagens/gato1.jpeg',
+        imagem:'assets/imagens/gato5.jpeg',
         idade: 4
     },
     {       
@@ -57,12 +57,12 @@ export default [
         localResgate: 'Rua 4, Bairro 4',
         observacao: 'Gato muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'assets/imagens/gato2.jpeg',    
+        imagem: 'assets/imagens/gato7.jpeg',    
         idade: 5
     },
     {       
         matricula: '5',
-        nome: 'Dog 3',
+        nome: 'Dog 6',
         especie: 'Cachorro',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -72,7 +72,7 @@ export default [
         localResgate: 'Rua 5, Bairro 5',
         observacao: 'Cachorra muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'assets/imagens/cachorro3.jpeg',
+        imagem: 'assets/imagens/cachorro6.jpeg',
         idade: 6
     },  
     {        
@@ -87,12 +87,12 @@ export default [
         localResgate: 'Rua 6, Bairro 6',
         observacao: 'Cachorro muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'assets/imagens/cachorro4.jpeg',
+        imagem: 'assets/imagens/cachorro7.jpeg',
         idade: 7
     },
     {       
         matricula: '7',
-        nome: 'Cat 3',
+        nome: 'Cat 6',
         especie: 'Gato',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -102,7 +102,7 @@ export default [
         localResgate: 'Rua 7, Bairro 7',
         observacao: 'Gata muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'assets/imagens/gato3.jpeg',
+        imagem: 'assets/imagens/gato6.jpeg',
         idade: 8
     },
     {    
@@ -137,7 +137,7 @@ export default [
     },
     {      
         matricula: '10',
-        nome: 'Dog 6',
+        nome: 'Dog 3',
         especie: 'Cachorro',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -147,7 +147,7 @@ export default [
         localResgate: 'Rua 10, Bairro 10',
         observacao: 'Cachorro muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'assets/imagens/cachorro6.jpeg',
+        imagem: 'assets/imagens/cachorro8.jpeg',
         idade: 11
     },
     {      
@@ -162,12 +162,12 @@ export default [
         localResgate: 'Rua 11, Bairro 11',
         observacao: 'Gata muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'assets/imagens/gato5.jpeg',
+        imagem: 'assets/imagens/gato1.jpeg',
         idade: 12
     },
     {      
         matricula: '12',
-        nome: 'Cat 6',
+        nome: 'Cat 3',
         especie: 'Gato',
         pelagem: 'Curta',
         raca: 'Vira-lata',
@@ -177,7 +177,7 @@ export default [
         localResgate: 'Rua 12, Bairro 12',
         observacao: 'Gato muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'assets/imagens/gato6.jpeg',
+        imagem: 'assets/imagens/gato3.jpeg',
         idade: 13
     },
     {       
@@ -192,7 +192,7 @@ export default [
         localResgate: 'Rua 1, Bairro 1',
         observacao: 'Cachorro muito dócil e brincalhão',
         status: 'Disponível',
-        imagem: 'assets/imagens/cachorro1.jpeg',
+        imagem: 'assets/imagens/cachorro2.jpeg',
         idade: 14
     },
     {       
@@ -207,7 +207,7 @@ export default [
         localResgate: 'Rua 2, Bairro 2',
         observacao: 'Cachorra muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'assets/imagens/cachorro2.jpeg',
+        imagem: 'assets/imagens/cachorro3.jpeg',
         idade: 15
     },
     {      
@@ -222,7 +222,7 @@ export default [
         localResgate: 'Rua 3, Bairro 3',
         observacao: 'Gata muito dócil e brincalhona',
         status: 'Disponível',
-        imagem: 'assets/imagens/gato1.jpeg',
+        imagem: 'assets/imagens/gato8.jpeg',
         idade: 16
     },
     {       
