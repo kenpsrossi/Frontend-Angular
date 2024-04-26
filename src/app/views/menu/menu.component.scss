@@ -46,25 +46,28 @@ footer {
 /* Estiliza os botões com a classe .btn-custom */
 .btn-custom {
   /* Define a cor de fundo do botão */
-  background-color: #110308; 
+  background-color: transparent; 
   /* Define a cor do texto do botão */
-  color: #fff; 
+  color: #060202; 
   /* Remove a borda do botão */
-  border: none; 
+  border:rgb(8, 16, 20); 
   /* Define o padding do botão */
-  padding: 10px 20px; 
+  padding: 7px 20px; 
   /* Define o raio da borda do botão para tornar os cantos arredondados */
   border-radius: 5px; 
   /* Define a sombra ao redor do botão */
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); 
+  box-shadow: 5 5px 3px rgba(145, 218, 231, 0.1); 
   /* Define a transição suave para o hover */
   transition: all 0.3s ease; 
 
   /* Estiliza o botão quando o mouse está sobre ele */
   &:hover {
     /* Define a cor de fundo do botão quando o mouse está sobre ele */
-    background-color: #09bbec; 
+    background-color: #989298; 
     /* Define a sombra ao redor do botão quando o mouse está sobre ele */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 2px 5px rgba(214, 202, 202, 0.2); 
   }
 }
+
+
+
