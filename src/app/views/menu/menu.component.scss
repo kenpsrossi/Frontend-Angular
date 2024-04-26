@@ -4,41 +4,67 @@
 }
 
 /* Define a cor dos links ativos */
-$link-active: #0c185f;
+$link-active: #7489fd;
 
 /* Estiliza o menu */
 .menu {
-/* Define a cor de fundo do menu */
-background-color: var(--secondary-color);
+  /* Define a cor de fundo do menu */
+  background-color: var(--secondary-color);
 
-/* Estiliza os links do menu */
-& li > a {
-  /* Remove a decoração do texto dos links */
-  text-decoration: none;
-  /* Define a cor do texto dos links */
-  color: white;
-  /* Define o padding dos links */
-  padding: 0.5rem;
-  /* Define o raio da borda dos links */
-  border-radius: 0.5rem;
+  /* Estiliza os links do menu */
+  & li > a {
+    /* Remove a decoração do texto dos links */
+    text-decoration: none;
+    /* Define a cor do texto dos links */
+    color: rgb(15, 0, 0);
+    /* Define o padding dos links */
+    padding: 0.5rem;
+    /* Define o raio da borda dos links */
+    border-radius: 0.5rem;
 
-  /* Estiliza os links ativos */
-  &.active {
-    /* Define a cor de fundo dos links ativos */
-    background-color: lighten($link-active, 15);
+    /* Estiliza os links ativos */
+    &.active {
+      /* Define a cor de fundo dos links ativos */
+      background-color: lighten($link-active, 15);
+    }
   }
-}
 }
 
 /* Estiliza o título h1 */
 h1 {
-/* Posiciona o título um pouco abaixo do topo */
-position: relative;
-top: 0.3em;
+  /* Posiciona o título um pouco abaixo do topo */
+  position: relative;
+  top: 0.3em;
 }
 
 /* Estiliza o rodapé */
 footer {
-/* Define a cor de fundo do rodapé */
-background-color: #FFB6C1;
+  /* Define a cor de fundo do rodapé */
+  background-color: #FFB6C1;
+}
+
+/* Estiliza os botões com a classe .btn-custom */
+.btn-custom {
+  /* Define a cor de fundo do botão */
+  background-color: #110308; 
+  /* Define a cor do texto do botão */
+  color: #fff; 
+  /* Remove a borda do botão */
+  border: none; 
+  /* Define o padding do botão */
+  padding: 10px 20px; 
+  /* Define o raio da borda do botão para tornar os cantos arredondados */
+  border-radius: 5px; 
+  /* Define a sombra ao redor do botão */
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); 
+  /* Define a transição suave para o hover */
+  transition: all 0.3s ease; 
+
+  /* Estiliza o botão quando o mouse está sobre ele */
+  &:hover {
+    /* Define a cor de fundo do botão quando o mouse está sobre ele */
+    background-color: #09bbec; 
+    /* Define a sombra ao redor do botão quando o mouse está sobre ele */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  }
 }
