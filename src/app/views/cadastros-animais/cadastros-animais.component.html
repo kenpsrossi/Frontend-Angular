@@ -5,9 +5,9 @@
       <!-- Botão Home na barra de navegação -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="btn btn-info" href="#" style="margin-left: 50px;">Home
-            <span class="visually-hidden">(current)</span>
-        </a>
+          <a class="btn btn-info bot-home" href="#">Home
+            <span class="visually-hidden">(current)</span> 
+        </a> 
         </li>
       </ul>
 
@@ -22,66 +22,73 @@
 <!-- Formulário de cadastro de animais -->
 
 <form [formGroup]="profileForm" class="formulario" (ngSubmit)="onSubmit()">
-  <fieldset>
-    <div class="row">
-      <div class="col col-md-8">
-
-        <label class="form-label mt-4">Nome:
-          <input type="text" formControlName="nome" placeholder="Nome">
+  <div class="container-fluid">
+    <div class="row justify-content-between">
+      <div class="col-md-4">
+        <label class="form-label mt-0">Nome:
+          <input type="text" formControlName="nome" placeholder="Nome" class="form-control">
         </label>
 
         <label class="form-label mt-4">Matrícula:
-          <input type="text" formControlName="matricula" placeholder="Matricula">
-        </label>
-        
-        <label class="form-label mt-4">Espécie: 
-          <input type="text" formControlName="especie" placeholder="Espécie">
-        </label>
-                
-        <label class="form-label mt-4">Pelagem:
-          <input type="text" formControlName="pelagem" placeholder="Pelagem">          
+          <input type="text" formControlName="matricula" placeholder="Matricula" class="form-control">
         </label>
 
-        <label class="form-label mt-4">Raça:
-          <input type="text" formControlName="raca" placeholder="Raça">
+        <label class="form-label mt-4">Espécie:
+          <input type="text" formControlName="especie" placeholder="Espécie" class="form-control">
+        </label>
+
+        <label class="form-label mt-4">Pelagem:
+          <input type="text" formControlName="pelagem" placeholder="Pelagem" class="form-control">
+        </label>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label mt-0">Raça:
+          <input type="text" formControlName="raca" placeholder="Raça" class="form-control">
         </label>
 
         <label class="form-label mt-4">Sexo:
-          <input type="text" formControlName="sexo" placeholder="Sexo">
+          <input type="text" formControlName="sexo" placeholder="Sexo" class="form-control">
         </label>
 
         <label class="form-label mt-4">Castração:
-          <input type="text" formControlName="castracao" placeholder="Castração">
+          <input type="text" formControlName="castracao" placeholder="Castração" class="form-control">
         </label>
 
         <label class="form-label mt-4">Vacinação:
-          <input type="text" formControlName="vacinacao" placeholder="Vacinacao">
+          <input type="text" formControlName="vacinacao" placeholder="Vacinacao" class="form-control">
         </label>
+      </div>
 
-        <label class="form-label mt-4">Local Resgate:
-          <input type="text" formControlName="localResgate" placeholder="Local Resgate">
+      <div class="col-md-4">
+        <label class="form-label mt-0">Local Resgate:
+          <input type="text" formControlName="localResgate" placeholder="Local Resgate" class="form-control">
         </label>
-
-        
-          <label for="exampleTextarea" placeholder="Vacinação" class="form-label mt-4">Breve história do pet :</label>
-          <textarea class="form-control" id="exampleTextarea"  rows="4"> Escreva aqui sobre o pet...</textarea>
-      
 
         <label class="form-label mt-4">Status:
-          <input type="text" formControlName="status" placeholder="Status">
+          <input type="text" formControlName="status" placeholder="Status" class="form-control">
         </label>
 
-        <label for="formFile" class="form-label mt-4">Imagem do pet no formato $$$ x $$$</label>
-        <input type="text" formControlName="imagem" class="form-control" type="file" id="formFile">
-
         <label class="form-label mt-4">Idade:
-          <input type="text" formControlName="idade" placeholder="Idade">
+          <input type="text" formControlName="idade" placeholder="Idade" class="form-control">
         </label>
       </div>
     </div>
 
-  <!-- Botão para submeter o formulário -->
-<!-- A diretiva disabled desabilita este botão se o FormGroup 'profileForm' não é válido -->
-<button type="submit" [disabled]="!profileForm.valid">Cadastrar</button>
-  </fieldset>
+    <div class="row">
+      <div class="col-md-12">
+        <label for="exampleTextarea" placeholder="Vacinação" class="form-label mt-4">Breve história do pet :</label>
+        <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Escreva aqui sobre o pet..."></textarea>
+
+        <label for="formFile" class="form-label mt-4">Imagem do pet no formato $$$ x $$$</label>
+        <input class="form-control" type="file" id="formFile" formControlName="imagem">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <button type="submit" [disabled]="!profileForm.valid" class="btn bot-salvar">Cadastrar</button>
+      </div>
+    </div>
+  </div>
 </form>

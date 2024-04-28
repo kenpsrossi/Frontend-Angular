@@ -2,9 +2,24 @@
 $z-index-wrapper: 10;
 
 // Define cores
-$color-wrapper-bg: #9096969c;
+$color-wrapper-bg: #404a4a9c;
+
+.bot-adotar {
+  background-color:  #FFB6C1;
+  color: black;
+}
+.bot-adotar:hover {
+  background-color:  #FFB6C1;
+  box-shadow: 0 10px 10px 5px rgb(146, 247, 220);
+}
+
+.animal-data {
+  margin-top: 1rem;
+}
 
 .animal-list {
+  margin-top: -30px;
+  background-color: #f5d9f3;
   // Define o display para grid
   display: grid;
   // Define 4 colunas de tamanho igual
@@ -13,10 +28,12 @@ $color-wrapper-bg: #9096969c;
   justify-items: center;
   // Define o espaço entre os itens da grid
   gap: 2rem;
+  padding: 2rem;
 
   .animal-image {
     // Define a posição como relativa para permitir posicionamento absoluto dos filhos
     position: relative;
+    box-shadow: 15px 13px 10px  rgb(146, 247, 220);
 
     // Mostra o wrapper do animal quando o mouse passa sobre a imagem
     &:hover {

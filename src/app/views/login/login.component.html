@@ -12,7 +12,7 @@
     <!-- Rótulo para o campo de nome de usuário -->
     <label for="username" style="font-size: 1.5em;">Usuário</label>
     <!-- Campo de entrada para o nome de usuário -->
-    <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" required style="font-size: 1.5em; line-height: 1.5; padding: .5rem 1rem;">
+    <input type="text" class="form-control campo" id="username" [(ngModel)]="username" name="username" required style="font-size: 1.5em; line-height: 1.5; padding: .5rem 1rem;">
   </div>
 
   <!-- Grupo de entrada para a senha -->
@@ -20,11 +20,11 @@
     <!-- Rótulo para o campo de senha -->
     <label for="password" style="font-size: 1.5em;">Senha</label>
     <!-- Campo de entrada para a senha -->
-    <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required style="font-size: 1.5em; line-height: 1.5; padding: .5rem 1rem;">
+    <input type="password" class="form-control campo" id="password" [(ngModel)]="password" name="password" required style="font-size: 1.5em; line-height: 1.5; padding: .5rem 1rem;">
   </div>
 
   <!-- Botão para submeter o formulário -->
-  <button type="submit" class="btn btn-secondary mx-2" style="font-size: 1.5em; line-height: 1.5; padding: .5rem 1rem;" routerLink="/menu"
+  <button type="submit" class="btn bot-entrar" routerLink="/menu"
   routerLinkActive="active">Entrar</button>
 
 </form>

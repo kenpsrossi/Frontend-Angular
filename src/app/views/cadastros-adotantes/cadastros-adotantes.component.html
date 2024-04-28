@@ -6,9 +6,10 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <!-- O atributo href define o destino do link -->
-          <a class="btn btn-info" href="#" style="margin-left: 50px;">Home
-            <span class="visually-hidden">(current)</span>
-          </a>             
+          <a class="btn btn-info bot-home" href="#">Home
+            <span class="visually-hidden">(current)</span> 
+        </a> 
+                       
         </li>
       </ul>
 
@@ -25,89 +26,83 @@
 <!-- A diretiva formGroup vincula este formulário ao FormGroup 'profileForm' -->
 <!-- A diretiva ngSubmit especifica a função a ser executada quando o formulário é submetido -->
 <form [formGroup]="profileForm" class="formulario" (ngSubmit)="onSubmit()">
-  <fieldset>
-    <div class="row">
-      <div class="col col-md-8">
-
-        <!-- Campo de entrada para o nome -->
-        <!-- A diretiva formControlName vincula este campo de entrada ao campo 'nome' do FormGroup 'profileForm' -->
-        <label class="form-label mt-4">Nome:
+  <div class="container-fluid">
+    <div class="row justify-content-between">
+      <div class="col-md-4">
+        <label class="form-label mt-0">Nome:
           <input type="text" formControlName="nome" placeholder="Nome completo">
-          <!-- Mensagem de erro exibida quando o campo 'nome' é inválido e tocado ou sujo -->
           <div *ngIf="profileForm.controls.nome.invalid && (profileForm.controls.nome.touched || profileForm.controls.nome.dirty)">
             Nome é obrigatório mínimo 8 letras.
           </div>
         </label>
 
-        <!-- Campo de entrada para o CPF -->
-        <!-- A diretiva formControlName vincula este campo de entrada ao campo 'cpf' do FormGroup 'profileForm' -->
         <label class="form-label mt-4">CPF: 
           <input type="text" formControlName="cpf" placeholder="Digite CPF">
-          <!-- Mensagem de erro exibida quando o campo 'cpf' não tem exatamente 11 caracteres e é tocado ou sujo -->
           <div *ngIf="profileForm.controls.cpf.errors?.['cpfLength'] && (profileForm.controls.cpf.touched || profileForm.controls.cpf.dirty)">
             CPF deve ter exatamente 11 caracteres.
           </div>
         </label>
-        
-        <!-- Campo de entrada para o email -->
-        <!-- A diretiva formControlName vincula este campo de entrada ao campo 'email' do FormGroup 'profileForm' -->
+
         <label class="form-label mt-4">Email:
           <input type="text" formControlName="email" placeholder="Email">
-          <!-- Mensagem de erro exibida quando o campo 'email' não é um email válido e é tocado ou sujo -->
           <div *ngIf="profileForm.controls.email.errors?.['email'] && (profileForm.controls.email.touched || profileForm.controls.email.dirty)">
             Email inválido.
           </div>
         </label>
 
-        <!-- Campo de entrada para o telefone -->
         <label class="form-label mt-4">Telefone:
           <input type="text" formControlName="telefone" placeholder="Telefone">
         </label>
+      </div>
 
-        <!-- Campo de entrada para o estado civil -->
+      <!-- Segunda coluna -->
+      <div class="col col-md-4">
         <label class="form-label mt-4">Estado Civil:
           <input type="text" formControlName="estadoCivil" placeholder="Estado Civil">
         </label>
-
-        <!-- Campo de entrada para o logradouro -->
+      
         <label class="form-label mt-4">Logradouro:
           <input type="text" formControlName="logradouro" placeholder="Logradouro">
         </label>
 
-        <!-- Campo de entrada para o CEP -->
         <label class="form-label mt-4">CEP:
           <input type="text" formControlName="cep" placeholder="00000-000">
         </label>
 
-        <!-- Campo de entrada para o número -->
         <label class="form-label mt-4">Número:
           <input type="text" formControlName="numero" placeholder="Número">
         </label>
+      </div>
 
-        <!-- Campo de entrada para o bairro -->
+       
+     
+
+      <!-- Terceira coluna -->
+      <div class="col col-md-4">
         <label class="form-label mt-4">Bairro:
           <input type="text" formControlName="bairro" placeholder="Bairro">
         </label>
 
-        <!-- Campo de entrada para a cidade -->
         <label class="form-label mt-4">Cidade:
           <input type="text" formControlName="cidade" placeholder="Cidade">
-        </label>
+        </label> 
 
-        <!-- Campo de entrada para o estado -->
         <label class="form-label mt-4">Estado:
           <input type="text" formControlName="estado" placeholder="Estado">
         </label>
 
-        <!-- Campo de entrada para o complemento -->
         <label class="form-label mt-4">Complemento:
           <input type="text" formControlName="complemento" placeholder="Complemento">
         </label>
       </div>
+
     </div>
 
-  <!-- Botão para submeter o formulário -->
-<!-- A diretiva disabled desabilita este botão se o FormGroup 'profileForm' não é válido -->
-<button type="submit" [disabled]="!profileForm.valid">Cadastrar</button>
-  </fieldset>
+    <!-- Botão para submeter o formulário -->
+    <div class="row">
+      <div class="col-12 text-center mt-4">
+        <button type="submit" [disabled]="!profileForm.valid">Cadastrar</button>
+      </div>
+    </div>
+  </div>
 </form>

@@ -3,8 +3,20 @@
   background-color: #FFB6C1;
 }
 
+.logo {
+  margin-top: -25px;
+  width: 160%;
+  height: 160%;
+  object-fit: contain;
+}
+
+.navbar-brand {
+  width: 200px;  /* Ajuste conforme necessário */
+  height: 80px; /* Ajuste conforme necessário */
+}
+
 /* Define a cor dos links ativos */
-$link-active: #7489fd;
+$link-active: #bcc5f5;
 
 /* Estiliza o menu */
 .menu {
@@ -29,7 +41,6 @@ $link-active: #7489fd;
     }
   }
 }
-
 /* Estiliza o título h1 */
 h1 {
   /* Posiciona o título um pouco abaixo do topo */
@@ -37,16 +48,11 @@ h1 {
   top: 0.3em;
 }
 
-/* Estiliza o rodapé */
-footer {
-  /* Define a cor de fundo do rodapé */
-  background-color: #FFB6C1;
-}
-
 /* Estiliza os botões com a classe .btn-custom */
 .btn-custom {
   /* Define a cor de fundo do botão */
   background-color: transparent; 
+  font-weight: bold; 
   /* Define a cor do texto do botão */
   color: #060202; 
   /* Remove a borda do botão */
@@ -56,18 +62,71 @@ footer {
   /* Define o raio da borda do botão para tornar os cantos arredondados */
   border-radius: 5px; 
   /* Define a sombra ao redor do botão */
-  box-shadow: 5 5px 3px rgba(145, 218, 231, 0.1); 
+  box-shadow: 5 5px 3px palevioletred; 
   /* Define a transição suave para o hover */
   transition: all 0.3s ease; 
 
   /* Estiliza o botão quando o mouse está sobre ele */
   &:hover {
     /* Define a cor de fundo do botão quando o mouse está sobre ele */
-    background-color: #989298; 
+    background-color: #a4dede; 
     /* Define a sombra ao redor do botão quando o mouse está sobre ele */
-    box-shadow: 0 2px 5px rgba(214, 202, 202, 0.2); 
+    box-shadow: 0 10px 10px 5px rgb(233, 160, 233); 
   }
 }
 
+.btn-login {
+  background-color:rgb(233, 160, 233);/* Substitua por sua cor de fundo desejada */
+  color:black; /* Substitua por sua cor de texto desejada */
+  font-weight: bold; 
+  //border:rgb(8, 16, 20); 
+}
+.btn-login:hover {
+  background-color:rgb(150, 156, 156); /* Substitua por sua cor de fundo desejada quando o mouse estiver sobre o botão */
+  box-shadow: 0 10px 10px 5px rgb(233, 160, 233); 
+}
 
+.btn-lista {
+  background-color: rgb(146, 247, 220); /* Substitua por sua cor de fundo desejada */
+  color: black; /* Substitua por sua cor de texto desejada */
+  border:rgb(8, 16, 20); 
+  font-weight: bold; 
+}
+.btn-lista:hover {
+  background-color: rgb(150, 156, 156); /* Substitua por sua cor de fundo desejada quando o mouse estiver sobre o botão */
+  box-shadow: 0 10px 10px 5px rgb(146, 247, 220); 
+}
 
+.btn-pets {
+  background-color:#99e9e9; /* Substitua por sua cor de fundo desejada */
+  color: black; /* Substitua por sua cor de texto desejada */
+  border:rgb(8, 16, 20); 
+  font-weight: bold; 
+}
+.btn-pets:hover {
+  background-color: rgb(150, 156, 156); /* Substitua por sua cor de fundo desejada quando o mouse estiver sobre o botão */
+  box-shadow: 0 10px 10px 5px #99e9e9; 
+}
+
+/* Estiliza o rodapé */
+footer {
+  /* Define a cor de fundo do rodapé */
+  background-color: #FFB6C1;
+  padding: 20px;
+}
+
+.footer-grid {
+  display: grid;
+  margin: 30px;
+  grid-template-columns: 4fr 4fr 4fr;
+  text-align: justify;
+  gap: 3px;
+}
+
+.criado {
+  margin-top: 40px;
+  margin-bottom: -40px;
+  text-align: left;
+  color: black;
+
+}

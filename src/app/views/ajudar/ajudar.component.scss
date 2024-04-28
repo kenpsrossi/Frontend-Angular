@@ -6,6 +6,15 @@ $main-color: #a7087a;
     background-color: #FFB6C1;
 }
 
+.bot-home {
+  font-weight: bold; 
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 5px 15px; 
+  background-color:  rgb(146, 247, 220) ; /* Substitua #corDeFundo pela cor que deseja */
+  color:black; /* Substitua #corDoTexto pela cor que deseja */
+}
+
 .aligned-text {
   text-align: justify;
 }
@@ -40,10 +49,10 @@ ul, li {
 
 .ajudar {
   padding: 35px 35px; 
-  background: #a8e3ef;
+  background: #bee8e6;
 
   h1 {
-    color: #333;
+    color: #090808;
     text-align: center;
     font-size: 5em;
     border: 1px solid #333;

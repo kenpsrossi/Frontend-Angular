@@ -1,0 +1,51 @@
+/* Formulário */
+.mat-dialog-content {
+    background-color: #ffc1e3; /* Fundo do formulário */
+    max-height: 90vh; /* Altura máxima da caixa de diálogo */
+    overflow-y: auto; /* Barra de rolagem vertical se necessário */
+}
+
+.form-content {
+    background-color: #f6d6db; /* Fundo do conteúdo do formulário */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Campos */
+.form-field {
+    background-color: #f5f0f0; /* Fundo dos campos */
+    color: black; /* Cor das labels e inputs */
+    margin: 5px;
+}
+
+/* Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Grid com 3 colunas de igual largura */
+    gap: 10px; /* Espaço entre os campos */
+}
+
+.campo-nome {
+    grid-column: span 2; /* Campo de nome ocupa 2 colunas */
+}
+
+/* Botões */
+.bot-salvar {
+    background-color: rgb(165, 245, 213); /* Fundo do botão salvar */
+}
+
+.bot-salvar:hover {
+    background-color: rgb(62, 237, 167); /* Fundo do botão salvar ao passar o mouse */
+    box-shadow: 0 10px 10px 3px rgb(165, 245, 213); /* Sombra do botão salvar ao passar o mouse */
+}
+
+.bot-cancelar {
+    background-color: rgb(250, 151, 151); /* Fundo do botão cancelar */
+}
+
+.bot-cancelar:hover {
+    background-color: rgb(253, 43, 43); /* Fundo do botão cancelar ao passar o mouse */
+    box-shadow: 0 10px 10px 3px rgb(250, 151, 151); /* Sombra do botão cancelar ao passar o mouse */
+}

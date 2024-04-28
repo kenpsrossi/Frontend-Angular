@@ -19,7 +19,7 @@ export class CarouselComponent {
   // Índice do slide ativo no carrossel
   public activeSlideIndex = 0;
   // Título da página atual
-  public pageCurrentTitle = 'Todos os animais disponiveis para adoção'; 
+  public pageCurrentTitle = 'Todos os animais disponíveis para adoção'; 
 
   // Array de slides para o carrossel, cada um com uma imagem e um texto opcional
   public slides: Array<{image: string; text? : string}> = [
@@ -30,9 +30,9 @@ export class CarouselComponent {
 
   // Títulos das páginas, cada um associado a um caminho de rota
   private _pageTitles: Array<{path: RegExp; title: string}> = [
-    {path: /^\/todos/, title: 'Todos os animais disponiveis para adoção'},
-    {path: /^\/dogs/, title: 'Cachorros disponiveis para adoção'},
-    {path: /^\/cats/, title: 'Gatos disponiveis para adoção'},
+    {path: /^\/todos/, title: 'Todos os animais disponíveis para adoção'},
+    {path: /^\/dogs/, title: 'Cachorros disponíveis para adoção'},
+    {path: /^\/cats/, title: 'Gatos disponíveis para adoção'},
   ];
 
   // Construtor do componente, que recebe o roteador do Angular como dependência
@@ -44,7 +44,7 @@ export class CarouselComponent {
         // Atualiza o título da página com base na URL atual
         this.pageCurrentTitle = this._pageTitles
         .find(pageTitle => pageTitle.path.test(_router.url))?.title ??
-        'Animais disponiveis para adoção';
+        'Animais disponíveis para adoção';
       }
     });
   }

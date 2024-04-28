@@ -4,14 +4,15 @@
   <nav class="navbar navbar-expand-lg navbar-rosa-claro" data-bs-theme="dark">
     <div class="container-fluid">
       <!-- Logo e nome do site. -->
-      <a class="navbar-brand ms-0 ms-md-5 d-flex align-items-center gap-3 list-unstyled">
+      <a class="navbar-brand ms-0 ms-md-3 d-flex align-items-center gap-2 list-unstyled">
         <!-- Logo do site -->
-        <img src="assets/imagens/logo pet.png" width="150" height="90" alt="Logo">
+        <img src="assets/imagens/logo pet.png" class="logo" alt="Logo">
         <!-- Título do site -->
-        <h1 class="fs-" style="color: #050d0c; font-weight: bold">PetGuardian</h1>
       </a>
+      <h1 class="fs-" style="color: #050d0c; font-weight: bold">PetGuardian</h1>
       <!-- Botão que aparece em telas pequenas para expandir ou colapsar o menu de navegação -->
-      <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+       data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <!-- Ícone do botão -->
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -19,52 +20,59 @@
       <div [collapse]="isCollapsed" [isAnimated]="true" class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
         <!-- Lista de botões de navegação -->
         <ul class="m-0 py-3 list-unstyled d-flex justify-content-start flex-wrap fs-5 gap-4 gap-sm-0">
-          <!-- Cada item do menu é um 'li'. 'a' é o link para a página correspondente. -->
-          <!-- Item do menu para a página "Todos" -->
           <li class="nav-item">
             <a class="btn btn-custom mx-2" routerLink="/todos" routerLinkActive="active">Todos</a>
           </li>
-          <!-- Item do menu para a página "Cachorros" -->
           <li class="nav-item">
-            <a class="btn btn-info mx-2" routerLink="/dogs" routerLinkActive="active">Cachorros</a>
-          </li>
-          <!-- Item do menu para a página "Gatos" -->
-          <li class="nav-item">
-            <a class="btn btn-info mx-2" routerLink="/cats" routerLinkActive="active">Gatos</a>
-          </li>
-          <!-- Item do menu para a página "Adotar" -->
-          <li class="nav-item">
-            <a class="btn btn-success mx-2" routerLink="/cadastro-adotante" routerLinkActive="active">Adotar</a>
-          </li>
-          <!-- Item do menu para a página "Ajudar" -->
-          <li class="nav-item">
-            <a class="btn btn-success mx-2" routerLink="/ajudar" routerLinkActive="active">Ajudar</a>
+            <a class="btn btn-info mx-2 btn-pets" routerLink="/dogs" routerLinkActive="active">Cachorros</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-secondary mx-2" routerLink="/lista-adotantes" routerLinkActive="active">Lista-Adotantes</a>
+            <a class="btn btn-info mx-2 btn-pets" routerLink="/cats" routerLinkActive="active">Gatos</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-secondary mx-2" routerLink="/lista-animais" routerLinkActive="active">Lista-Animais</a>
+            <a class="btn btn-info mx-2 btn-lista" routerLink="/cadastro-adotante" routerLinkActive="active">Adotar</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-info mx-2 btn-lista" routerLink="/ajudar" routerLinkActive="active">Ajudar</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-info mx-2 btn-lista" routerLink="/lista-adotantes" routerLinkActive="active">Lista-Adotantes</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-info mx-2 btn-lista" routerLink="/lista-animais" routerLinkActive="active">Lista-Animais</a>
           </li>
         </ul>
         <!-- Botão de login -->
         <div class="d-flex justify-content-end">
           <li class="nav-item list-unstyled">
-            <a class="btn btn-danger mx-2" routerLink="/login" routerLinkActive="active">Login</a>
+            <a class="btn btn-login mx-2" routerLink="/login" routerLinkActive="active">Login</a>
           </li>
         </div>
       </div>
     </div>
-  </nav>
+  </nav>  
 </header>
 
 <!-- Carrossel de imagens -->
 <app-carousel></app-carousel>
-
 <!-- Lista de animais -->
 <app-animais></app-animais>
-
 <!-- Rodapé do site -->
-<footer class="text-center py-3 text-black">
-  <span> Criado por PI-1 007 013 </span>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <p>Disque Denúncia Animal (São Paulo e Grande São Paulo)<br> 0800 600 6428</p>
+      <p>Web Denúncia – <a href="http://www.webdenuncia.org.br" target="_blank">www.webdenuncia.org.br</a></p>
+    </div>
+    <div>
+      <p>Delegacia Eletrônica de Proteção Animal<br>(Depa) – <a href="http://www.ssp.sp.gov.br/depa" target="_blank">http://www.ssp.sp.gov.br/depa</a></p>
+      <p>Disque 181 ou (11) 3338-0155 / 1380</p>
+    </div>
+    <div>
+      <p>Polícia Ambiental: <a href="http://denuncia.sigam.sp.gov.br/" target="_blank">http://denuncia.sigam.sp.gov.br/</a></p>
+      <p>E-mail: <a href="mailto:ambientaldenuncias@policiamilitar.sp.gov.br">ambientaldenuncias@policiamilitar.sp.gov.br</a></p>
+    </div>
+    <span class="criado"> Criado por PI-1 007 013 </span>
+  </div>
 </footer>

@@ -19,11 +19,9 @@ const routes: Routes = [
   {
     path: '', pathMatch: 'full', redirectTo: 'menu',
   },
-  // Rota para o menu
   {
     path: 'menu', component: MenuComponent
   },
-  // Outras rotas
   {
     path: 'todos', component: MenuComponent
   },
@@ -48,7 +46,6 @@ const routes: Routes = [
   {
     path: 'cadastros-adotantes', component: CadastrosAdotantesComponent
   },
-  
   {
     path: 'lista-adotantes', component: ListaAdotantesComponent
   },
