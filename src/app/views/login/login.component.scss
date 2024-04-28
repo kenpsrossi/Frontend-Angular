@@ -14,14 +14,13 @@
   background-color: rgb(224, 243, 238);
 }
 
-
 .campo-senha {
   margin-top: 20px; /* Aumenta o espaço acima do campo de senha */
 }
 /* Estilo para a imagem do logo */
 .logo-container img {
   /* Define a largura máxima da imagem */
-  max-width: 400px; /* ajuste este valor conforme necessário */
+  max-width: 440px; /* ajuste este valor conforme necessário */
   /* Mantém a proporção da imagem */
   height: auto;
 }
@@ -55,7 +54,7 @@ form {
 }
 
 /* Estilo para os rótulos, campos de entrada e botões */
-label, input, button {
+label, button {
   /* Define o peso da fonte como negrito */
   font-weight: bold; /* peso da fonte negrito */
 }

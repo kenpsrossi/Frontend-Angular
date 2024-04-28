@@ -10,6 +10,10 @@
     background-color:  rgb(146, 247, 220) ; /* Substitua #corDeFundo pela cor que deseja */
     color:black; /* Substitua #corDoTexto pela cor que deseja */
 }
+.bot-home:hover {
+    background-color: rgb(62, 237, 167);
+    box-shadow: 0 10px 10px 3px rgb(165, 245, 213);
+}
 
 .bot-adic {
     font-weight: bold; 

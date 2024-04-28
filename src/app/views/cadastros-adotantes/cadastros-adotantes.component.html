@@ -8,8 +8,7 @@
           <!-- O atributo href define o destino do link -->
           <a class="btn btn-info bot-home" href="#">Home
             <span class="visually-hidden">(current)</span> 
-        </a> 
-                       
+          </a> 
         </li>
       </ul>
 
@@ -26,82 +25,67 @@
 <!-- A diretiva formGroup vincula este formulário ao FormGroup 'profileForm' -->
 <!-- A diretiva ngSubmit especifica a função a ser executada quando o formulário é submetido -->
 <form [formGroup]="profileForm" class="formulario" (ngSubmit)="onSubmit()">
+  
   <div class="container-fluid">
-    <div class="row justify-content-between">
-      <div class="col-md-4">
-        <label class="form-label mt-0">Nome:
-          <input type="text" formControlName="nome" placeholder="Nome completo">
-          <div *ngIf="profileForm.controls.nome.invalid && (profileForm.controls.nome.touched || profileForm.controls.nome.dirty)">
-            Nome é obrigatório mínimo 8 letras.
-          </div>
-        </label>
 
-        <label class="form-label mt-4">CPF: 
-          <input type="text" formControlName="cpf" placeholder="Digite CPF">
-          <div *ngIf="profileForm.controls.cpf.errors?.['cpfLength'] && (profileForm.controls.cpf.touched || profileForm.controls.cpf.dirty)">
-            CPF deve ter exatamente 11 caracteres.
-          </div>
-        </label>
-
-        <label class="form-label mt-4">Email:
-          <input type="text" formControlName="email" placeholder="Email">
-          <div *ngIf="profileForm.controls.email.errors?.['email'] && (profileForm.controls.email.touched || profileForm.controls.email.dirty)">
-            Email inválido.
-          </div>
-        </label>
-
-        <label class="form-label mt-4">Telefone:
-          <input type="text" formControlName="telefone" placeholder="Telefone">
-        </label>
-      </div>
-
-      <!-- Segunda coluna -->
-      <div class="col col-md-4">
-        <label class="form-label mt-4">Estado Civil:
-          <input type="text" formControlName="estadoCivil" placeholder="Estado Civil">
-        </label>
+    <div class="col-12">
+      <label class="form-label mt-5 col-8 me-3">Nome:
+        <input type="text" formControlName="nome" placeholder="Nome completo" class="w-100">
+      </label>
       
-        <label class="form-label mt-4">Logradouro:
-          <input type="text" formControlName="logradouro" placeholder="Logradouro">
-        </label>
-
-        <label class="form-label mt-4">CEP:
-          <input type="text" formControlName="cep" placeholder="00000-000">
-        </label>
-
-        <label class="form-label mt-4">Número:
-          <input type="text" formControlName="numero" placeholder="Número">
-        </label>
-      </div>
-
-       
-     
-
-      <!-- Terceira coluna -->
-      <div class="col col-md-4">
-        <label class="form-label mt-4">Bairro:
-          <input type="text" formControlName="bairro" placeholder="Bairro">
-        </label>
-
-        <label class="form-label mt-4">Cidade:
-          <input type="text" formControlName="cidade" placeholder="Cidade">
-        </label> 
-
-        <label class="form-label mt-4">Estado:
-          <input type="text" formControlName="estado" placeholder="Estado">
-        </label>
-
-        <label class="form-label mt-4">Complemento:
-          <input type="text" formControlName="complemento" placeholder="Complemento">
-        </label>
-      </div>
-
+      <label class="form-label mt-5 col-3">Estado Civil:
+        <input type="text" formControlName="estadoCivil" placeholder="Estado Civil" class="w-100">
+      </label>
     </div>
+
+    <div class="col-12">
+      <label class="form-label mt-5 col-4 me-2">CPF: 
+        <input type="text" formControlName="cpf" placeholder="CPF" class="w-100">
+      </label>
+
+      <label class="form-label mt-5 col-3 me-2">Telefone:
+        <input type="text" formControlName="telefone" placeholder="Telefone" class="w-100">
+      </label>
+    
+      <label class="form-label mt-5 col-4">Email:
+        <input type="text" formControlName="email" placeholder="Email" class="w-100">
+      </label>
+    </div>
+      
+    <div class="col-12">
+      <label class="form-label mt-5 col-9 me-3">Logradouro:
+        <input type="text" formControlName="logradouro" placeholder="Logradouro" class="w-100">
+      </label>
+      <label class="form-label mt-5 col-2">Número:
+        <input type="text" formControlName="numero" placeholder="Número" class="w-100">
+      </label>
+    </div>
+
+    <div class="col-12">
+      <label class="form-label mt-5 col-5 me-2">Cidade:
+        <input type="text" formControlName="cidade" placeholder="Cidade" class="w-100">
+      </label> 
+      <label class="form-label mt-5 col-4 me-2">Bairro:
+        <input type="text" formControlName="bairro" placeholder="Bairro" class="w-100">
+      </label>
+            
+      <label class="form-label mt-5 col-2">Estado:
+        <input type="text" formControlName="estado" placeholder="Estado" class="w-100">
+      </label>
+    </div>
+     <div class="col-12"> 
+      <label class="form-label mt-5 col-3 me-3">CEP
+        <input type="text" formControlName="cep" placeholder="CEP" class="w-100">
+      </label>
+    <label class="form-label mt-5 col-8">Complemento:
+      <input type="text" formControlName="complemento" placeholder="Complemento" class="w-100">
+    </label>
+  </div>  
 
     <!-- Botão para submeter o formulário -->
     <div class="row">
-      <div class="col-12 text-center mt-4">
-        <button type="submit" [disabled]="!profileForm.valid">Cadastrar</button>
+      <div class="col-12 text-center mt-5">
+        <button type="submit" class="bot-salvar" [disabled]="!profileForm.valid ">Cadastrar</button>
       </div>
     </div>
   </div>

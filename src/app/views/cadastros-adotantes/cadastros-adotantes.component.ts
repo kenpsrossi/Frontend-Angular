@@ -27,13 +27,13 @@ export class CadastrosAdotantesComponent implements OnInit {
   // Definição do formulário
   profileForm = new FormGroup({
     // Campo nome com validação de requerido e mínimo de 8 caracteres
-    nome: new FormControl('', [Validators.required, Validators.minLength(8)]),
+    nome: new FormControl(''),
     // Campo matrícula sem validação
     matricula: new FormControl(''),
     // Campo CPF com validação de requerido e validação de comprimento
-    cpf: new FormControl('', [Validators.required, cpfLengthValidator]),
+    cpf: new FormControl(''),
     // Campo email com validação de requerido e formato de email
-    email: new FormControl('', [Validators.required, Validators.email]),
+    email: new FormControl(''),
     
     telefone: new FormControl(''),
     
