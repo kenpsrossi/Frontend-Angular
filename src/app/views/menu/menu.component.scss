@@ -11,106 +11,83 @@
 }
 
 .navbar-brand {
-  width: 200px;  /* Ajuste conforme necessário */
-  height: 80px; /* Ajuste conforme necessário */
+  width: 200px;  
+  height: 80px; 
 }
 
-/* Define a cor dos links ativos */
 $link-active: #bcc5f5;
 
-/* Estiliza o menu */
 .menu {
-  /* Define a cor de fundo do menu */
   background-color: var(--secondary-color);
 
-  /* Estiliza os links do menu */
   & li > a {
-    /* Remove a decoração do texto dos links */
     text-decoration: none;
-    /* Define a cor do texto dos links */
     color: rgb(15, 0, 0);
-    /* Define o padding dos links */
     padding: 0.5rem;
-    /* Define o raio da borda dos links */
     border-radius: 0.5rem;
 
-    /* Estiliza os links ativos */
     &.active {
-      /* Define a cor de fundo dos links ativos */
       background-color: lighten($link-active, 15);
     }
   }
 }
-/* Estiliza o título h1 */
+
 h1 {
-  /* Posiciona o título um pouco abaixo do topo */
   position: relative;
   top: 0.3em;
 }
 
-/* Estiliza os botões com a classe .btn-custom */
 .btn-custom {
-  /* Define a cor de fundo do botão */
   background-color: transparent; 
   font-weight: bold; 
-  /* Define a cor do texto do botão */
   color: #060202; 
-  /* Remove a borda do botão */
   border:rgb(8, 16, 20); 
-  /* Define o padding do botão */
   padding: 7px 20px; 
-  /* Define o raio da borda do botão para tornar os cantos arredondados */
   border-radius: 5px; 
-  /* Define a sombra ao redor do botão */
   box-shadow: 5 5px 3px palevioletred; 
-  /* Define a transição suave para o hover */
   transition: all 0.3s ease; 
 
-  /* Estiliza o botão quando o mouse está sobre ele */
   &:hover {
-    /* Define a cor de fundo do botão quando o mouse está sobre ele */
     background-color: #a4dede; 
-    /* Define a sombra ao redor do botão quando o mouse está sobre ele */
     box-shadow: 0 10px 10px 5px rgb(233, 160, 233); 
   }
 }
 
 .btn-login {
-  background-color:rgb(233, 160, 233);/* Substitua por sua cor de fundo desejada */
-  color:black; /* Substitua por sua cor de texto desejada */
+  background-color:rgb(203, 235, 235);
+  color:black; 
   font-weight: bold; 
   //border:rgb(8, 16, 20); 
 }
 .btn-login:hover {
-  background-color:rgb(150, 156, 156); /* Substitua por sua cor de fundo desejada quando o mouse estiver sobre o botão */
-  box-shadow: 0 10px 10px 5px rgb(233, 160, 233); 
+  background-color:#99e9e9; 
+  box-shadow: 0 10px 10px 5px rgb(132, 146, 146); 
 }
 
 .btn-lista {
-  background-color: rgb(146, 247, 220); /* Substitua por sua cor de fundo desejada */
-  color: black; /* Substitua por sua cor de texto desejada */
+  background-color: rgb(146, 247, 220);
+  color: black;
   border:rgb(8, 16, 20); 
   font-weight: bold; 
 }
 .btn-lista:hover {
-  background-color: rgb(150, 156, 156); /* Substitua por sua cor de fundo desejada quando o mouse estiver sobre o botão */
+  background-color: rgb(150, 156, 156); 
   box-shadow: 0 10px 10px 5px rgb(146, 247, 220); 
 }
 
 .btn-pets {
-  background-color:#99e9e9; /* Substitua por sua cor de fundo desejada */
-  color: black; /* Substitua por sua cor de texto desejada */
+  background-color:#99e9e9; 
+  color: black; 
   border:rgb(8, 16, 20); 
   font-weight: bold; 
 }
 .btn-pets:hover {
-  background-color: rgb(150, 156, 156); /* Substitua por sua cor de fundo desejada quando o mouse estiver sobre o botão */
+  background-color: rgb(150, 156, 156); 
   box-shadow: 0 10px 10px 5px #99e9e9; 
 }
 
 /* Estiliza o rodapé */
 footer {
-  /* Define a cor de fundo do rodapé */
   background-color: #FFB6C1;
   padding: 20px;
 }
