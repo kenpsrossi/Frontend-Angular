@@ -1,7 +1,7 @@
 /* Estilo para as imagens do carrossel, definindo que elas devem ocupar toda a largura do contêiner */
 .carousel-image {
     display: block;
-    width: 100%;
+    width: 80%;
 }
 
 .cor-texto {
@@ -24,7 +24,7 @@
             /* Ajusta a imagem para preencher o contêiner mantendo a proporção */
             object-fit: cover;
             /* Alinha a imagem ao topo e à esquerda do contêiner */
-            object-position: top left;
+            object-position: top center;
         }
     }
 }

@@ -28,9 +28,11 @@
 }
 
 .formulario {
-justify-content: center;
-background-color: #f3e3e5;
-padding: 60px;
-border-radius: 10px;
-box-shadow: 0 0 10px #FFB6C1;
+  justify-content: center;
+  background-color: #f3e3e5;
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #FFB6C1;
+  overflow-y: auto; /* Adiciona uma barra de rolagem vertical se necessário */
+  max-height: 100vh; /* Define a altura máxima do formulário para a altura da janela do navegador */
 }
