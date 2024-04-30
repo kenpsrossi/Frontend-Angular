@@ -32,9 +32,13 @@ $link-active: #bcc5f5;
   }
 }
 
-h1 {
+h1 { 
+  color: #000;
+  font-weight: bold;
+  //font-style: italic;
+  font-family: "Slabo 27px", serif, Courier, monospace;
   position: relative;
-  top: 0.3em;
+  top: 0.1em;
 }
 
 .btn-custom {
@@ -106,4 +110,22 @@ footer {
   text-align: left;
   color: black;
 
+}
+@keyframes walking {
+  0% {opacity: 0;}
+  25% {opacity: 1;}
+  50% {opacity: 0;}
+  75% {opacity: 1;}
+  100% {opacity: 0;}
+}
+.pegada {
+  margin-top: 50px;
+  background-image: url('/assets/imagens/patagato1.png');
+  background-size: contain;
+  width: 16px; 
+  height: 16px; 
+  animation: walking 10s infinite;
+}
+.alt1 {
+  margin-top: 64px;
 }
