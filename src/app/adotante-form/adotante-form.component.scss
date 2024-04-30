@@ -1,5 +1,23 @@
 /* adotante-form.component.css */
-
+.header {
+    display: flex;
+    align-items: center;
+  }
+.logo {
+    margin-top: -20px;
+    width: 14%;
+    height: 14%;
+    object-fit: contain;
+    margin-right: -12px;
+  }
+  .pegada {
+    margin-top: 5px;
+    width: 10%;
+    height: 10%;
+    object-fit: contain;
+    margin-right: 12px;
+  }
+  
 /* Formulário */
 .mat-dialog-content {
     background-color: #ffc1e3; /* Fundo do formulário */

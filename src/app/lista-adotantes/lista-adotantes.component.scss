@@ -1,6 +1,36 @@
 .navbar-rosa-claro {
     background-color: #FFB6C1;
 }
+.navbar-nav {
+    padding-left: -0;
+  }
+.navbar-nav {
+    position: absolute;
+    left: 240px; 
+  }
+
+.header {
+    display: flex;
+    align-items: center;
+  }
+.logo {
+    margin-top: -20px;
+    width: 12%;
+    height: 12%;
+    object-fit: contain;
+  }
+.pegada {
+    width: 8%;
+    height: 8%;
+    object-fit: contain;
+  }
+
+h1 {
+    color: #000;
+    position: absolute;
+    top: 25px; 
+    left: 840px; 
+  }
 
 .bot-home {
     font-weight: bold; 
