@@ -46,59 +46,77 @@ h1 {
   font-weight: bold; 
   color: #060202; 
   border:rgb(8, 16, 20); 
+  //border: 1px solid rgb(8, 16, 20);
   padding: 7px 20px; 
   border-radius: 5px; 
-  box-shadow: 5 5px 3px palevioletred; 
+  box-shadow: 5 5px 3px rgb(104, 246, 243); 
   transition: all 0.3s ease; 
 
   &:hover {
-    background-color: #a4dede; 
-    box-shadow: 0 10px 10px 5px rgb(233, 160, 233); 
+    background-color:whitesmoke; 
+    box-shadow: 1px 10px 10px 5px rgb(104, 246, 196); 
   }
 }
 
-.btn-login {
-  background-color:rgb(203, 235, 235);
-  color:black; 
-  font-weight: bold; 
-  //border:rgb(8, 16, 20); 
-}
-.btn-login:hover {
-  background-color:#99e9e9; 
-  box-shadow: 0 10px 10px 5px rgb(132, 146, 146); 
-}
-
-.btn-lista {
-  background-color: rgb(146, 247, 220);
-  color: black;
-  border:rgb(8, 16, 20); 
-  font-weight: bold; 
-}
-.btn-lista:hover {
-  background-color: rgb(150, 156, 156); 
-  box-shadow: 0 10px 10px 5px rgb(146, 247, 220); 
-}
-
 .btn-pets {
-  background-color:#99e9e9; 
+  background-color:rgb(146, 247, 220); 
   color: black; 
   border:rgb(8, 16, 20); 
   font-weight: bold; 
 }
 .btn-pets:hover {
-  background-color: rgb(150, 156, 156); 
+  background-color: whitesmoke; 
+  box-shadow: 0 10px 10px 5px rgb(146, 247, 220); 
+}
+
+.btn-adaj {
+  background-color: #99e9e9;
+  color: black;
+  border:rgb(8, 16, 20); 
+  font-weight: bold; 
+}
+.btn-adaj:hover {
+  background-color: whitesmoke; 
   box-shadow: 0 10px 10px 5px #99e9e9; 
+}
+
+.btn-lista {
+  background-color: #a7cdf0;
+  color: black;
+  border:rgb(8, 16, 20); 
+  font-weight: bold; 
+}
+.btn-lista:hover {
+  background-color: whitesmoke; 
+  box-shadow: 0 10px 10px 5px #a7cdf0; 
+}
+
+.btn-login {
+  background-color:rgb(138, 186, 254);
+  color:black; 
+  padding: 4px 15px;
+  font-weight: bold; 
+  //border:rgb(8, 16, 20); 
+}
+.btn-login:hover {
+  background-color:whitesmoke; 
+  box-shadow: 0 10px 10px 5px rgb(138, 186, 254); 
+}
+
+.insta {
+  margin-left: 180px;
 }
 
 /* Estiliza o rodapé */
 footer {
   background-color: #FFB6C1;
-  padding: 20px;
+  padding: 80px;
 }
 
 .footer-grid {
   display: grid;
-  margin: 30px;
+  margin: 10px;
+  font-size: 18px; 
   grid-template-columns: 5fr 4fr 4fr;
   text-align: justify;
   gap: 3px;
@@ -106,7 +124,8 @@ footer {
 
 .criado {
   margin-top: 40px;
-  margin-bottom: -40px;
+  margin-bottom: -10px;
+  margin-left: 750px;
   text-align: left;
   color: black;
 
