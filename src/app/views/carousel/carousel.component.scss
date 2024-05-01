@@ -1,30 +1,18 @@
-/* Estilo para as imagens do carrossel, definindo que elas devem ocupar toda a largura do contêiner */
-.carousel-image {
-    display: block;
-    width: 80%;
-}
 
-.cor-texto {
-    color:rgb(44, 137, 135);
-    margin-top: 20px;
-}
 
-/* Estilos para o carrossel da aplicação */
-.app-carousel {
-    /* Estilos para cada slide do carrossel */
-    slide {
-        /* Estilos para imagens dentro de um slide */
-        & img {
-            /* Define a largura da imagem para ocupar 100% da largura do contêiner */
-            width: 100%;
-            /* Define a altura mínima da imagem para 300px */
-            min-height: 300px;
-            /* Define a altura máxima da imagem para 500px */
-            max-height: 500px;
-            /* Ajusta a imagem para preencher o contêiner mantendo a proporção */
-            object-fit: cover;
-            /* Alinha a imagem ao topo e à esquerda do contêiner */
-            object-position: top center;
-        }
-    }
-}
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .app-video, .app-img {
+    flex: 1; /* Faz com que o vídeo e a imagem ocupem o mesmo espaço */
+    margin-top: 3px;
+    margin-bottom: 10px;
+  }
+  
+  .app-video .video, .app-img img {
+    width: 100%; /* Faz com que o vídeo e a imagem ocupem todo o espaço disponível em seus respectivos contêineres */
+    height: 100%; /* Mantém a proporção da imagem/vídeo */
+    object-fit: contain; /* Garante que a imagem/vídeo mantenha suas proporções enquanto preenche o espaço disponível */
+  }

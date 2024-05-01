@@ -20,13 +20,14 @@ export class CarouselComponent {
   public activeSlideIndex = 0;
   // Título da página atual
   public pageCurrentTitle = 'Todos os animais disponíveis para adoção'; 
+  // Texto ao lado do vídeo
+  public imageNextToVideo = 'assets/imagens/PetGuard2.png'; 
 
-  // Array de slides para o carrossel, cada um com uma imagem e um texto opcional
-  public slides: Array<{image: string; text? : string}> = [
+  /*public slides: Array<{image: string; text? : string}> = [
     {image: 'assets/imagens/cao-gato.jpeg', },
     {image: 'assets/imagens/caes.jpeg', },
     {image: 'assets/imagens/gatos.jpeg' ,},
-  ];
+  ];*/
 
   // Títulos das páginas, cada um associado a um caminho de rota
   private _pageTitles: Array<{path: RegExp; title: string}> = [

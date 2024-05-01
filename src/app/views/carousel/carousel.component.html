@@ -1,17 +1,16 @@
-<!-- Container para o carrossel de imagens -->
-<div class="app-carousel">
-  <!-- Componente de carrossel com animação e intervalo entre as slides -->
-  <carousel [isAnimated]="true" [interval]="slideInterval" [(activeSlide)]="activeSlideIndex">
-    <!-- Usando *ngFor para iterar sobre as slides -->
-    <slide *ngFor="let slide of slides; let index=index">
-      <!-- Imagem do carrossel com texto alternativo descritivo -->
-      <img [src]="slide.image" alt="Imagem de {{ slide.text }}" class="carousel-image">
-      <div class="carousel-caption">
-        <!-- Texto da slide -->
-        <h4>{{ slide.text }}</h4>
-      </div>
-    </slide>
-  </carousel>
+<div class="content-container">
+    <!-- Espaço para o texto ao lado do vídeo -->
+    <div class="app-img">
+      <img [src]="imageNextToVideo" alt="Descrição da imagem">
+    </div>
+  
+  <div class="app-video">
+    <!-- Vídeo com controles, em loop, início automático e silenciado -->
+    <video loop autoplay muted class="video">
+      <source src="assets/imagens/VdPets.mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+  </div>
 </div>
 
 <!-- Container principal da página -->
