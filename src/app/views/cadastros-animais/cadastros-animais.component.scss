@@ -29,18 +29,11 @@
   object-fit: contain;
 }
 
-h1 {
-  color: #000;
-  position: absolute;
-  top: 15px; 
-  left: 440px; 
-}
-
 .bot-home {
     font-weight: bold; 
     margin-left: -30px;
     margin-right: 30px;
-    padding: 5px 15px; 
+    padding: 4px 10px; 
     background-color:  rgb(146, 247, 220) ; 
     color:black; 
 }
@@ -60,12 +53,26 @@ h1 {
   box-shadow: 0 10px 10px 3px rgb(165, 245, 213); 
 }
 
-.formulario {
-  justify-content: center;
-  background-color: #f3e3e5;
-  padding: 60px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #FFB6C1;
-  overflow-y: auto; /* Adiciona uma barra de rolagem vertical se necessário */
-  max-height: 100vh; /* Define a altura máxima do formulário para a altura da janela do navegador */
+h1 {
+  text-align: center;
+  margin: 8px; 
+}
+
+  .formulario {
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+    overflow-y: auto;
+    max-height: 100vh; 
+    border-left: 10px solid white; 
+    border-right: 10px solid white; 
+}
+
+.formulario input {
+  background-color: #fdf7f7; 
+  border-radius: 5px; 
+  border-width: 1px; 
+  padding: 10px; 
+  font-size: 15px;
+
 }

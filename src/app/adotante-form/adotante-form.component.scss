@@ -1,5 +1,6 @@
 /* adotante-form.component.css */
 .header {
+    background-color: #f6bec6;
     display: flex;
     align-items: center;
   }
@@ -17,16 +18,19 @@
     object-fit: contain;
     margin-right: 12px;
   }
+
+  h2 {
+    text-align: center;
+    margin: 4px; 
+  }
   
 /* Formulário */
 .mat-dialog-content {
-    background-color: #ffc1e3; /* Fundo do formulário */
     max-height: 90vh; /* Altura máxima da caixa de diálogo */
     overflow-y: auto; /* Barra de rolagem vertical se necessário */
 }
 
 .form-content {
-    background-color: #f6d6db; /* Fundo do conteúdo do formulário */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

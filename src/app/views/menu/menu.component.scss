@@ -35,34 +35,19 @@ $link-active: #bcc5f5;
 h1 { 
   color: #000;
   font-weight: bold;
-  //font-style: italic;
   font-family: "Slabo 27px", serif, Courier, monospace;
   position: relative;
   top: 0.1em;
 }
 
-.btn-custom {
-  background-color: transparent; 
-  font-weight: bold; 
-  color: #060202; 
-  border:rgb(8, 16, 20); 
-  //border: 1px solid rgb(8, 16, 20);
-  padding: 7px 20px; 
-  border-radius: 5px; 
-  box-shadow: 5 5px 3px rgb(104, 246, 243); 
-  transition: all 0.3s ease; 
-
-  &:hover {
-    background-color:whitesmoke; 
-    box-shadow: 1px 10px 10px 5px rgb(104, 246, 196); 
-  }
-}
-
 .btn-pets {
   background-color:rgb(146, 247, 220); 
+  padding: 4px 20px; 
   color: black; 
+  font-size: 16px;
   border:rgb(8, 16, 20); 
-  font-weight: bold; 
+  font-weight: bold;
+  margin-top: -30px; 
 }
 .btn-pets:hover {
   background-color: whitesmoke; 
@@ -71,7 +56,9 @@ h1 {
 
 .btn-adaj {
   background-color: #99e9e9;
+  padding: 5px 10px; 
   color: black;
+  font-size: 16px;
   border:rgb(8, 16, 20); 
   font-weight: bold; 
 }
@@ -82,7 +69,9 @@ h1 {
 
 .btn-lista {
   background-color: #a7cdf0;
+  padding: 5px 10px; 
   color: black;
+  font-size: 16px;
   border:rgb(8, 16, 20); 
   font-weight: bold; 
 }
@@ -94,7 +83,8 @@ h1 {
 .btn-login {
   background-color:rgb(138, 186, 254);
   color:black; 
-  padding: 4px 15px;
+  font-size: 16px;
+  padding: 3px 10px;
   font-weight: bold; 
   //border:rgb(8, 16, 20); 
 }
@@ -104,8 +94,9 @@ h1 {
 }
 
 .insta {
-  margin-left: 180px;
+  margin-left: auto;
 }
+
 
 /* Estiliza o rodapé */
 footer {

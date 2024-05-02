@@ -15,8 +15,6 @@ export class ListaAnimaisComponent implements OnInit {
     'sexo', 'castracao', 'vacinacao', 'localResgate', 'observacao', 'status', 'imagem', 'idade', 'acao'];
   dataSource: Pet[] = [];
 
-  constructor(private animalService: AnimalService, public dialog: MatDialog) {}
-
    // Objeto para armazenar os dados do novo animal
    newAnimal: Pet = {
     matricula: '',
@@ -34,6 +32,8 @@ export class ListaAnimaisComponent implements OnInit {
     idade: 0
   };
 newanimal: any;
+
+constructor(private animalService: AnimalService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.animalService.getAnimais().subscribe(animais => {
@@ -60,7 +60,7 @@ newanimal: any;
 
   openAnimalFormDialog(animal: Pet): void {
     const dialogRef = this.dialog.open(AnimalFormComponent, {
-      width: '800px',
+      width: '900px',
       data: animal
     });
 

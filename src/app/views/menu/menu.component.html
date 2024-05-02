@@ -29,35 +29,30 @@
       <div [collapse]="isCollapsed" [isAnimated]="true" class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
         <!-- Lista de botões de navegação -->
         <ul class="m-0 py-3 list-unstyled d-flex justify-content-center align-items-center flex-wrap fs-5 gap-4 gap-sm-0" style="padding-left: 50px;">
+         
           <li class="nav-item">
-            <a class="btn btn-custom mx-2" routerLink="/todos" routerLinkActive="active">Todos</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-info mx-2 btn-pets" routerLink="/dogs" routerLinkActive="active">Cachorros</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-info mx-2 btn-pets" routerLink="/cats" routerLinkActive="active">Gatos</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-info mx-2 btn-adaj" routerLink="/cadastro-adotante" routerLinkActive="active">Adotar</a>
+            <a class="btn btn-info mx-2 btn-adaj" routerLink="/cadastros-adotantes" routerLinkActive="active">Adotar</a>
           </li>
           <li class="nav-item">
             <a class="btn btn-info mx-2 btn-adaj" routerLink="/ajudar" routerLinkActive="active">Ajudar</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-info mx-2 btn-lista" routerLink="/lista-adotantes" routerLinkActive="active">Lista-Adotantes</a>
+            <a class="btn btn-info mx-2 btn-lista" routerLink="/lista-adotantes" routerLinkActive="active">Adotantes</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-info mx-2 btn-lista" routerLink="/lista-animais" routerLinkActive="active">Lista-Animais</a>
+            <a class="btn btn-info mx-2 btn-lista" routerLink="/lista-animais" routerLinkActive="active">Animais</a>
           </li>
         </ul>
-        <a class="insta" href="https://www.instagram.com/projetoqueroadotar/related_profiles/" target="_blank">
-          <img src="assets/imagens/instaPng.png" alt="Instagram" style="width: 45px; height: 45px;">
+        <a class="insta" href="" target="_blank">
+          <img src="assets/imagens/instaPng.png" alt="Instagram" style="width: 40px; height: 40px;">
+        </a>
+        <a class="what" href="" target="_blank">
+          <img src="assets/imagens/what.png" alt="Instagram" style="width: 40px; height: 40px;">
         </a>
         <!-- Botão de login -->
         <div class="d-flex justify-content-end">
           <li class="nav-item list-unstyled">
-            <a class="btn btn-login mx-2" routerLink="/login" routerLinkActive="active">Login</a>
+            <a class="btn btn-login mx-3" routerLink="/login" routerLinkActive="active">Login</a>
           </li>
         </div>
       </div>
@@ -67,7 +62,20 @@
 
 <!-- Carrossel de imagens -->
 <app-carousel></app-carousel>
+
 <!-- Lista de animais -->
+<ul class="m-0 py-1 list-unstyled d-flex justify-content-center align-items-center flex-wrap fs-1 gap-4 gap-sm-0">
+  <li class="nav-item">
+    <a class="btn btn-info mx-2 btn-pets" routerLink="/todos" routerLinkActive="active">Todos</a>
+  </li>
+  <li class="nav-item">
+    <a class="btn btn-info mx-2 btn-pets" routerLink="/dogs" routerLinkActive="active">Cachorros</a>
+  </li>
+  <li class="nav-item">
+    <a class="btn btn-info mx-2 btn-pets" routerLink="/cats" routerLinkActive="active">Gatos</a>
+  </li>
+</ul>
+
 <app-animais></app-animais>
 <!-- Rodapé do site -->
 

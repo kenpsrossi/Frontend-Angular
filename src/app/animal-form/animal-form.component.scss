@@ -1,5 +1,6 @@
 /* Formulário */
 .header {
+    background-color: #f6bec6;
     display: flex;
     align-items: center;
   }
@@ -18,14 +19,17 @@
     margin-right: 12px;
   }
   
-.mat-dialog-content {
-    background-color: #ffc1e3; /* Fundo do formulário */
-    max-height: 90vh; /* Altura máxima da caixa de diálogo */
-    overflow-y: auto; /* Barra de rolagem vertical se necessário */
+  h2 {
+    text-align: center;
+    margin: 4px; 
+  }
+
+.mat-dialog-content {   
+    max-height: 90vh; 
+    overflow-y: auto; 
 }
 
 .form-content {
-    background-color: #f6d6db; /* Fundo do conteúdo do formulário */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

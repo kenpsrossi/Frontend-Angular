@@ -19,17 +19,16 @@
         </li>
       </ul>
 
-      <!-- Título da página, centralizado na barra de navegação -->
-      <h1>Lista-Adotantes</h1>
-      <!-- Espaço vazio para manter o título no centro -->
       <ul class="navbar-nav"></ul>
     </div>
   </div>
 </nav>
 
+<h1>Adotantes</h1>
+
 <!-- Tabela Angular Material para exibir os dados dos adotantes -->
 <div>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabela">
     <!-- Definição das colunas da tabela. Cada coluna é definida dentro de um ng-container -->
     <!-- Coluna Matrícula -->
     <ng-container matColumnDef="matricula">

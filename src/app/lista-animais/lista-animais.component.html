@@ -16,19 +16,16 @@
           <button mat-raised-button class="bot-adic" (click)="openCadastroAnimaisDialog(newanimal)">Adicionar Animal</button>
         </li>
       </ul>
-
-      <!-- Título da página, centralizado na barra de navegação -->
-      <h1>Lista-Animais</h1>
-
-      <!-- Espaço vazio para manter o título no centro -->
       <ul class="navbar-nav"></ul>
     </div>
   </div>
 </nav>
 
+<h1 style="text-align: center;">Animais</h1>
+
 <div>
   <!-- Tabela Angular Material -->
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabela">
 
     <!-- Coluna Matrícula -->
     <ng-container matColumnDef="matricula">
