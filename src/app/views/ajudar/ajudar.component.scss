@@ -1,7 +1,14 @@
 $golden: gold;
 $black: black;
 $main-color: #a7087a;
+$card-bg:rgb(224, 223, 233); // Cor de fundo dos cards alterada para a mesma cor do botão Home
+$card-header-bg:   rgb(146, 247, 220);
+$card-header-color: #000c03;
+$btn-bg:rgb(146, 247, 220);
+$btn-hover-bg: #138496;
+$btn-focus-border: #9ede73;
 
+// Restante do código SCSS...
 // Estilo da barra de navegação
 .navbar-rosa-claro {
     background-color: #FFB6C1;
@@ -46,7 +53,6 @@ ul, li {
 .title {
   color: $main-color;
   font-weight: bold;
-  font-style: italic;
 }
 
 // Estilo do subtítulo
@@ -57,7 +63,7 @@ ul, li {
 // Estilo do conteúdo principal
 .ajudar {
   padding: 35px 35px; 
-  background: #bee8e6;
+  background:  #FFB6C1;
 
   // Estilo do título principal
   h1 {
@@ -85,7 +91,7 @@ ul, li {
       // Estilo do botão
       button {
         padding: 0 20px;
-        border: 1px solid #333;
+        border: 1px solid  rgb(137, 128, 232);
         margin: 7px 5px;
       }
     }
@@ -95,11 +101,44 @@ ul, li {
       margin-top: 20px;
     }
   }
+
+  // Estilo dos cards
+  .card {
+    background-color: $card-bg;
+    margin-bottom: 20px; // Adiciona espaço entre os cards
+    border-radius: 5px; // Arredonda os cantos dos cards
+    box-shadow: 0 2px 5px  rgb(137, 128, 232); // Adiciona sombra aos cards
+
+    .card-header {
+      background-color: $card-header-bg;
+      color: $card-header-color;
+    }
+
+    .card-body {
+      display: flex;
+      justify-content: space-between; // Alinha o conteúdo do corpo do cartão em ambos os lados
+      padding: 20px; // Adiciona espaço ao texto
+    }
+
+    .btn {
+      background-color: $btn-bg;
+      color: white;
+
+      &:hover {
+        background-color: $btn-hover-bg;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba($btn-focus-border, 0.5); // Adiciona um foco estilizado ao botão
+      }
+    }
+  }
 }
 
 // Estilo do corpo do texto
 body {
-  font-weight: bold;
+ 
   font-size: 20px;
 }
 
@@ -114,12 +153,12 @@ body {
   margin-left: 30px;
   margin-right: 30px;
   padding: 5px 15px; 
-  background-color:  rgb(146, 247, 220);
+  background-color:    rgb(137, 128, 232);
   color: black;
 
   // Estilo do botão padrão quando o mouse está sobre ele
   &:hover {
-    background-color: rgb(62, 237, 167);
-    box-shadow: 0 10px 10px 3px rgb(165, 245, 213);
+    background-color:  rgb(137, 128, 232);
+    box-shadow: 0 10px 10px 3px rgb(137, 128, 232);
   }
 }

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seu Título Aqui</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
@@ -14,14 +16,14 @@
           <li class="nav-item">
             <a class="btn btn-info bot-home" href="#">Home
               <span class="visually-hidden">(current)</span> 
-          </a> 
+            </a> 
           </li>
         </ul>
         <!-- Título na barra de navegação -->
         <h3 class="fs-3">Nosso projeto é financiado 100% por nós, ou seja, sua ajuda é bem-vinda.</h3>
         <!-- Barra de progresso na barra de navegação -->
         <div class="progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100;"></div>
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
         </div>
         <ul class="navbar-nav"></ul>
       </div>
@@ -29,54 +31,67 @@
   </nav>
   <!-- Fim da barra de navegação -->
   <!-- Início do conteúdo principal -->
-  <div class="ajudar">
-    <ul>
-      <!-- Botão Quem Somos -->
-      <div class="alert alert-dismissible text-center">
-        <button type="button" class="btn-padrao">Quem Somos</button>
-      </div>
-      <!-- Descrição do projeto -->
-      <p class="aligned-text">
-        O Projeto Adotar é uma iniciativa dedicada ao resgate, cuidado e busca por lares amorosos para animais abandonados e maltratados. Fundado com o objetivo de promover a adoção responsável e o bem-estar animal.
-      </p>
-      <p class="aligned-text">
-        "Nosso Compromisso: Resgatar animais em situações de abandono e maus-tratos. Oferecer abrigo, cuidado e proteção aos animais resgatados. Realizar feiras de adoção para encontrar lares permanentes para nossos animais. Fornecer suporte contínuo aos adotantes para garantir a adaptação e o bem-estar dos animais. Nossa Filosofia: Acreditamos que cada animal merece uma segunda chance e um lar amoroso. Trabalhamos arduamente para garantir que todos os animais sob nossa proteção sejam tratados com dignidade e recebam o cuidado e o carinho que merecem."
-      </p>
-      <!-- Início das opções de doação -->
-      <div class="row">
-        <!-- Opção de Doações -->
-        <div class="col text-center">
-          <div class="alert alert-dismissible text-center">
-            <button type="button" class="btn-padrao">Doações</button>
+  <main class="ajudar">
+    <!-- Card Quem Somos -->
+    <div class="row">
+      <div class="col-md-12">
+        <article class="card">
+          <header class="card-header text-center">
+            <h2>Quem Somos</h2>
+          </header>
+          <div class="card-body">
+            <p class="card-text">O Projeto Adotar é uma iniciativa dedicada ao resgate, cuidado e busca por lares amorosos para animais abandonados e maltratados. Fundado com o objetivo de promover a adoção responsável e o bem-estar animal.</p>
           </div>
-          <p class="aligned-text">Você pode contribuir de diversas formas para ajudar nossos animais resgatados. Aceitamos doações de ração, cobertores, medicamentos, materiais de limpeza e de procedimento. Alternativamente, doações em dinheiro são igualmente valiosas. Sua generosidade faz toda a diferença na vida dos animais necessitados que cuidamos. Agradecemos profundamente por seu apoio.</p>
-        </div>
-        <!-- Opção de Pix -->
-        <div class="col text-center">
-          <div class="alert alert-dismissible text-center">
-            <button type="button" class="btn-padrao">Pix</button>
-          </div>
-          <p class="aligned-text">Alternativamente, doações via pix são igualmente valiosas. Sua generosidade faz toda a diferença na vida dos animais necessitados que cuidamos. Agradecemos profundamente por seu apoio.</p>
-        </div>
-        <!-- Opção de Apadrinhamento -->
-        <div class="col text-center">
-          <div class="alert alert-dismissible text-center">
-            <button type="button" class="btn-padrao">Apadrinhamento</button>
-          </div>
-          <p class="aligned-text">Apadrinhamento significa tornar-se padrinho ou madrinha de um ou de vários animais abrigados sem precisar levá-lo para casa, o bichinho continuará morando em nosso abrigo. 
-            Esta é uma ótima opção para quem gostaria de ajudar o nosso Projeto, mas não tem condições de adotar.
-
-            Não é obrigatória a escolha de um animal, você poderá definir o apadrinhamento como genérico, ou seja, para todos. Você também pode apadrinhar quantos animais desejar.
-          </p>
-        </div>
+        </article>
       </div>
-      <!-- Fim das opções de doação -->
-      <!-- Botão Saiba mais -->
-      <div class="text-right">
-        <button type="button" class="btn-padrao">Saiba mais</button>
+    </div>
+    <!-- Cards Doações, Pix e Apadrinhamento -->
+    <div class="row">
+      <!-- Card Doações -->
+      <div class="col-md-4">
+        <article class="card">
+          <header class="card-header">
+            <h2>Doações</h2>
+          </header>
+          <div class="card-body">
+            <p class="card-text">Você pode contribuir de diversas formas para ajudar nossos animais resgatados. Aceitamos doações de ração, cobertores, medicamentos, materiais de limpeza e de procedimento. Alternativamente, doações em dinheiro são igualmente valiosas. Sua generosidade faz toda a diferença na vida dos animais necessitados que cuidamos. Agradecemos profundamente por seu apoio.</p>
+          </div>
+        </article>
       </div>
-    </ul>
-  </div>
+      <!-- Card Pix -->
+      <div class="col-md-4">
+        <article class="card">
+          <header class="card-header">
+            <h2>Pix</h2>
+          </header>
+          <div class="card-body">
+            <p class="card-text">Alternativamente, doações via pix são igualmente valiosas. Sua generosidade faz toda a diferença na vida dos animais necessitados que cuidamos. Agradecemos profundamente por seu apoio.</p>
+          </div>
+        </article>
+      </div>
+      <!-- Card Apadrinhamento -->
+      <div class="col-md-4">
+        <article class="card">
+          <header class="card-header">
+            <h2>Apadrinhamento</h2>
+          </header>
+          <div class="card-body">
+            <p class="card-text">Apadrinhamento significa tornar-se padrinho ou madrinha de um ou de vários animais abrigados sem precisar levá-lo para casa, o bichinho continuará morando em nosso abrigo. Esta é uma ótima opção para quem gostaria de ajudar o nosso Projeto, mas não tem condições de adotar. Não é obrigatória a escolha de um animal, você poderá definir o apadrinhamento como genérico, ou seja, para todos. Você também pode apadrinhar quantos animais desejar.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <!-- Card Saiba mais -->
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-end">
+        <article class="card">
+          <header class="card-header">
+            <h2>Saiba mais</h2>
+          </header>
+        </article>
+      </div>
+    </div>
+  </main>
   <!-- Fim do conteúdo principal -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
