@@ -1,8 +1,6 @@
-
 .navbar-rosa-claro {
   background-color: #FFB6C1;
 }
-
 .navbar-nav {
   padding-left: -0;
 }
@@ -10,7 +8,6 @@
   position: absolute;
   left: 240px; 
 }
-
 .header {
   display: flex;
   align-items: center;
@@ -26,7 +23,6 @@
   height: 8%;
   object-fit: contain;
 }
-
 .bot-home {
   font-weight: bold; 
   margin-left: 30px;
@@ -37,51 +33,92 @@
 }
 .bot-home:hover {
   background-color: rgb(62, 237, 167);
-  box-shadow: 0 10px 10px 3px rgb(165, 245, 213);
+  box-shadow: 0 10px 10px 3px rgb(146, 247, 220);
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-.back {
-  /* Caminho para a imagem */
-  background-image: url('/assets/imagens/back.png');
-  
-} 
+.insta {
+  margin-left: auto;
+}
+//////////////////////////////////////////////////////////
+.titulo {
+  margin: 20px;
+ 
+  font-size: 31px;
+  //font-weight: bold;
+  color: black;
+  text-align: center; /* Centraliza o texto */
+}
+//////////////////////////////
+.background {
+  background: #e9f7f7;
+}
+///////////
+
 .container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap; /* Permite que os cartões se ajustem em novas linhas se necessário */
+  margin-bottom: 20px;
 }
 
 .card {
-  width: 60%; /* aumenta a largura do card */
-  height: 600px;
-  margin: 10px 5px; /* diminui a margem lateral */
+  width: 45%;
+  height: 450px; /* Diminui ainda mais a altura do cartão */
+  margin: 10px 5px;
   position: relative;
   overflow: hidden;
-  transition: all 3s ease; /* aumenta o tempo da transição */
+  transition: all 1s ease;
+  box-shadow: 0 6px 10px rgb(62, 237, 167);
+  border-radius: 10px;
 }
 
-.card img {
-  width: 100%;
-  height: 50%;
-  transition: all 3s ease; /* aumenta o tempo da transição */
+.card:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do card quando o mouse passa sobre ele */
+  box-shadow: 0 16px 10px rgb(62, 237, 167); /* Aumenta a sombra do card quando o mouse passa sobre ele */
+}
+
+.img1, .img2 {
+  transition: all 2s ease;
   position: absolute;
-  top: 50%; /* faz a imagem começar na metade do card */
+  top: 80%; /* Ajusta a posição das imagens */
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
+}
+
+.img1 {
+  width: 35%;
+  height: 45%;
+}
+
+.img2 {
+  width: 55%;
+  height: 65%;
 }
 
 .card-content {
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  color: white;
-  padding: 20px;
+  background-color: rgb(194, 252, 237);
+  color: black;
+  padding: 10px;
   box-sizing: border-box;
   overflow: hidden;
-  transition: all 3s ease; /* aumenta o tempo da transição */
+  transition: all 2s ease;
   position: absolute;
   bottom: 0;
 }
 
+.card-content h2, .card-content h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-content p {
+  color: #666;
+  line-height: 1.6;
+}
+
 .card:hover img {
-  transform: translateY(200%);
+  transform: translateY(10%);
 }
 
 .expanded .card-text-full {
@@ -92,5 +129,66 @@
 .card-text-full {
   display: none;
   opacity: 0;
-  transition: opacity 3s ease; /* aumenta o tempo da transição */
+  transition: opacity 3s ease;
+}
+
+.bot-common {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.bot-common:hover {
+  background-color: rgb(62, 237, 167);
+  box-shadow: 0 10px 10px 3px rgb(62, 237, 167);
+}
+
+.bot-common button {
+  border-radius: 5px;
+  width: 120px;
+  background-color:white;
+  color: #111212;
+  border: 1px solid rgb(62, 237, 167);
+}
+
+.bot1 {
+  bottom: 80px;
+}
+.bot1 button {
+  height: 30px;
+  padding: 2px;
+  width: 140px;
+}
+
+.bot2 {
+  bottom: 126px;
+}
+.bot2 button {
+  height: 30px;
+  padding: 2px;
+}
+
+/* Estiliza o rodapé */
+footer {
+  background-color: #FFB6C1;
+  padding: 48px;
+}
+
+.footer-grid {
+  display: grid;
+  margin: 2px;
+  font-size: 16px; 
+  grid-template-columns: 5fr 4fr 4fr;
+  text-align: justify;
+  gap: 3px;
+}
+
+.criado {
+  margin-top: 20px;
+  margin-bottom: -6px;
+  margin-left: 750px;
+  text-align: left;
+  color: black;
+
 }

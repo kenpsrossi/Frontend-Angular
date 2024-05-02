@@ -4,7 +4,7 @@
     <!-- Neste caso, um 'li' é criado para cada 'animal' na coleção 'animais' -->
     <li *ngFor="let animal of animais" class="d-flex flex-column">
         <!-- 'div' para a imagem do animal -->
-        <div class="animal-image">
+            <div class="animal-image">
             <!-- A imagem do animal é carregada dinamicamente usando a propriedade 'imagem' do objeto 'animal' -->
             <!-- O texto alternativo da imagem também é carregado dinamicamente usando a propriedade 'nome' do objeto 'animal' -->
             <img src="{{  animal.imagem }}" alt="Foto de {{ animal.nome }}" class="rounded img-fluid form-imagem">
@@ -20,8 +20,9 @@
         <!-- Várias propriedades do animal são exibidas -->
         <span>Espécie: {{ animal.especie }}</span>
         <span>Gênero: {{ animal.sexo }}</span>
-        <span>Idade: {{ animal.idade }}</span>
-        <span>Raça: {{ animal.raca }}</span>
+        <span>Observações: {{ animal.observacao }}</span>
+        
+        
     </li>
 </ul>
 
