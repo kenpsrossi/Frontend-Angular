@@ -7,7 +7,7 @@
 #  :large_orange_diamond: Sobre o Projeto :  :page_with_curl:
 Trata-se do Projeto Integrador 1 do curso de Engenharia da Computação da Univesp <br>
 O objetivo é possibilitar ao projeto PetGuardian, por meio digital, realizar os cadastros de animais resgatados, o registro histórico de vacinações e cuidados dos pets, bem como oportunizar o gerenciamento eficiente do fluxo desses dados. <br> Além disso, visa disponibilizar uma aplicação web com navegação intuitiva, priorizando a usabilidade e facilidade de navegação.<br>
-Dessa forma, garantindo que os usuários possam encontrar facilmente as informações sobre o projeto, o trabalho desenvolvido e, principalmente, todos os animais disponíveis para adoção. <br>
+Dessa forma, garantindo que os usuários possam encontrar facilmente as informações sobre o projeto, o trabalho desenvolvido e principalmente, todos os animais disponíveis para adoção. <br>
 Esse projeto dispõe das seguintes funcionalidades:
 
 | :small_orange_diamond: Pagina Login ;  :white_check_mark:  | :small_orange_diamond: Página Home ;  :white_check_mark:
@@ -43,7 +43,7 @@ Esse projeto dispõe das seguintes funcionalidades:
 *****
 <P>:large_orange_diamond: Video</p>
    <p align="center">
-   <img src="src/assets/imagens/vdreadme1.gif" alt="Logo"  height="400" width="800">
+   <img src="src/assets/imagens/vdreadme1.gif" alt="Logo"  height="350" width="700">
    </p>   
      
 *****
