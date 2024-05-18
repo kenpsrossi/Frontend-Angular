@@ -6,7 +6,7 @@
       <div class="header">
         <img src="assets/imagens/logo pet.png" class="logo" alt="Logo">
         <img src="assets/imagens/pegada (2).png" class="pegada" alt="Pegada">
-        </div>
+      </div>
       <ul class="navbar-nav">
         <li class="nav-item">
           <!-- O atributo href define o destino do link -->
@@ -15,7 +15,6 @@
           </a> 
         </li>
       </ul>
-
       <!-- Espaço vazio para manter o título no centro -->
       <ul class="navbar-nav"></ul>
     </div>
@@ -34,60 +33,83 @@
       <label class="form-label mt-5 col-8 me-3">Nome:
         <input type="text" formControlName="nome" placeholder="Nome completo" class="w-100">
       </label>
-      
+      <div *ngIf="profileForm.get('nome')?.invalid && (profileForm.get('nome')?.touched || profileForm.get('nome')?.dirty)" class="text-danger">
+        Nome é obrigatório.
+      </div>
+
       <label class="form-label mt-5 col-3">Estado Civil:
         <input type="text" formControlName="estadoCivil" placeholder="Estado Civil" class="w-100">
       </label>
+      
     </div>
 
     <div class="col-12">
       <label class="form-label mt-5 col-4 me-2">CPF: 
         <input type="text" formControlName="cpf" placeholder="CPF" class="w-100">
       </label>
+      <div *ngIf="profileForm.get('cpf')?.invalid && (profileForm.get('cpf')?.touched || profileForm.get('cpf')?.dirty)" class="text-danger">
+        <div *ngIf="profileForm.get('cpf')?.errors?.['required']">CPF é obrigatório.</div>
+        <div *ngIf="profileForm.get('cpf')?.errors?.['cpfLength']">CPF deve ter 11 caracteres.</div>
+      </div>
 
       <label class="form-label mt-5 col-3 me-2">Telefone:
         <input type="text" formControlName="telefone" placeholder="Telefone" class="w-100">
       </label>
-    
+     
+
       <label class="form-label mt-5 col-4">Email:
         <input type="text" formControlName="email" placeholder="Email" class="w-100">
       </label>
+      <div *ngIf="profileForm.get('email')?.invalid && (profileForm.get('email')?.touched || profileForm.get('email')?.dirty)" class="text-danger">
+        <div *ngIf="profileForm.get('email')?.errors?.['required']">Email é obrigatório.</div>
+        <div *ngIf="profileForm.get('email')?.errors?.['email']">Email inválido.</div>
+      </div>
     </div>
       
     <div class="col-12">
       <label class="form-label mt-5 col-9 me-3">Logradouro:
         <input type="text" formControlName="logradouro" placeholder="Logradouro" class="w-100">
       </label>
+      
+
       <label class="form-label mt-5 col-2">Número:
         <input type="text" formControlName="numero" placeholder="Número" class="w-100">
       </label>
+     
     </div>
 
     <div class="col-12">
       <label class="form-label mt-5 col-5 me-2">Cidade:
         <input type="text" formControlName="cidade" placeholder="Cidade" class="w-100">
       </label> 
+      
+
       <label class="form-label mt-5 col-4 me-2">Bairro:
         <input type="text" formControlName="bairro" placeholder="Bairro" class="w-100">
       </label>
+      
             
       <label class="form-label mt-5 col-2">Estado:
         <input type="text" formControlName="estado" placeholder="Estado" class="w-100">
       </label>
+      
     </div>
-     <div class="col-12"> 
-      <label class="form-label mt-5 col-3 me-3">CEP
+    <div class="col-12"> 
+      <label class="form-label mt-5 col-3 me-3">CEP:
         <input type="text" formControlName="cep" placeholder="CEP" class="w-100">
       </label>
-    <label class="form-label mt-5 col-8">Complemento:
-      <input type="text" formControlName="complemento" placeholder="Complemento" class="w-100">
-    </label>
-  </div>  
+      
 
-    <!-- Botão para submeter o formulário -->
+      <label class="form-label mt-5 col-8">Complemento:
+        <input type="text" formControlName="complemento" placeholder="Complemento" class="w-100">
+      </label>
+    </div>  
+
+    <!-- Botões para submeter e cancelar o formulário -->
     <div class="row">
       <div class="col-12 text-center mt-5">
-        <button type="submit" [disabled]="!profileForm.valid " class="btn bot-salvar">Cadastrar</button>
+        <button type="submit" [disabled]="!profileForm.valid" class="btn bot-salvar">Cadastrar</button>
+        <button type="button" (click)="onCancel()" class="btn bot-cancelar" style="background-color: lightcoral; margin-left: 10px;">Cancelar</button>
       </div>
     </div>
   </div>

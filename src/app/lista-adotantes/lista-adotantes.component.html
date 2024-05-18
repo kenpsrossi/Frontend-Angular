@@ -14,7 +14,7 @@
             <span class="visually-hidden">(current)</span> 
         </a>
           <!-- Botão para abrir o diálogo de adição de um novo adotante -->
-          <button mat-raised-button class="bot-adic" (click)="openDialog(newAdotante)">Adicionar Adotante</button>
+          <button mat-raised-button class="bot-adic" (click)="openCadastroAnimaisDialog(newAdotante)">Adicionar Adotante</button>
           
         </li>
       </ul>
@@ -117,9 +117,10 @@
           <mat-icon>edit</mat-icon>
         </button>
         <!-- Botão para deletar o adotante -->
-        <button mat-icon-button color="warn" (click)="deleteAdotante(adotante)">
-          <mat-icon>delete</mat-icon>
-        </button>
+       <!-- Botão para deletar o adotante -->
+          <button mat-icon-button color="warn" (click)="deleteAdotante(adotante.cpf)">
+            <mat-icon>delete</mat-icon>
+         </button>
       </td>
     </ng-container>
 

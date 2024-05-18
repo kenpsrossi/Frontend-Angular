@@ -6,14 +6,10 @@ import { AdotanteService } from 'src/app/services/adotante.service';
 
 // Função validadora para o CPF
 function cpfLengthValidator(control: AbstractControl): ValidationErrors | null {
-  // Obtendo o valor do controle
   const value = control.value;
-  // Verificando se o CPF tem exatamente 11 caracteres
   if (value && value.length !== 11) {
-    // Se não tiver, retorna um erro
     return { cpfLength: true };
   }
-  // Se tiver, retorna null (sem erros)
   return null;
 }
 
@@ -22,35 +18,21 @@ function cpfLengthValidator(control: AbstractControl): ValidationErrors | null {
   templateUrl: './cadastros-adotantes.component.html',
   styleUrls: ['./cadastros-adotantes.component.scss']
 })
-
 export class CadastrosAdotantesComponent implements OnInit {
   // Definição do formulário
   profileForm = new FormGroup({
-    // Campo nome com validação de requerido e mínimo de 8 caracteres
-    nome: new FormControl(''),
-    // Campo matrícula sem validação
+    nome: new FormControl('', [Validators.required]),
     matricula: new FormControl(''),
-    // Campo CPF com validação de requerido e validação de comprimento
-    cpf: new FormControl(''),
-    // Campo email com validação de requerido e formato de email
+    cpf: new FormControl('', [Validators.required, cpfLengthValidator]),
     email: new FormControl(''),
-    
     telefone: new FormControl(''),
-    
     estadoCivil: new FormControl(''),
-    
     logradouro: new FormControl(''),
-    
     cep: new FormControl(''),
-    
     numero: new FormControl(''),
-    
     bairro: new FormControl(''),
-    
     cidade: new FormControl(''),
-    
     estado: new FormControl(''),
-  
     complemento: new FormControl('')
   });
 
@@ -62,7 +44,6 @@ export class CadastrosAdotantesComponent implements OnInit {
 
   // Método chamado quando o componente é inicializado
   ngOnInit(): void {
-    // Inicializa a fonte de dados da tabela com os adotantes do serviço
     this.adotanteService.getAdotantes().subscribe(adotantes => {
       this.dataSource = adotantes;
     });
@@ -70,36 +51,51 @@ export class CadastrosAdotantesComponent implements OnInit {
 
   // Método chamado quando o formulário é submetido
   onSubmit() {
-    // Acessando o valor do formulário
-    const formValues = this.profileForm.value;
+    if (this.profileForm.valid) {
+      const formValues = this.profileForm.value;
 
-    // Criando um novo adotante com os valores do formulário
-    const newAdotante: Adotante = {
-      matricula:'', // 
-      nome: formValues.nome ?? '', 
-      cpf: formValues.cpf ?? '', 
-      email: formValues.email?? '', 
-      telefone: formValues.telefone ?? '', 
-      estadoCivil: formValues.estadoCivil ?? '', 
-      logradouro: formValues.logradouro ?? '', 
-      cep: formValues.cep ?? '',
-      numero: formValues.numero ?? '',
-      bairro: formValues.bairro ?? '',
-      cidade: formValues.cidade ?? '', 
-      estado: formValues.estado ?? '', 
-      complemento: formValues.complemento ?? '' 
-    };
+      const newAdotante: Adotante = {
+        matricula: formValues.matricula || '',
+        nome: formValues.nome || '',
+        cpf: formValues.cpf || '',
+        email: formValues.email || '',
+        telefone: formValues.telefone || '',
+        estadoCivil: formValues.estadoCivil || '',
+        logradouro: formValues.logradouro || '',
+        cep: formValues.cep || '',
+        numero: formValues.numero || '',
+        bairro: formValues.bairro || '',
+        cidade: formValues.cidade || '',
+        estado: formValues.estado || '',
+        complemento: formValues.complemento || ''
+      };
 
-    // Adicionando o novo adotante ao serviço
-    this.adotanteService.addAdotante(newAdotante).subscribe(() => {
-      // Exibindo a mensagem de sucesso
-      this.snackBar.open('Adotante cadastrado com sucesso!', 'Fechar', {
-        duration: 5000, // A mensagem será exibida por 5 segundos
-        verticalPosition: 'top', // A mensagem será exibida no topo da tela
+      this.adotanteService.addAdotante(newAdotante).subscribe(() => {
+        this.snackBar.open('Adotante cadastrado com sucesso!', 'Fechar', {
+          duration: 5000,
+          verticalPosition: 'top',
+        });
+
+        this.profileForm.reset();
+
+        this.adotanteService.getAdotantes().subscribe(adotantes => {
+          this.dataSource = adotantes;
+        });
       });
+    } else {
+      this.snackBar.open('Por favor, preencha os campos corretamente.', 'Fechar', {
+        duration: 5000,
+        verticalPosition: 'top',
+      });
+    }
+  }
 
-      // Resetando o formulário
-      this.profileForm.reset();
+  // Método chamado quando o botão de cancelar é clicado
+  onCancel() {
+    this.profileForm.reset();
+    this.snackBar.open('Cadastro cancelado.', 'Fechar', {
+      duration: 5000,
+      verticalPosition: 'top',
     });
   }
 }

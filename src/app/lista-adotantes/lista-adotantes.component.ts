@@ -1,29 +1,20 @@
-
-// Este código é responsável por exibir uma lista de adotantes em uma tabela,
-// bem como por abrir um diálogo para adicionar ou editar adotantes.
-// Ele usa o serviço AdotanteService para realizar essas operações.
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Adotante } from '../models/adotante';
 import { AdotanteService } from '../services/adotante.service';
 import { AdotanteFormComponent } from '../adotante-form/adotante-form.component';
+import { CadastrosAdotantesComponent } from '../views/cadastros-adotantes/cadastros-adotantes.component';
 
 @Component({
   selector: 'app-lista-adotantes',
   templateUrl: './lista-adotantes.component.html',
   styleUrls: ['./lista-adotantes.component.scss']
 })
-
 export class ListaAdotantesComponent implements OnInit {
-  // Colunas a serem exibidas na tabela
-  displayedColumns: string[] = ['matricula', 'nome', 'telefone', 'email', 'cpf', 'estadoCivil', 'logradouro', 'cep', 'numero', 'bairro', 'cidade', 'estado', 'complemento', 'acao'];
-  
-  // Array para armazenar os adotantes recebidos do servidor
+  displayedColumns: string[] = ['nome', 'telefone', 'email', 'cpf', 'estadoCivil', 'logradouro', 'cep', 'numero', 'bairro', 'cidade', 'estado', 'complemento', 'acao'];
   dataSource: Adotante[] = [];
-
-  // Objeto para armazenar os dados do novo adotante
   newAdotante: Adotante = {
-    matricula:'',
+    matricula: '',
     nome: '',
     telefone: '',
     email: '',
@@ -38,58 +29,75 @@ export class ListaAdotantesComponent implements OnInit {
     complemento: ''
   };
 
-  constructor(private adotanteService: AdotanteService, public dialog: MatDialog) { }
+  constructor(private adotanteService: AdotanteService, public dialog: MatDialog) {}
 
   openDialog(adotante: Adotante): void {
-    // Este método abre um diálogo para o formulário de adotantes
     const dialogRef = this.dialog.open(AdotanteFormComponent, {
       width: '900px',
       data: adotante
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      // Após o diálogo ser fechado, verificamos se um resultado foi retornado
       if (result) {
-        // Se o adotante tiver um CPF, consideramos que é uma edição
         if (result.cpf) {
           this.editAdotante(result);
         } else {
-          // Caso contrário, é um novo adotante
           this.addAdotante(result);
         }
-        // Atualizamos a lista de adotantes após a edição ou adição
-        this.adotanteService.getAdotantes().subscribe(adotantes => {
-          this.dataSource = adotantes;
-          console.log('Adotantes recebidos do serviço:', adotantes);
-        });
       }
     });
   }
 
   ngOnInit(): void {
-    // Quando o componente é inicializado, fazemos uma chamada ao serviço para obter a lista de adotantes
-    this.adotanteService.getAdotantes().subscribe(adotantes => {
-      this.dataSource = adotantes;
+    this.atualizarLista();
+  }
+
+  openCadastroAnimaisDialog(adotante: Adotante): void {
+    const dialogRef = this.dialog.open(CadastrosAdotantesComponent, {
+      width: '900px',
+      data: adotante
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        if (result.cpf) {
+          this.editAdotante(result);
+        } else {
+          this.addAdotante(result);
+        }
+        this.dataSource.push(result); // Adiciona o novo adotante à lista
+        this.dataSource = [...this.dataSource]; // Atualiza a tabela
+      }
     });
   }
 
   addAdotante(adotante: Adotante) {
-    // Este método adiciona um novo adotante à lista
-    this.adotanteService.addAdotante(adotante).subscribe(adotantes => {
-      this.dataSource = adotantes;
+    this.adotanteService.addAdotante(adotante).subscribe(() => {
+      this.atualizarLista();
     });
   }
 
   editAdotante(adotante: Adotante) {
-    // Este método edita um adotante existente na lista
-    this.adotanteService.editAdotante(adotante).subscribe(adotantes => {
-      this.dataSource = adotantes;
+    this.adotanteService.editAdotante(adotante).subscribe(() => {
+      this.atualizarLista();
     });
   }
 
   deleteAdotante(cpf: string) {
-    // Este método deleta um adotante da lista
-    this.adotanteService.deleteAdotante(cpf).subscribe(adotantes => {
+    const confirmDelete = confirm('Tem certeza que deseja deletar este adotante?');
+    if (confirmDelete) {
+      this.adotanteService.deleteAdotante(cpf).subscribe(() => {
+        this.atualizarLista();
+        alert('Adotante deletado com sucesso!');
+      }, error => {
+        console.error(error);
+        alert('Falha ao deletar adotante: ' + error.message);
+      });
+    }
+  }
+
+  atualizarLista() {
+    this.adotanteService.getAdotantes().subscribe((adotantes: Adotante[]) => {
       this.dataSource = adotantes;
     });
   }
