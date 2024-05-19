@@ -23,6 +23,9 @@
     <input type="password" class="form-control campo" id="password" [(ngModel)]="password" name="password" required style="font-size: 1.5em; line-height: 1.5; padding: .5rem 1rem;">
   </div>
 
+  <!-- Exibição da mensagem de erro -->
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
   <!-- Botão para submeter o formulário -->
   <button type="submit" class="btn bot-entrar" routerLink="/menu"
   routerLinkActive="active">Entrar</button>

@@ -75,15 +75,18 @@
         <label class="form-label mt-4">Local Resgate:
           <input type="text" formControlName="localResgate" placeholder="Local Resgate" class="form-control">
         </label>
+
+        <label class="form-label mt-4">Observação:
+          <input type="text" formControlName="observacao" placeholder="Observação" class="form-control">
+        </label> 
+
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-12">
-        <label for="exampleTextarea" placeholder="Vacinação" class="form-label mt-4">Breve história do pet :</label>
-        <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Escreva aqui sobre o pet..."></textarea>
-
-        <label for="formFile" class="form-label mt-4">Imagem do pet no formato $$$ x $$$</label>
+      
+        <label for="formFile" class="form-label mt-4"></label>
         <input class="form-control" type="file" id="formFile" formControlName="imagem">
       </div>
     </div>
@@ -91,6 +94,8 @@
     <div class="row">
       <div class="col-md-12">
         <button type="submit" [disabled]="!profileForm.valid" class="btn bot-salvar">Cadastrar</button>
+        <button type="button" (click)="onCancel()" class="btn bot-cancelar" style="background-color: lightcoral; margin-left: 10px;">Cancelar</button>
+
       </div>
     </div>
   </div>

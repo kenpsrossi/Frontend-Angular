@@ -6,14 +6,14 @@
       <div class="header">
         <img src="assets/imagens/logo pet.png" class="logo" alt="Logo">
         <img src="assets/imagens/pegada (2).png" class="pegada" alt="Pegada">
-        </div>
+      </div>
       <ul class="navbar-nav">
         <li class="nav-item">
           <!-- O atributo href define o destino do link -->
           <a class="btn btn-info bot-home" href="#">Home
-            <span class="visually-hidden">(current)</span> 
-        </a>  
-          <button mat-raised-button class="bot-adic" (click)="openCadastroAnimaisDialog(newanimal)">Adicionar Animal</button>
+            <span class="visually-hidden">(current)</span>
+          </a>
+          <button mat-raised-button class="bot-adic" (click)="openCadastroAnimaisDialog(newAnimal)">Adicionar Animal</button>
         </li>
       </ul>
       <ul class="navbar-nav"></ul>
@@ -65,7 +65,7 @@
 
     <!-- Coluna Castração -->
     <ng-container matColumnDef="castracao">
-      <th mat-header-cell *matHeaderCellDef> Castração  </th>
+      <th mat-header-cell *matHeaderCellDef> Castração </th>
       <td mat-cell *matCellDef="let animal"> {{animal.castracao}} </td>
     </ng-container>
 
@@ -83,11 +83,11 @@
 
     <!-- Coluna Observação -->
     <ng-container matColumnDef="observacao">
-      <th mat-header-cell *matHeaderCellDef>  Observação  </th>
+      <th mat-header-cell *matHeaderCellDef> Observação </th>
       <td mat-cell *matCellDef="let animal"> {{animal.observacao}} </td>
     </ng-container>
 
-    <!-- Coluna status-->
+    <!-- Coluna Status -->
     <ng-container matColumnDef="status">
       <th mat-header-cell *matHeaderCellDef> Status </th>
       <td mat-cell *matCellDef="let animal"> {{animal.status}} </td>
@@ -96,7 +96,9 @@
     <!-- Coluna Imagem -->
     <ng-container matColumnDef="imagem">
       <th mat-header-cell *matHeaderCellDef> Imagem </th>
-      <td mat-cell *matCellDef="let animal"> {{animal.imagem}} </td>
+      <td mat-cell *matCellDef="let animal">
+        <img [src]="animal.imagem" alt="{{animal.nome}}" class="miniatura">
+      </td>
     </ng-container>
 
     <!-- Coluna Idade -->
@@ -110,11 +112,11 @@
       <th mat-header-cell *matHeaderCellDef> Ações </th>
       <td mat-cell *matCellDef="let animal">
         <!-- Botão para abrir o diálogo de edição -->
-        <button mat-icon-button color="primary" (click)=" openAnimalFormDialog(animal)">
+        <button mat-icon-button color="primary" (click)="openDialog(animal)">
           <mat-icon>edit</mat-icon>
         </button>
-        <!-- Botão para deletar o adotante -->
-        <button mat-icon-button color="warn" (click)="deleteAnimal(animal)">
+        <!-- Botão para deletar o animal -->
+        <button mat-icon-button color="warn" (click)="deleteAnimal(animal.matricula)">
           <mat-icon>delete</mat-icon>
         </button>
       </td>
@@ -129,5 +131,5 @@
 
 <!-- Rodapé do site -->
 <footer class="text-center py-3 text-white">
-  <span class="copyright"> Criado por PI-1 007 013 </span>
+  <span class="copyright">Criado por PI-1 007 013</span>
 </footer>

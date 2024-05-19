@@ -11,7 +11,7 @@ import { CadastrosAdotantesComponent } from '../views/cadastros-adotantes/cadast
   styleUrls: ['./lista-adotantes.component.scss']
 })
 export class ListaAdotantesComponent implements OnInit {
-  displayedColumns: string[] = ['nome', 'telefone', 'email', 'cpf', 'estadoCivil', 'logradouro', 'cep', 'numero', 'bairro', 'cidade', 'estado', 'complemento', 'acao'];
+  displayedColumns: string[] = ['nome', 'telefone', 'email', 'cpf', 'estadoCivil', 'logradouro', 'cep', 'numero', 'bairro', 'cidade', 'estado', 'acao'];
   dataSource: Adotante[] = [];
   newAdotante: Adotante = {
     matricula: '',
@@ -52,7 +52,7 @@ export class ListaAdotantesComponent implements OnInit {
     this.atualizarLista();
   }
 
-  openCadastroAnimaisDialog(adotante: Adotante): void {
+  openCadastroAdotantesDialog(adotante: Adotante): void {
     const dialogRef = this.dialog.open(CadastrosAdotantesComponent, {
       width: '900px',
       data: adotante

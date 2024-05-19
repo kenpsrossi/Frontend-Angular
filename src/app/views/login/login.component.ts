@@ -1,28 +1,31 @@
-// Importando o componente do Angular
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
 
-// Decorador que define que a classe a seguir é um componente do Angular
 @Component({
-  // Seletor CSS que será usado para inserir este componente em um template HTML
   selector: 'app-login',
-  // Caminho para o arquivo HTML que define a visualização deste componente
   templateUrl: './login.component.html',
-  // Caminho para o arquivo CSS que define os estilos aplicados a este componente
   styleUrls: ['./login.component.scss']
 })
-
-// Classe que define o comportamento do componente Login
 export class LoginComponent {
-  // Variável para armazenar o nome de usuário inserido
   username: string = '';
-  // Variável para armazenar a senha inserida
   password: string = '';
+  errorMessage: string = '';
 
-  // Método que será chamado quando o formulário for submetido
+  constructor(private authService: AuthService) {}
+
   onSubmit() {
-    // Implemente a lógica de login aqui
-
-    // Imprime o nome de usuário e a senha no console
-    console.log(`Username: ${this.username}, Password: ${this.password}`);
+    this.authService.login(this.username, this.password).subscribe(
+      () => {
+        // Login bem-sucedido, redirecione para a página de menu ou faça qualquer outra ação necessária
+        console.log('Login bem-sucedido');
+        // Limpa a mensagem de erro
+        this.errorMessage = '';
+      },
+      error => {
+        // Login falhou, exiba mensagem de erro
+        this.errorMessage = 'Credenciais inválidas';
+        console.error('Erro durante o login:', error);
+      }
+    );
   }
 }

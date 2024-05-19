@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Pet }  from '../models/pet';
+import { AnimalService } from '../services/animal.service';
 
 @Component({
   selector: 'app-animal-form',
@@ -8,18 +9,40 @@ import { Pet }  from '../models/pet';
   styleUrls: ['./animal-form.component.scss']
 })
 export class  AnimalFormComponent  {
-  // Injeção de dependências do diálogo e dos dados do animais
   constructor(
     public dialogRef: MatDialogRef<AnimalFormComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Pet ) {}
+    @Inject(MAT_DIALOG_DATA) public data: Pet,
+    private animalService: AnimalService 
+  ) {}
 
-  // Função para fechar o diálogo sem retornar dados
   onNoClick(): void {
     this.dialogRef.close();
   }
 
-  // Função para fechar o diálogo e retornar os dados do formulário
   save(): void {
+    if (this.data.matricula) {
+      // Editar animal existente
+      this.animalService.editAnimal(this.data).subscribe(
+        () => {
+          console.log('Animal editado:', this.data);
+          this.dialogRef.close(this.data);
+        },
+        error => {
+          console.error('Erro ao editar animal:', error);
+        }
+      );
+    }else {
+      // Adicionar novo animal
+      this.animalService.addAnimal(this.data).subscribe(
+        novoAnimal => {
+          console.log('Novo animal adicionado:', novoAnimal);
+          this.dialogRef.close(novoAnimal);
+        },
+        error => {
+          console.error('Erro ao adicionar animal:', error);
+        }
+      );
+    }
     console.log('Dados retornados pelo diálogo:', this.data);
     this.dialogRef.close(this.data);
   }
