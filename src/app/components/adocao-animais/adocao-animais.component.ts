@@ -35,16 +35,17 @@ export class AdocaoAnimaisComponent {
 
   onSelectPet() {
     // Mostrar a mensagem de notificação
-    const message = `Escolha do Pet realizada com sucesso!<br>
-                     Seus dados e escolha foram salvos e serão comunicados para a administração<br>
-                     para as próximas etapas para a conclusão da adoção. Muito Obrigado.`;
+    const message = `Escolha do pet concluída com sucesso!<br>
+                     Seus dados e a escolha do pet foram salvos.<br>
+                     Em breve, mais informações sobre as próximas etapas da adoção.<br>
+                     Muito obrigado!`;
     
     this.notificacao.show(message);
 
     // Redirecionar para a página de menu após 8 segundos
     setTimeout(() => {
       this._router.navigate(['/menu']);
-    }, 8000);
+    }, 7000);
   }
 
   private filterAnimalsPerEspecie(especie?: 'Cachorro' | 'Gato'): Array<Pet> {

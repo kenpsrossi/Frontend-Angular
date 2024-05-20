@@ -70,7 +70,7 @@ export class CadastrosAdotantesComponent implements OnInit {
       };
 
       this.adotanteService.addAdotante(newAdotante).subscribe(() => {
-        this.notification.showMessage('Seus dados foram cadastrados com sucesso! Agora será redirecionado para outra página escolher o seu pet!');
+        this.notification.showMessage('Dados cadastrados com sucesso!<br> Agora escolha seu pet!');
 
         this.profileForm.reset();
 
@@ -78,10 +78,10 @@ export class CadastrosAdotantesComponent implements OnInit {
           // Manipule os dados se necessário
         });
 
-        // Redireciona para a página de adoção de animais após 8 segundos
+        // Redireciona para a página de adoção de animais após 6 segundos
         setTimeout(() => {
           this.router.navigate(['/adocao-animais']);
-        }, 8000);
+        }, 5000);
 
         if (this.dialogRef) {
           this.dialogRef.close(newAdotante);

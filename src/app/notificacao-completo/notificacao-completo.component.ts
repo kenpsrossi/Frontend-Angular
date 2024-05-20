@@ -16,7 +16,7 @@ export class NotificacaoCompletoComponent {
 
     setTimeout(() => {
       this.showMessage = false;
-    }, 8000);
+    }, 7000);
   }
 }
 

@@ -17,6 +17,6 @@ export class NotificationComponent implements OnInit {
     document.getElementById('notification')!.style.display = 'block';
     setTimeout(() => {
       document.getElementById('notification')!.style.display = 'none';
-    }, 8000);
+    }, 5000);
   }
 }
