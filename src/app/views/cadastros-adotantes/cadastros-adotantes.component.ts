@@ -1,17 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
-import { Adotante } from 'src/app/models/adotante';
+import { Component, Inject, OnInit, Optional, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AdotanteService } from 'src/app/services/adotante.service';
-
-// Função validadora para o CPF
-function cpfLengthValidator(control: AbstractControl): ValidationErrors | null {
-  const value = control.value;
-  if (value && value.length !== 11) {
-    return { cpfLength: true };
-  }
-  return null;
-}
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { Adotante } from 'src/app/models/adotante';
+import { NotificationComponent } from 'src/app/notification/notification.component';
 
 @Component({
   selector: 'app-cadastros-adotantes',
@@ -19,11 +13,12 @@ function cpfLengthValidator(control: AbstractControl): ValidationErrors | null {
   styleUrls: ['./cadastros-adotantes.component.scss']
 })
 export class CadastrosAdotantesComponent implements OnInit {
-  // Definição do formulário
+  @ViewChild(NotificationComponent) notification!: NotificationComponent;
+
   profileForm = new FormGroup({
     nome: new FormControl('', [Validators.required]),
     matricula: new FormControl(''),
-    cpf: new FormControl('', [Validators.required, cpfLengthValidator]),
+    cpf: new FormControl('', [Validators.required]),
     email: new FormControl(''),
     telefone: new FormControl(''),
     estadoCivil: new FormControl(''),
@@ -36,20 +31,24 @@ export class CadastrosAdotantesComponent implements OnInit {
     complemento: new FormControl('')
   });
 
-  // Fonte de dados para a tabela
-  dataSource: Adotante[] = [];
-
-  // Injetando MatSnackBar e AdotanteService no construtor
-  constructor(private snackBar: MatSnackBar, private adotanteService: AdotanteService) { }
-
-  // Método chamado quando o componente é inicializado
-  ngOnInit(): void {
-    this.adotanteService.getAdotantes().subscribe(adotantes => {
-      this.dataSource = adotantes;
-    });
+  constructor(
+    private snackBar: MatSnackBar,
+    private adotanteService: AdotanteService,
+    private router: Router,
+    @Optional() private dialogRef: MatDialogRef<CadastrosAdotantesComponent>,
+    @Optional() @Inject(MAT_DIALOG_DATA) public data: Adotante
+  ) {
+    if (data) {
+      this.profileForm.patchValue(data);
+    }
   }
 
-  // Método chamado quando o formulário é submetido
+  ngOnInit(): void {
+    if (!this.data) {
+      // Lógica para lidar com a inicialização do componente quando não usado como uma caixa de diálogo
+    }
+  }
+
   onSubmit() {
     if (this.profileForm.valid) {
       const formValues = this.profileForm.value;
@@ -71,31 +70,38 @@ export class CadastrosAdotantesComponent implements OnInit {
       };
 
       this.adotanteService.addAdotante(newAdotante).subscribe(() => {
-        this.snackBar.open('Adotante cadastrado com sucesso!', 'Fechar', {
-          duration: 5000,
-          verticalPosition: 'top',
-        });
+        this.notification.showMessage('Seus dados foram cadastrados com sucesso! Agora será redirecionado para outra página escolher o seu pet!');
 
         this.profileForm.reset();
 
         this.adotanteService.getAdotantes().subscribe(adotantes => {
-          this.dataSource = adotantes;
+          // Manipule os dados se necessário
         });
+
+        // Redireciona para a página de adoção de animais após 8 segundos
+        setTimeout(() => {
+          this.router.navigate(['/adocao-animais']);
+        }, 8000);
+
+        if (this.dialogRef) {
+          this.dialogRef.close(newAdotante);
+        }
       });
     } else {
       this.snackBar.open('Por favor, preencha os campos corretamente.', 'Fechar', {
         duration: 5000,
-        verticalPosition: 'top',
+        verticalPosition: 'top'
       });
     }
   }
 
-  // Método chamado quando o botão de cancelar é clicado
   onCancel() {
-    this.profileForm.reset();
-    this.snackBar.open('Cadastro cancelado.', 'Fechar', {
-      duration: 5000,
-      verticalPosition: 'top',
-    });
+    // Redireciona para a página de menu
+    this.router.navigate(['/menu']);
+
+    // Fecha a caixa de diálogo se estiver aberta
+    if (this.dialogRef) {
+      this.dialogRef.close();
+    }
   }
 }

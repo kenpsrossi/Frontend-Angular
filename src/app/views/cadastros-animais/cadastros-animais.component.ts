@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Pet } from 'src/app/models/pet';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AnimalService } from 'src/app/services/animal.service';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-cadastros-animais',
@@ -10,7 +11,6 @@ import { AnimalService } from 'src/app/services/animal.service';
   styleUrls: ['./cadastros-animais.component.scss']
 })
 export class CadastrosAnimaisComponent implements OnInit {
-  // Definição do formulário
   profileForm = new FormGroup({
     nome: new FormControl(''),
     matricula: new FormControl('', Validators.required),
@@ -27,13 +27,15 @@ export class CadastrosAnimaisComponent implements OnInit {
     idade: new FormControl('')
   });
 
-  // Fonte de dados para a tabela
   dataSource: Pet[] = [];
 
-  constructor(private snackBar: MatSnackBar, private animalService: AnimalService) { }
+  constructor(
+    private snackBar: MatSnackBar,
+    private animalService: AnimalService,
+    public dialogRef: MatDialogRef<CadastrosAnimaisComponent>
+  ) {}
 
   ngOnInit(): void {
-    // Inicializa a fonte de dados da tabela com os animais do serviço
     this.animalService.getAnimais().subscribe(animais => {
       this.dataSource = animais;
     });
@@ -44,46 +46,44 @@ export class CadastrosAnimaisComponent implements OnInit {
       const formValues = this.profileForm.value;
 
       const newAnimal: Pet = {
-        matricula: formValues.matricula || '', 
-        nome: formValues.nome || '', 
-        especie: formValues.especie || '', 
-        pelagem: formValues.pelagem || '', 
+        matricula: formValues.matricula || '',
+        nome: formValues.nome || '',
+        especie: formValues.especie || '',
+        pelagem: formValues.pelagem || '',
         raca: formValues.raca || '',
-        sexo: formValues.sexo || '', 
-        castracao: formValues.castracao || '', 
-        vacinacao: formValues.vacinacao || '', 
-        localResgate: formValues.localResgate || '', 
-        observacao: formValues.observacao || '', 
-        status: formValues.status || '', 
-        imagem: formValues.imagem || '', 
-        idade: 0 
+        sexo: formValues.sexo || '',
+        castracao: formValues.castracao || '',
+        vacinacao: formValues.vacinacao || '',
+        localResgate: formValues.localResgate || '',
+        observacao: formValues.observacao || '',
+        status: formValues.status || '',
+        imagem: formValues.imagem || '',
+        idade: 0
       };
 
       this.animalService.addAnimal(newAnimal).subscribe(() => {
         this.snackBar.open('Animal cadastrado com sucesso!', 'Fechar', {
-          duration: 5000, 
-          verticalPosition: 'top', 
+          duration: 5000,
+          verticalPosition: 'top',
         });
 
         this.profileForm.reset();
-
-        this.animalService.getAnimais().subscribe(animais => {
-          this.dataSource = animais;
-        });
+        this.dialogRef.close(newAnimal); // Fechar o diálogo e enviar o novo animal
       });
     } else {
       this.snackBar.open('Por favor, preencha os campos corretamente.', 'Fechar', {
-        duration: 5000, 
-        verticalPosition: 'top', 
+        duration: 5000,
+        verticalPosition: 'top',
       });
     }
   }
 
   onCancel() {
     this.profileForm.reset();
+    this.dialogRef.close(); // Fechar o diálogo sem enviar dados
     this.snackBar.open('Cadastro cancelado!', 'Fechar', {
-      duration: 5000, 
-      verticalPosition: 'top', 
+      duration: 5000,
+      verticalPosition: 'top',
     });
   }
 }

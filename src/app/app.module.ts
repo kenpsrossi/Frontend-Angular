@@ -37,6 +37,9 @@ import { MatInputModule } from '@angular/material/input';
 import { ListaAdotantesComponent } from './lista-adotantes/lista-adotantes.component';
 import { ListaAnimaisComponent } from './lista-animais/lista-animais.component';
 import { AnimalFormComponent } from './animal-form/animal-form.component';
+import { AdocaoAnimaisComponent } from './components/adocao-animais/adocao-animais.component';
+import { NotificationComponent } from './notification/notification.component';
+import { NotificacaoCompletoComponent } from './notificacao-completo/notificacao-completo.component';
 
 
 
@@ -59,6 +62,9 @@ import { AnimalFormComponent } from './animal-form/animal-form.component';
     ListaAdotantesComponent,
     ListaAnimaisComponent,
     AnimalFormComponent,
+    AdocaoAnimaisComponent,
+    NotificationComponent,
+    NotificacaoCompletoComponent,
    
    
   ],

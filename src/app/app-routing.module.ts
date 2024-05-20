@@ -11,6 +11,7 @@ import { CadastrosAnimaisComponent } from './views/cadastros-animais/cadastros-a
 import { CadastrosAdotantesComponent } from './views/cadastros-adotantes/cadastros-adotantes.component';
 import { ListaAdotantesComponent } from './lista-adotantes/lista-adotantes.component';
 import { ListaAnimaisComponent } from './lista-animais/lista-animais.component';
+import { AdocaoAnimaisComponent } from './components/adocao-animais/adocao-animais.component';
 
 
 // Define as rotas da aplicação
@@ -49,6 +50,9 @@ const routes: Routes = [
   {
     path: 'lista-animais', component: ListaAnimaisComponent
   },
+  {
+    path: 'adocao-animais', component: AdocaoAnimaisComponent
+  }
 ];
 
 // Define o módulo de roteamento

@@ -1,0 +1,135 @@
+
+
+/* Estilo para a barra de navegação, definindo a cor de fundo como rosa claro */
+.navbar-rosa-claro {
+    background-color: #FFB6C1;
+  }
+
+.navbar-nav {
+    padding-left: -0;
+  }
+.navbar-nav {
+    position: absolute;
+    left: 240px; 
+  }
+
+.header {
+    display: flex;
+    align-items: center;
+  }
+.logo {
+    margin-top:-20px;
+    width: 12%;
+    height: 12%;
+    object-fit: contain;
+  }
+.pegada {
+    width: 8%;
+    height: 8%;
+    object-fit: contain;
+  }
+
+  .bot-home {
+    font-weight: bold; 
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 3px 10px; 
+    background-color:  rgb(146, 247, 220) ; 
+    color:black; 
+  }
+.bot-home:hover {
+    background-color: rgb(62, 237, 167);
+    box-shadow: 0 10px 10px 3px rgb(165, 245, 213);
+}
+
+  .bot-salvar {
+    background-color: rgb(165, 245, 213); /* Fundo do botão salvar */
+    margin: 10px 0px 10px 0px;
+    padding: 5px 35px; 
+}
+  .bot-salvar:hover {
+    background-color: rgb(62, 237, 167); /* Fundo do botão salvar ao passar o mouse */
+    box-shadow: 0 10px 10px 3px rgb(165, 245, 213); /* Sombra do botão salvar ao passar o mouse */
+} 
+
+
+h1 {
+  text-align: center;
+  margin: 30px;
+  font-size: 2.5em; 
+}
+
+
+
+// Define valores para z-index
+$z-index-wrapper: 10;
+
+// Define cores
+$color-wrapper-bg: #7f8d8d9c;
+
+.bot-adotar {
+  background-color:#FFB6C1;
+  color: black;
+  //font-weight: bold;
+  padding: 4px 10px; 
+  font-size: 14px; 
+}
+
+.bot-adotar:hover {
+  background-color: white;
+  box-shadow: 0 10px 10px 5px#FFB6C1;
+}
+
+.animal-data {
+  margin-top: 1rem;
+  
+}
+
+.animal-list {
+  margin-top: 0px;
+  background-color: #e9f7f7;
+  // Define o display para grid
+  display: grid;
+  // Define 4 colunas de tamanho igual
+  grid-template-columns: repeat(3, 1fr);
+  // Centraliza os itens na célula da grid
+  justify-items: center;
+  // Define o espaço entre os itens da grid
+  gap: 3rem;
+  padding: 2rem;
+
+  .animal-image {
+    // Define a posição como relativa para permitir posicionamento absoluto dos filhos
+    position: relative;
+    box-shadow: 15px 13px 10px  rgb(146, 247, 220);
+    // Mostra o wrapper do animal quando o mouse passa sobre a imagem
+    &:hover {
+      .animal-wrapper {
+        display: block;
+      }
+    }
+  }
+
+  .animal-wrapper {
+    // Esconde o wrapper do animal por padrão
+    display: none;
+    // Posiciona o wrapper do animal sobre a imagem
+    position: absolute;
+    // Define a cor de fundo do wrapper do animal
+    background-color: $color-wrapper-bg;
+    // Posiciona o wrapper do animal no topo e à esquerda da imagem
+    top: 0;
+    left: 0;
+    // Faz o wrapper do animal ocupar toda a largura e altura da imagem
+    width: 100%;
+    height: 100%;
+    // Coloca o wrapper do animal acima da imagem
+    z-index: $z-index-wrapper;
+  }
+}
+
+.form-imagem {
+  width: 440px;
+  height: 280px;
+  object-fit: cover;
+}

@@ -1,0 +1,39 @@
+#notification {
+  /* Define a posição fixa para a notificação, centralizada na tela */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Define a cor de fundo e a opacidade da notificação */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Define a cor do texto da notificação */
+  color: white;
+  /* Define o preenchimento interno da notificação */
+  padding: 40px; /* Ajustar conforme necessário */
+  /* Define o raio das bordas da notificação */
+  border-radius: 10px;
+  /* Define o alinhamento do texto no centro da notificação */
+  text-align: center;
+  /* Define a ordem de empilhamento z-index da notificação */
+  z-index: 1000;
+  /* Define a largura da notificação */
+  width: 80%; /* Ajustar conforme necessário */
+  /* Define a largura máxima da notificação para garantir que não ultrapasse uma determinada largura */
+  max-width: 800px; /* Ajustar conforme necessário */
+  /* Define a altura da notificação */
+  height: auto; /* Ajustar conforme necessário */
+}
+
+.message-text {
+  /* Define o tamanho da fonte do texto da mensagem */
+  font-size: 2.7em; /* Ajustar conforme necessário */
+  font-size: bold;
+  /* Define a altura da linha do texto */
+  line-height: 1.5; /* Ajustar conforme necessário */
+  /* Define o espaçamento entre as letras */
+  letter-spacing: 0.05em; /* Ajustar conforme necessário */
+  /* Define o espaçamento entre as palavras */
+  word-spacing: 0.1em; /* Ajustar conforme necessário */
+  /* Permite a quebra de linha no texto */
+  white-space: pre-line; /* Permite a quebra de linha */
+}

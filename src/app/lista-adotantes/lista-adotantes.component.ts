@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Adotante } from '../models/adotante';
 import { AdotanteService } from '../services/adotante.service';
 import { AdotanteFormComponent } from '../adotante-form/adotante-form.component';
@@ -29,7 +30,11 @@ export class ListaAdotantesComponent implements OnInit {
     complemento: ''
   };
 
-  constructor(private adotanteService: AdotanteService, public dialog: MatDialog) {}
+  constructor(private adotanteService: AdotanteService, public dialog: MatDialog, private snackBar: MatSnackBar) {}
+
+  ngOnInit(): void {
+    this.atualizarLista();
+  }
 
   openDialog(adotante: Adotante): void {
     const dialogRef = this.dialog.open(AdotanteFormComponent, {
@@ -48,10 +53,6 @@ export class ListaAdotantesComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    this.atualizarLista();
-  }
-
   openCadastroAdotantesDialog(adotante: Adotante): void {
     const dialogRef = this.dialog.open(CadastrosAdotantesComponent, {
       width: '900px',
@@ -65,8 +66,8 @@ export class ListaAdotantesComponent implements OnInit {
         } else {
           this.addAdotante(result);
         }
-        this.dataSource.push(result); // Adiciona o novo adotante à lista
-        this.dataSource = [...this.dataSource]; // Atualiza a tabela
+        this.atualizarLista(); // Atualiza a lista após a ação
+        
       }
     });
   }

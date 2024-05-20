@@ -1,0 +1,49 @@
+<!-- Barra de navegação no topo da página -->
+<nav class="navbar navbar-expand-lg navbar-rosa-claro" data-bs-theme="dark">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
+      <!-- Botão Home na barra de navegação -->
+      <div class="header">
+        <img src="assets/imagens/logo pet.png" class="logo" alt="Logo">
+        <img src="assets/imagens/pegada (2).png" class="pegada" alt="Pegada">
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="btn btn-info bot-home" href="#">Home
+            <span class="visually-hidden">(current)</span> 
+          </a> 
+        </li>
+      </ul>
+      <!-- Espaço vazio para manter o título no centro -->
+      <ul class="navbar-nav"></ul>
+    </div>
+  </div>
+</nav>
+
+<h1>Escolha seu Pet</h1>
+
+<!-- Incluindo o componente de notificação -->
+<app-notificacao-completo></app-notificacao-completo>
+
+<!-- Lista de animais -->
+<ul class="animal-list">
+  <li *ngFor="let animal of animais" class="d-flex flex-column">
+    <div class="animal-image">
+      <img src="{{ animal.imagem }}" alt="Foto de {{ animal.nome }}" class="rounded img-fluid form-imagem">
+      <div class="animal-wrapper p-2">
+        <button class="btn bot-adotar mx-2" (click)="onSelectPet()">Meu Pet !</button>
+      </div>
+    </div>
+    <strong class="fs-6 animal-data">{{ animal.nome }}</strong>
+    <span>Espécie: {{ animal.especie }}</span>
+    <span>Gênero: {{ animal.sexo }}</span>
+    <span>Pelagem: {{ animal.pelagem }}</span>
+    <span>Idade: {{ animal.idade }}</span>
+    <span>Raça: {{ animal.raca }}</span>
+    <span>Sexo: {{ animal.sexo }}</span>
+    <span>Castração: {{ animal.castracao }}</span>
+    <span>Observações: {{ animal.observacao }}</span>
+  </li>
+</ul>
+
+<h1 *ngIf="!animais.length" class="fs-3 display-3 text-center">Não há nenhum animalzinho</h1>

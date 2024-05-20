@@ -8,6 +8,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 // Importa o módulo FormsModule para fornecer suporte para formulários e vinculação de dados bidirecional
 import { FormsModule } from "@angular/forms";
 
+
 // Define um módulo que agrupa e compartilha componentes comuns
 @NgModule({ 
     imports: [], // Nenhum módulo é importado aqui, pois este é um módulo de compartilhamento

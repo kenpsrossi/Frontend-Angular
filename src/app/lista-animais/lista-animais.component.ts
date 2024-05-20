@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Pet } from '../models/pet';
 import { AnimalService } from '../services/animal.service';
 import { AnimalFormComponent } from '../animal-form/animal-form.component';
@@ -12,9 +13,9 @@ import { CadastrosAnimaisComponent } from '../views/cadastros-animais/cadastros-
 })
 export class ListaAnimaisComponent implements OnInit {
   displayedColumns: string[] = ['matricula', 'nome', 'especie', 'pelagem', 'raca', 
-    'sexo', 'castracao', 'observacao', 'status', 'imagem', 'idade', 'acao'];
+    'sexo', 'castracao', 'observacao', 'status', 'idade', 'acao'];
   dataSource: Pet[] = [];
-   newAnimal: Pet = {
+  newAnimal: Pet = {
     matricula: '',
     nome: '',
     especie: '',
@@ -29,33 +30,19 @@ export class ListaAnimaisComponent implements OnInit {
     imagem: '',
     idade: 0
   };
-//newanimal: any;
 
-constructor(private animalService: AnimalService, public dialog: MatDialog) {}
+  constructor(
+    private animalService: AnimalService,
+    public dialog: MatDialog,
+    private snackBar: MatSnackBar
+  ) {}
 
-openDialog(animal: Pet): void {
-  const dialogRef = this.dialog.open(AnimalFormComponent, {
-    width: '900px',
-    data: animal
-  });
+  ngOnInit(): void {
+    this.atualizarLista();
+  }
 
-  dialogRef.afterClosed().subscribe(result => {
-    if (result) {
-      if (result.matricula) {
-        this.editAnimal(result);
-      } else {
-        this.addAnimal(result);
-      }
-    }
-  });
-}
-
-ngOnInit(): void {
-  this.atualizarLista();
-}
-
-  openCadastroAnimaisDialog(animal: Pet): void {
-    const dialogRef = this.dialog.open(CadastrosAnimaisComponent, {
+  openDialog(animal: Pet): void {
+    const dialogRef = this.dialog.open(AnimalFormComponent, {
       width: '900px',
       data: animal
     });
@@ -67,24 +54,34 @@ ngOnInit(): void {
         } else {
           this.addAnimal(result);
         }
-        this.dataSource.push(result);
-        this.dataSource = [...this.dataSource];
       }
     });
   }
-   
+
+  openCadastroAnimaisDialog(animal: Pet): void {
+    const dialogRef = this.dialog.open(CadastrosAnimaisComponent, {
+      width: '900px',
+      data: animal
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.atualizarLista(); // Atualiza a lista após a ação              
+      }
+    });
+  }
+
   addAnimal(animal: Pet) {
     this.animalService.addAnimal(animal).subscribe(() => {
       this.atualizarLista();
     });
   }
-  
+
   editAnimal(animal: Pet) {
     this.animalService.editAnimal(animal).subscribe(() => {
       this.atualizarLista();
     });
   }
-
 
   deleteAnimal(matricula: string) {
     const confirmDelete = confirm('Deseja realmente excluir o animal?');
@@ -94,15 +91,19 @@ ngOnInit(): void {
         alert('Animal excluído com sucesso!');
       }, error => {
         console.error(error);
-        alert('Erro ao excluir o animal!'+ error.message);
-    });
+        alert('Erro ao excluir o animal! ' + error.message);
+      });
+    }
   }
-}
 
   atualizarLista() {
     this.animalService.getAnimais().subscribe(animais => {
-      this.dataSource = animais;
+      this.dataSource = animais.map(animal => {
+        if (animal.imagem) {
+          animal.imagem = `data:image/jpeg;base64,${animal.imagem}`;
+        }
+        return animal;
+      });
     });
   }
- 
 }
