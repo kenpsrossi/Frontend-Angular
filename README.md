@@ -52,16 +52,16 @@ Esse projeto dispõe das seguintes funcionalidades:
 |:----- |:----- |:----- |:----- |
 
 *****
-# :large_orange_diamond: Como executar o Front end : :bulb:
+# :large_orange_diamond: Como executar o Frontend : :bulb:
 
-##  :flashlight: Front end : :octocat: https://github.com/kenpsrossi/AngularLab
+##  :flashlight: Frontend : :octocat: https://github.com/kenpsrossi/AngularLab
 - Pré-requisitos : 
 
 ```bash
 # clonar repositório
 https://github.com/kenpsrossi/AngularLab.git
 
-# entrar na pasta do projeto projeto-Radar-angular
+# entrar na pasta do projeto 
 
 # instalar dependências
 npm install
