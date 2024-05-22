@@ -1,7 +1,7 @@
 # <img src="src/assets/imagens/logo pet.png" alt="Logo"  height="110" width="160" >  Projeto PetGuardian   
 
 <br>
- <h1 align="left"> :large_orange_diamond: Olá <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" height="30px">, somos o grupo  PI-1 007 013</h1>
+ <h1 align="left"> :large_orange_diamond: Olá <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" height="30px"></h1>
 <br>
 
 #  :large_orange_diamond: Sobre o Projeto :  :page_with_curl:
