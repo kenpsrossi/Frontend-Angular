@@ -2,7 +2,27 @@
 
 <br>
  <h1 align="left"> :large_orange_diamond: Olá <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" height="30px"></h1>
-<br>
+
+
+## :large_orange_diamond: Desenvolvedores :
+<table>
+  <tr>
+    <td align="center"><img src="https://avatars.githubusercontent.com/u/102131657?v=4" width="120px;" alt="Kenps"/><br /><b>Kenps Rossi</b></td>
+    <td align="center"><img src="https://avatars.githubusercontent.com/u/101351309?v=4" width="120px;" alt="Rosana"/><br /><b>Rosana Souza</b></td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/kenps-dev-adv/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Kenps" />
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/rosanatsf/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Rosana" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 #  :large_orange_diamond: Sobre o Projeto :  :page_with_curl:
 Trata-se do Projeto Integrador 1 do curso de Engenharia da Computação da Univesp <br>
