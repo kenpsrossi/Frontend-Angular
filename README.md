@@ -3,9 +3,10 @@
 <br>
  <h1 align="left"> :large_orange_diamond: Olá <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" height="30px"></h1>
 
+
 <table>
   <tr>
-    <td valign="middle"><h1>:large_orange_diamond: Desenvolvedores :</h1></td>
+    <td valign="middle"><h2>:large_orange_diamond: Desenvolvedores :</h2></td>
     <td>
       <table>
         <tr>
